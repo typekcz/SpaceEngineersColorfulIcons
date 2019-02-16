@@ -13,7 +13,6 @@ namespace Sisk.ColorfulIcons {
     public class Mod : MySessionComponentBase {
         public const string NAME = "Colorful Icons";
         private const string FILE_NAME = "definitions.txt";
-        private readonly CommandHandler _commandHandler = new CommandHandler();
 
         private readonly Dictionary<MyDefinitionBase, string> _replacedIcons = new Dictionary<MyDefinitionBase, string>();
 
@@ -28,12 +27,9 @@ namespace Sisk.ColorfulIcons {
                 MyLog.Default.WriteLineAndConsole("ColorfulIcons: Load Data - START");
                 try {
                     ModifyDefinitions();
-                    CreateCommands();
                 } catch (Exception exception) {
                     MyLog.Default.WriteLineAndConsole("ColorfulIcons: " + exception);
                 }
-
-                MyAPIGateway.Utilities.MessageEntered += OnMessageEntered;
                 MyLog.Default.WriteLineAndConsole("ColorfulIcons: Load Data - END");
             }
         }
@@ -42,7 +38,6 @@ namespace Sisk.ColorfulIcons {
         protected override void UnloadData() {
             if (!MyAPIGateway.Multiplayer.MultiplayerActive || !MyAPIGateway.Utilities.IsDedicated) {
                 MyLog.Default.WriteLineAndConsole("ColorfulIcons: Unload Data - START");
-                MyAPIGateway.Utilities.MessageEntered -= OnMessageEntered;
                 RevertIcons();
                 _replacedIcons.Clear();
                 MyLog.Default.WriteLineAndConsole("ColorfulIcons: Unload Data - END");
@@ -64,14 +59,6 @@ namespace Sisk.ColorfulIcons {
                     MyLog.Default.WriteLineAndConsole($"|-> {definition.Id} > {definition.Icons[0]}");
                 }
             }
-        }
-
-        /// <summary>
-        ///     Create commands.
-        /// </summary>
-        private void CreateCommands() {
-            _commandHandler.Prefix = $"/{Acronym}";
-            _commandHandler.Register(new Command { Name = "Generate", Description = "Generate a list of definition id's when loaded in a vanilla world", Execute = OnGenerateCommand });
         }
 
         /// <summary>
@@ -127,25 +114,6 @@ namespace Sisk.ColorfulIcons {
             }
 
             MyLog.Default.WriteLineAndConsole("ColorfulIcons: Change Icons - END");
-        }
-
-        /// <summary>
-        ///     Executed when "Generate" command in chat received.
-        /// </summary>
-        /// <param name="arguments"></param>
-        private void OnGenerateCommand(string arguments) {
-            if (MyAPIGateway.Session.Mods.Any(x => x.Name != ModContext.ModId)) {
-                MyAPIGateway.Utilities.ShowMessage(NAME, $"You should execute this command in a world without other mods than \"{NAME}\".");
-            } else {
-                CreateDefinitionFile();
-                MyAPIGateway.Utilities.ShowMessage(NAME, $"Definition file generated. You can find it in \"{MyAPIGateway.Session.CurrentPath}\\Storage\\{ModContext.ModId}\"");
-            }
-        }
-
-        private void OnMessageEntered(string messagetext, ref bool sendtoothers) {
-            if (_commandHandler.TryHandle(messagetext.Trim())) {
-                sendtoothers = false;
-            }
         }
 
         /// <summary>
