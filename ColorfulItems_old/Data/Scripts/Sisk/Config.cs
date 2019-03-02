@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Sisk.ColorfulIcons {
+namespace Sisk.ColorfulIconsOld {
     public static class Config {
         public static readonly Dictionary<string, string> Icons = new Dictionary<string, string> {
             { "MyObjectBuilder_AmmoMagazine/NATO_5p56x45mm", "Textures/GUI/Icons/ammo/Rifle_Ammo.dds" },
