@@ -99,14 +99,14 @@ namespace Sisk.ColorfulIcons {
 
             foreach (var blueprint in blueprintDefinitions) {
                 string iconPath;
-                if (blueprint?.Id != null && Config.Icons.TryGetValue(blueprint.Id.ToString(), out iconPath)) {
+                if (blueprint?.Id != null && Config.BlueprintIcons.TryGetValue(blueprint.Id.ToString(), out iconPath)) {
                     ChangeIcon(blueprint, iconPath);
                 }
             }
 
             foreach (var definition in definitions) {
                 string iconPath;
-                if (definition?.Id != null && Config.Icons.TryGetValue(definition.Id.ToString(), out iconPath)) {
+                if (definition?.Id != null && Config.DefinitionIcons.TryGetValue(definition.Id.ToString(), out iconPath)) {
                     if (definition is MyCubeBlockDefinition || definition is MyPhysicalItemDefinition) {
                         ChangeIcon(definition, iconPath);
                     }
