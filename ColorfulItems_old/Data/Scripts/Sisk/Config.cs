@@ -372,7 +372,22 @@ namespace Sisk.ColorfulIconsOld {
 			{ "MyObjectBuilder_BatteryBlock/SmallBlockSmallBatteryBlock", "Textures/GUI/Icons/Cubes/Battery1x1.dds" },
 			{ "MyObjectBuilder_SurvivalKit/SurvivalKitLarge", "Textures/GUI/Icons/Cubes/SurvivalKitLarge.dds" },
 			{ "MyObjectBuilder_SurvivalKit/SurvivalKit", "Textures/GUI/Icons/Cubes/SurvivalKitSmall.dds" },
-			{ "MyObjectBuilder_Assembler/BasicAssembler", "Textures/GUI/Icons/Cubes/BasicAssembler.dds" }
+			{ "MyObjectBuilder_Assembler/BasicAssembler", "Textures/GUI/Icons/Cubes/BasicAssembler.dds" },
+			{ "MyObjectBuilder_CryoChamber/SmallBlockCryoChamber", "Textures/GUI/Icons/Cubes/CryopodSmall.dds" },
+			{ "MyObjectBuilder_Cockpit/SmallBlockCockpitIndustrial", "Textures/GUI/Icons/Cubes/CockpitIndustrial.dds" },
+			{ "MyObjectBuilder_Cockpit/LargeBlockCockpitIndustrial", "Textures/GUI/Icons/Cubes/LargeCockpitIndustrial.dds" },
+			{ "MyObjectBuilder_Cockpit/LargeBlockDesk", "Textures/GUI/Icons/Cubes/Desk.dds" },
+			{ "MyObjectBuilder_Cockpit/LargeBlockDeskCorner", "Textures/GUI/Icons/Cubes/DeskCorner.dds" },
+			{ "MyObjectBuilder_Kitchen/LargeBlockKitchen", "Textures/GUI/Icons/Cubes/Kitchen.dds" },
+			{ "MyObjectBuilder_CryoChamber/LargeBlockBed", "Textures/GUI/Icons/Cubes/Bed.dds" },
+			{ "MyObjectBuilder_CargoContainer/LargeBlockLockerRoom", "Textures/GUI/Icons/Cubes/LockerRoom.dds" },
+			{ "MyObjectBuilder_CargoContainer/LargeBlockLockerRoomCorner", "Textures/GUI/Icons/Cubes/LockerRoomCorner.dds" },
+			{ "MyObjectBuilder_Planter/LargeBlockPlanters", "Textures/GUI/Icons/Cubes/Planters.dds" },
+			{ "MyObjectBuilder_Cockpit/LargeBlockCouch", "Textures/GUI/Icons/Cubes/Couch.dds" },
+			{ "MyObjectBuilder_CargoContainer/LargeBlockLockers", "Textures/GUI/Icons/Cubes/Lockers.dds" },
+			{ "MyObjectBuilder_Cockpit/LargeBlockBathroomOpen", "Textures/GUI/Icons/Cubes/BathroomOpen.dds" },
+			{ "MyObjectBuilder_Cockpit/LargeBlockToilet", "Textures/GUI/Icons/Cubes/Toilet.dds" },
+			{ "MyObjectBuilder_Projector/LargeBlockConsole", "Textures/GUI/Icons/Cubes/Console.dds" }
         };
 		public static readonly Dictionary<string, string> BlueprintIcons = new Dictionary<string, string> {
 			{ "MyObjectBuilder_BlueprintDefinition/StoneOreToIngot", "Textures/GUI/Icons/ingot/ingot_class.dds" },
