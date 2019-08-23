@@ -71,8 +71,8 @@ namespace Sisk.ColorfulIcons {
 
             var definitionIds = new Dictionary<string, string>();
             foreach (var definition in allDefinitions) {
-                if (definition.Context.IsBaseGame) {
-                    if (definition.Icons != null && definition.Icons.Any() && (definition is MyCubeBlockDefinition || definition is MyPhysicalItemDefinition || definition is MyBlockBlueprintDefinition)) {
+                if (definition.Context != null && definition.Context.IsBaseGame) {
+                    if (definition.Icons != null && definition.Icons.Any()) {
                         definitionIds.Add(definition.Id.ToString(), definition.Icons[0]);
                     }
                 }
@@ -81,7 +81,7 @@ namespace Sisk.ColorfulIcons {
             using (var writer = MyAPIGateway.Utilities.WriteBinaryFileInWorldStorage(FILE_NAME, typeof(Mod))) {
                 var sb = new StringBuilder();
                 foreach (var pair in definitionIds) {
-                    sb.AppendLine($"{{\"{pair.Key}\",\"{pair.Value.Replace(@"\", "/")}\"}},");
+                    sb.AppendLine($"{{ \"{pair.Key}\", \"{pair.Value.Replace(@"\", "/")}\" }},");
                 }
 
                 var bytes = Encoding.UTF8.GetBytes(sb.ToString());

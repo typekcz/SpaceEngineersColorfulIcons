@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Sisk.ColorfulIconsOld {
+namespace Sisk.ColorfulIcons {
     public static class Config {
         public static readonly Dictionary<string, string> DefinitionIcons = new Dictionary<string, string> {
             { "MyObjectBuilder_AmmoMagazine/NATO_5p56x45mm", "Textures/GUI/Icons/ammo/Rifle_Ammo.dds" },
@@ -378,16 +378,31 @@ namespace Sisk.ColorfulIconsOld {
 			{ "MyObjectBuilder_Cockpit/LargeBlockCockpitIndustrial", "Textures/GUI/Icons/Cubes/LargeCockpitIndustrial.dds" },
 			{ "MyObjectBuilder_Cockpit/LargeBlockDesk", "Textures/GUI/Icons/Cubes/Desk.dds" },
 			{ "MyObjectBuilder_Cockpit/LargeBlockDeskCorner", "Textures/GUI/Icons/Cubes/DeskCorner.dds" },
+			{ "MyObjectBuilder_CubeBlock/LargeBlockDeskChairless", "Textures/GUI/Icons/Cubes/DeskChairless.dds" },
+			{ "MyObjectBuilder_CubeBlock/LargeBlockDeskChairlessCorner", "Textures/GUI/Icons/Cubes/DeskChairlessCorner.dds" },
 			{ "MyObjectBuilder_Kitchen/LargeBlockKitchen", "Textures/GUI/Icons/Cubes/Kitchen.dds" },
 			{ "MyObjectBuilder_CryoChamber/LargeBlockBed", "Textures/GUI/Icons/Cubes/Bed.dds" },
 			{ "MyObjectBuilder_CargoContainer/LargeBlockLockerRoom", "Textures/GUI/Icons/Cubes/LockerRoom.dds" },
 			{ "MyObjectBuilder_CargoContainer/LargeBlockLockerRoomCorner", "Textures/GUI/Icons/Cubes/LockerRoomCorner.dds" },
 			{ "MyObjectBuilder_Planter/LargeBlockPlanters", "Textures/GUI/Icons/Cubes/Planters.dds" },
 			{ "MyObjectBuilder_Cockpit/LargeBlockCouch", "Textures/GUI/Icons/Cubes/Couch.dds" },
+			{ "MyObjectBuilder_Cockpit/LargeBlockCouchCorner", "Textures/GUI/Icons/Cubes/CouchCorner.dds" },
 			{ "MyObjectBuilder_CargoContainer/LargeBlockLockers", "Textures/GUI/Icons/Cubes/Lockers.dds" },
 			{ "MyObjectBuilder_Cockpit/LargeBlockBathroomOpen", "Textures/GUI/Icons/Cubes/BathroomOpen.dds" },
+			{ "MyObjectBuilder_Cockpit/LargeBlockBathroom", "Textures/GUI/Icons/Cubes/Bathroom.dds" },
 			{ "MyObjectBuilder_Cockpit/LargeBlockToilet", "Textures/GUI/Icons/Cubes/Toilet.dds" },
-			{ "MyObjectBuilder_Projector/LargeBlockConsole", "Textures/GUI/Icons/Cubes/Console.dds" }
+			{ "MyObjectBuilder_Projector/LargeBlockConsole", "Textures/GUI/Icons/Cubes/Console.dds" },
+			{ "MyObjectBuilder_Component/ZoneChip", "Textures/GUI/Icons/Items/ZoneChip_Item.dds" },
+			{ "MyObjectBuilder_Datapad/Datapad", "Textures/GUI/Icons/Items/Datapad_Item.dds" },
+			{ "MyObjectBuilder_Package/Package", "Textures/GUI/Icons/Items/ContractPackage.dds" },
+			{ "MyObjectBuilder_ConsumableItem/Medkit", "Textures/GUI/Icons/Items/MedKit.dds" },
+			{ "MyObjectBuilder_ConsumableItem/Powerkit", "Textures/GUI/Icons/Items/PowerKit.dds" },
+			{ "MyObjectBuilder_PhysicalObject/SpaceCredit", "Textures/GUI/Icons/Items/SpaceCredit.dds" },
+			{ "MyObjectBuilder_StoreBlock/StoreBlock", "Textures/GUI/Icons/Cubes/StoreBlock.dds" },
+			{ "MyObjectBuilder_SafeZoneBlock/SafeZoneBlock", "Textures/GUI/Icons/Cubes/SafeZoneBlock.dds" },
+			{ "MyObjectBuilder_ContractBlock/ContractBlock", "Textures/GUI/Icons/Cubes/ContractsBlock.dds" },
+			{ "MyObjectBuilder_VendingMachine/VendingMachine", "Textures/GUI/Icons/Cubes/VendingMachine.dds" },
+			{ "MyObjectBuilder_StoreBlock/AtmBlock", "Textures/GUI/Icons/Cubes/ATM.dds" }
         };
 		public static readonly Dictionary<string, string> BlueprintIcons = new Dictionary<string, string> {
 			{ "MyObjectBuilder_BlueprintDefinition/StoneOreToIngot", "Textures/GUI/Icons/ingot/ingot_class.dds" },
@@ -736,7 +751,14 @@ namespace Sisk.ColorfulIconsOld {
 			{ "MyObjectBuilder_BlueprintDefinition/CubeBlock/SmallArmorInvCorner", "Textures/GUI/Icons/Cubes/BlastDoorCornerInverted.dds" },
 			{ "MyObjectBuilder_BlueprintDefinition/CubeBlock/SmallArmorSide", "Textures/GUI/Icons/Cubes/ArmorSide.dds" },
 			{ "MyObjectBuilder_BlueprintDefinition/LaserAntenna/SmallBlockLaserAntenna", "Textures/GUI/Icons/Cubes/LaserAntennaSmall.dds" },
-			{ "MyObjectBuilder_BlueprintDefinition/Parachute/SmParachute", "Textures/GUI/Icons/Cubes/ParachuteHatch.dds" }
-        };
+			{ "MyObjectBuilder_BlueprintDefinition/Parachute/SmParachute", "Textures/GUI/Icons/Cubes/ParachuteHatch.dds" },
+			{ "MyObjectBuilder_BlueprintDefinition/ZoneChip", "Textures/GUI/Icons/Items/ZoneChip_Item.dds" },
+			{ "MyObjectBuilder_BlueprintDefinition/Datapad", "Textures/GUI/Icons/Items/Datapad_Item.dds" },
+			{ "MyObjectBuilder_BlueprintDefinition/StoreBlock/StoreBlock", "Textures/GUI/Icons/Cubes/StoreBlock.dds" },
+			{ "MyObjectBuilder_BlueprintDefinition/SafeZoneBlock/SafeZoneBlock", "Textures/GUI/Icons/Cubes/SafeZoneBlock.dds" },
+			{ "MyObjectBuilder_BlueprintDefinition/ContractBlock/ContractBlock", "Textures/GUI/Icons/Cubes/ContractsBlock.dds" },
+			{ "MyObjectBuilder_BlueprintDefinition/VendingMachine/VendingMachine", "Textures/GUI/Icons/Cubes/VendingMachine.dds" },
+			{ "MyObjectBuilder_BlueprintDefinition/StoreBlock/AtmBlock", "Textures/GUI/Icons/Cubes/ATM.dds" },
+		};
     }
 }

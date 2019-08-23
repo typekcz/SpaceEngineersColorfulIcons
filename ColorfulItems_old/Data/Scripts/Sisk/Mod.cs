@@ -8,10 +8,10 @@ using VRage.Game;
 using VRage.Game.Components;
 using VRage.Utils;
 
-namespace Sisk.ColorfulIconsOld {
+namespace Sisk.ColorfulIcons {
     [MySessionComponentDescriptor(MyUpdateOrder.NoUpdate)]
     public class Mod : MySessionComponentBase {
-        public const string NAME = "Colorful Icons Old";
+        public const string NAME = "Colorful Icons";
         private const string FILE_NAME = "definitions.txt";
 
         private readonly Dictionary<MyDefinitionBase, string> _replacedIcons = new Dictionary<MyDefinitionBase, string>();
@@ -24,23 +24,23 @@ namespace Sisk.ColorfulIconsOld {
         /// <inheritdoc />
         public override void LoadData() {
             if (!MyAPIGateway.Multiplayer.MultiplayerActive || !MyAPIGateway.Utilities.IsDedicated) {
-                MyLog.Default.WriteLineAndConsole("ColorfulIconsOld: Load Data - START");
+                MyLog.Default.WriteLineAndConsole("ColorfulIcons: Load Data - START");
                 try {
                     ModifyDefinitions();
                 } catch (Exception exception) {
-                    MyLog.Default.WriteLineAndConsole("ColorfulIconsOld: " + exception);
+                    MyLog.Default.WriteLineAndConsole("ColorfulIcons: " + exception);
                 }
-                MyLog.Default.WriteLineAndConsole("ColorfulIconsOld: Load Data - END");
+                MyLog.Default.WriteLineAndConsole("ColorfulIcons: Load Data - END");
             }
         }
 
         /// <inheritdoc />
         protected override void UnloadData() {
             if (!MyAPIGateway.Multiplayer.MultiplayerActive || !MyAPIGateway.Utilities.IsDedicated) {
-                MyLog.Default.WriteLineAndConsole("ColorfulIconsOld: Unload Data - START");
+                MyLog.Default.WriteLineAndConsole("ColorfulIcons: Unload Data - START");
                 RevertIcons();
                 _replacedIcons.Clear();
-                MyLog.Default.WriteLineAndConsole("ColorfulIconsOld: Unload Data - END");
+                MyLog.Default.WriteLineAndConsole("ColorfulIcons: Unload Data - END");
             }
         }
 
@@ -71,8 +71,8 @@ namespace Sisk.ColorfulIconsOld {
 
             var definitionIds = new Dictionary<string, string>();
             foreach (var definition in allDefinitions) {
-                if (definition.Context.IsBaseGame) {
-                    if (definition.Icons != null && definition.Icons.Any() && (definition is MyCubeBlockDefinition || definition is MyPhysicalItemDefinition || definition is MyBlockBlueprintDefinition)) {
+                if (definition.Context != null && definition.Context.IsBaseGame) {
+                    if (definition.Icons != null && definition.Icons.Any()) {
                         definitionIds.Add(definition.Id.ToString(), definition.Icons[0]);
                     }
                 }
@@ -81,7 +81,7 @@ namespace Sisk.ColorfulIconsOld {
             using (var writer = MyAPIGateway.Utilities.WriteBinaryFileInWorldStorage(FILE_NAME, typeof(Mod))) {
                 var sb = new StringBuilder();
                 foreach (var pair in definitionIds) {
-                    sb.AppendLine($"{{\"{pair.Key}\",\"{pair.Value.Replace(@"\", "/")}\"}},");
+                    sb.AppendLine($"{{ \"{pair.Key}\", \"{pair.Value.Replace(@"\", "/")}\" }},");
                 }
 
                 var bytes = Encoding.UTF8.GetBytes(sb.ToString());
@@ -93,7 +93,7 @@ namespace Sisk.ColorfulIconsOld {
         ///     Change block, blueprint and item icons.
         /// </summary>
         private void ModifyDefinitions() {
-            MyLog.Default.WriteLineAndConsole("ColorfulIconsOld: Change Icons - Start");
+            MyLog.Default.WriteLineAndConsole("ColorfulIcons: Change Icons - Start");
             var definitions = MyDefinitionManager.Static.GetAllDefinitions();
             var blueprintDefinitions = MyDefinitionManager.Static.GetBlueprintDefinitions();
 
@@ -113,14 +113,14 @@ namespace Sisk.ColorfulIconsOld {
                 }
             }
 
-            MyLog.Default.WriteLineAndConsole("ColorfulIconsOld: Change Icons - END");
+            MyLog.Default.WriteLineAndConsole("ColorfulIcons: Change Icons - END");
         }
 
         /// <summary>
         ///     Revert icons to default.
         /// </summary>
         private void RevertIcons() {
-            MyLog.Default.WriteLineAndConsole("ColorfulIconsOld: Revert Icons - END");
+            MyLog.Default.WriteLineAndConsole("ColorfulIcons: Revert Icons - END");
             foreach (var definition in _replacedIcons.Keys) {
                 definition.Icons[0] = _replacedIcons[definition];
                 MyLog.Default.WriteLineAndConsole($"|-> {definition.Id} > {definition.Icons[0]}");
