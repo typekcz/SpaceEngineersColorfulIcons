@@ -1,0 +1,26 @@
+﻿using VRage.Utils;
+
+// ReSharper disable InconsistentNaming
+
+namespace Sisk.ColorfulIcons.Localization {
+    public static class ModText {
+        public static readonly MyStringId Description_CI_Disable = MyStringId.GetOrCompute(nameof(Description_CI_Disable));
+        public static readonly MyStringId Description_CI_Enable = MyStringId.GetOrCompute(nameof(Description_CI_Enable));
+        public static readonly MyStringId Description_CI_Help = MyStringId.GetOrCompute(nameof(Description_CI_Help));
+        public static readonly MyStringId Description_CI_List = MyStringId.GetOrCompute(nameof(Description_CI_List));
+
+        public static readonly MyStringId Error_CI_OnlyBooleanAllowed = MyStringId.GetOrCompute(nameof(Error_CI_OnlyBooleanAllowed));
+        public static readonly MyStringId Error_CI_SetOption = MyStringId.GetOrCompute(nameof(Error_CI_SetOption));
+        public static readonly MyStringId Error_CI_UnknownOption = MyStringId.GetOrCompute(nameof(Error_CI_UnknownOption));
+
+        public static readonly MyStringId Message_CI_SetOptionSuccess = MyStringId.GetOrCompute(nameof(Message_CI_SetOptionSuccess));
+
+        public static readonly MyStringId MenuItemText_CI_ReplaceBlocks = MyStringId.GetOrCompute(nameof(MenuItemText_CI_ReplaceBlocks));
+        public static readonly MyStringId MenuItemText_CI_ReplaceComponents = MyStringId.GetOrCompute(nameof(MenuItemText_CI_ReplaceComponents));
+        public static readonly MyStringId MenuItemText_CI_ReplaceIngots = MyStringId.GetOrCompute(nameof(MenuItemText_CI_ReplaceIngots));
+        public static readonly MyStringId MenuItemText_CI_ReplaceOres = MyStringId.GetOrCompute(nameof(MenuItemText_CI_ReplaceOres));
+        public static readonly MyStringId MenuItemText_CI_ReplaceTools = MyStringId.GetOrCompute(nameof(MenuItemText_CI_ReplaceTools));
+
+        public static readonly MyStringId MenuRootCategoryHeader_CI = MyStringId.GetOrCompute(nameof(MenuRootCategoryHeader_CI));
+    }
+}
