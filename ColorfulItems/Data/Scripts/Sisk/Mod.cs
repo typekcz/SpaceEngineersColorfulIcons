@@ -20,6 +20,7 @@ namespace Sisk.ColorfulIcons {
         private const string SETTINGS_FILE = "ColorfulIcons.xml";
 
         private readonly Dictionary<MyDefinitionBase, string> _replacedIcons = new Dictionary<MyDefinitionBase, string>();
+        private readonly Dictionary<MyPhysicalItemDefinition, string> _replacedModels = new Dictionary<MyPhysicalItemDefinition, string>();
         private ChatHandler _chatHandler;
         private GuiHandler _guiHandler;
 
@@ -100,7 +101,7 @@ namespace Sisk.ColorfulIcons {
                     _chatHandler = null;
                 }
 
-                RevertIcons();
+                RevertDefinitions();
                 _replacedIcons.Clear();
             }
 
@@ -122,6 +123,9 @@ namespace Sisk.ColorfulIcons {
                 case Option.Components:
                     Settings.Components = (bool) (object) value;
                     break;
+                case Option.OldComponents:
+                    Settings.OldComponents = (bool) (object) value;
+                    break;
                 case Option.Ingots:
                     Settings.Ingots = (bool) (object) value;
                     break;
@@ -130,6 +134,9 @@ namespace Sisk.ColorfulIcons {
                     break;
                 case Option.Tools:
                     Settings.Tools = (bool) (object) value;
+                    break;
+                case Option.FixToolColors:
+                    Settings.FixToolColors = (bool) (object) value;
                     break;
                 default:
                     MyLog.Default.WriteLine($"Unknown option '{nameof(option)}'");
@@ -140,16 +147,24 @@ namespace Sisk.ColorfulIcons {
             if (showResultInChat) {
                 ShowResultMessage(option, value, Result.Success);
             }
-
+            
             _guiHandler.UpdateMenuItemText(option, (bool) (object) value);
+
             SaveSettings();
+            RevertDefinitions();
+            ModifyDefinitions();
+
+            /*MyAPIGateway.Utilities.InvokeOnGameThread(() => {
+                RevertDefinitions();
+                ModifyDefinitions();
+            });*/
         }
 
         /// <summary>
         ///     Change icon for specified definition.
         /// </summary>
         /// <param name="definition">The definition where the icon should be changed.</param>
-        /// <param name="iconPath">The path to the icon.</param>
+        /// <param name="iconPath">The path to the icon relative to mod path.</param>
         private void ChangeIcon(MyDefinitionBase definition, string iconPath) {
             if (definition?.Icons != null && definition.Icons.Any()) {
                 if (!definition.Icons[0].StartsWith(ModContext.ModPath)) {
@@ -159,6 +174,21 @@ namespace Sisk.ColorfulIcons {
 
                     definition.Icons[0] = $"{ModContext.ModPath}\\{iconPath}";
                 }
+            }
+        }
+
+        /// <summary>
+        ///     Change model for specified definition.
+        /// </summary>
+        /// <param name="definition">The definition where the model should be changed.</param>
+        /// <param name="iconPath">The path to the model relative to game path.</param>
+        private void ChangeModel(MyPhysicalItemDefinition definition, string modelPath){
+            if (definition?.Model != null) {
+                if (!_replacedModels.ContainsKey(definition)) {
+                    _replacedModels.Add(definition, definition.Model);
+                }
+
+                definition.Model = modelPath;
             }
         }
 
@@ -173,12 +203,16 @@ namespace Sisk.ColorfulIcons {
                     return Settings.Blocks;
                 case Option.Components:
                     return Settings.Components;
+                case Option.OldComponents:
+                    return Settings.OldComponents;
                 case Option.Ingots:
                     return Settings.Ingots;
                 case Option.Ores:
                     return Settings.Ores;
                 case Option.Tools:
                     return Settings.Tools;
+                case Option.FixToolColors:
+                    return Settings.FixToolColors;
                 default:
                     return false;
             }
@@ -263,6 +297,27 @@ namespace Sisk.ColorfulIcons {
                     }
                 }
             }
+
+            if(IsOptionEnabled(Option.FixToolColors)) {
+                foreach (var tool in Config.FixTools) {
+                    MyDefinitionBase definition;
+                    definitions.TryGetValue(MyDefinitionId.Parse(tool.Key), out definition);
+                    if(definition is MyPhysicalItemDefinition) {
+                        ChangeModel(definition as MyPhysicalItemDefinition, tool.Value.Model);
+                        if(IsOptionEnabled(Option.Tools))
+                            ChangeIcon(definition, tool.Value.Icon);
+                    }
+                }
+                if(IsOptionEnabled(Option.Tools)){
+                    foreach (var toolBp in Config.FixToolsBlueprints) {
+                        MyBlueprintDefinitionBase blueprint;
+                        blueprintDefinitions.TryGetValue(MyDefinitionId.Parse(toolBp.Key), out blueprint);
+                        if(blueprint != null){
+                            ChangeIcon(blueprint, toolBp.Key);
+                        }
+                    }
+                }
+            }
         }
 
         /// <summary>
@@ -277,12 +332,18 @@ namespace Sisk.ColorfulIcons {
         }
 
         /// <summary>
-        ///     Revert icons to default.
+        ///     Revert icons and models to default.
         /// </summary>
-        private void RevertIcons() {
+        private void RevertDefinitions() {
             foreach (var definition in _replacedIcons.Keys) {
                 definition.Icons[0] = _replacedIcons[definition];
             }
+            _replacedIcons.Clear();
+
+            foreach (var definition in _replacedModels.Keys) {
+                definition.Model = _replacedModels[definition];
+            }
+            _replacedModels.Clear();
         }
 
         /// <summary>

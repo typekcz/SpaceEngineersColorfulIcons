@@ -47,7 +47,7 @@ namespace Sisk.Utils.CommandHandler {
         /// </summary>
         /// <param name="arguments"></param>
         public void ShowHelp(string arguments) {
-            var sb = new StringBuilder().AppendLine("Usage: /ss [command]");
+            var sb = new StringBuilder().AppendLine($"Usage: {Prefix} [command]");
             var maxArgLen = _commands.Keys.Max(x => x.Length);
             var outputFormat = $"  {{0, -{maxArgLen + 2}}}{{1}}";
             foreach (var command in _commands.Values) {

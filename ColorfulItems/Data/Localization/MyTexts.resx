@@ -124,6 +124,9 @@
   <data name="MenuItemText_CI_ReplaceComponents" xml:space="preserve">
     <value>Replace Component Icons: {0}</value>
   </data>
+  <data name="MenuItemText_CI_ReplaceComponentsOld" xml:space="preserve">
+    <value>Replace Component Icons with old icons: {0}</value>
+  </data>
   <data name="MenuItemText_CI_ReplaceIngots" xml:space="preserve">
     <value>Replace Ingot Icons {0}</value>
   </data>
@@ -132,6 +135,9 @@
   </data>
   <data name="MenuItemText_CI_ReplaceTools" xml:space="preserve">
     <value>Replace Tool Icons: {0}</value>
+  </data>
+  <data name="MenuItemText_CI_FixToolColors" xml:space="preserve">
+    <value>Fix tool colors: {0}</value>
   </data>
   <data name="MenuRootCategoryHeader_CI" xml:space="preserve">
     <value>Colorful Icons Settings</value>

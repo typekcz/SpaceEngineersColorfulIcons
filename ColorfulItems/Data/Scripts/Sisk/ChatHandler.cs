@@ -14,9 +14,11 @@ namespace Sisk.ColorfulIcons {
         private readonly Dictionary<Option, Type> _options = new Dictionary<Option, Type> {
             { Option.Blocks, typeof(bool) },
             { Option.Components, typeof(bool) },
+            { Option.OldComponents, typeof(bool) },
             { Option.Ingots, typeof(bool) },
             { Option.Ores, typeof(bool) },
-            { Option.Tools, typeof(bool) }
+            { Option.Tools, typeof(bool) },
+            { Option.FixToolColors, typeof(bool) }
         };
 
         public ChatHandler() {

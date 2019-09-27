@@ -2,8 +2,10 @@
     public enum Option {
         Blocks,
         Components,
+        OldComponents,
         Ingots,
         Ores,
-        Tools
+        Tools,
+        FixToolColors
     }
 }
