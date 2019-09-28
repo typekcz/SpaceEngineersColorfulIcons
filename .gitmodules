@@ -1,0 +1,3 @@
+[submodule "ColorfulItems/Data/Scripts/Sisk/Utils"]
+	path = ColorfulItems/Data/Scripts/Sisk/Utils
+	url = https://github.com/SiskSjet/SE_Mod_Utils.git
