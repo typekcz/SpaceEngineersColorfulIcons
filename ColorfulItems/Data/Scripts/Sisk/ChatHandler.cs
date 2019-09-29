@@ -23,7 +23,7 @@ namespace Sisk.ColorfulIcons {
 
         public ChatHandler() {
             _commandHandler = new CommandHandler(Mod.NAME) { Prefix = $"/{Mod.Acronym}" };
-            _commandHandler.Register(new Command { Name = "", Description = ModText.Description_CI_Base.GetString(), Execute = OnBaseCommand });
+            _commandHandler.Register(new Command { Name = "Status", Description = ModText.Description_CI_Status.GetString(), Execute = OnStatusCommand });
             _commandHandler.Register(new Command { Name = "Enable", Description = ModText.Description_CI_Enable.GetString(), Execute = OnEnableOptionCommand });
             _commandHandler.Register(new Command { Name = "Disable", Description = ModText.Description_CI_Disable.GetString(), Execute = OnDisableOptionCommand });
             _commandHandler.Register(new Command { Name = "Help", Description = ModText.Description_CI_Help.GetString(), Execute = _commandHandler.ShowHelp });
@@ -43,7 +43,7 @@ namespace Sisk.ColorfulIcons {
         ///     Called on Base command.
         /// </summary>
         /// <param name="arguments">Arguments are ignored in this handler.</param>
-        private void OnBaseCommand(string arguments) {
+        private void OnStatusCommand(string arguments) {
             var sb = new StringBuilder().AppendLine();
             foreach (var pair in _options) {
                 Option option = pair.Key;
@@ -114,6 +114,11 @@ namespace Sisk.ColorfulIcons {
         /// <param name="sendToOthers">Indicates if message should be send to others.</param>
         private void OnMessageEntered(string messageText, ref bool sendToOthers) {
             if (_commandHandler.TryHandle(messageText.Trim())) {
+                sendToOthers = false;
+                return;
+            }
+            if (messageText.Trim().ToLower() == $"/{Mod.Acronym}".ToLower()){
+                OnStatusCommand("");
                 sendToOthers = false;
             }
         }
