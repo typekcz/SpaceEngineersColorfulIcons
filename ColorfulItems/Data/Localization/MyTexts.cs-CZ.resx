@@ -80,33 +80,45 @@
     <value>{0} uspěšně nastaveno na {1}.</value>
   </data>
   <data name="MenuItemText_CI_ReplaceBlocks" xml:space="preserve">
-    <value>Nahradit ikony bloků: {0}</value>
+    <value>Bloky: {0}</value>
   </data>
   <data name="MenuItemText_CI_ReplaceComponents" xml:space="preserve">
-    <value>Nahradit ikony komponent: {0}</value>
+    <value>Komponenty: {0}</value>
   </data>
   <data name="MenuItemText_CI_ReplaceComponentsOld" xml:space="preserve">
-    <value>Nahradit ikony komponent starými ikonami: {0}</value>
+    <value>Použít staré ikony: {0}</value>
   </data>
   <data name="MenuItemText_CI_ReplaceIngots" xml:space="preserve">
-    <value>Nahradit ikony ingotů: {0}</value>
+    <value>Ingoty: {0}</value>
   </data>
   <data name="MenuItemText_CI_ReplaceOres" xml:space="preserve">
-    <value>Nahradit ikony rud: {0}</value>
+    <value>Rudy: {0}</value>
   </data>
   <data name="MenuItemText_CI_ReplaceTools" xml:space="preserve">
-    <value>Nahradit ikony nástrojů: {0}</value>
+    <value>Nástroje: {0}</value>
   </data>
   <data name="MenuItemText_CI_FixToolColors" xml:space="preserve">
     <value>Opravit barvy nástrojů: {0}</value>
   </data>
   <data name="MenuRootCategoryHeader_CI" xml:space="preserve">
-    <value>Barevné ikony - Nastavení</value>
+    <value>Nahradit ikony</value>
   </data>
   <data name="Description_CI_List" xml:space="preserve">
     <value>Zobrazí všechny možnosti</value>
   </data>
   <data name="Description_CI_Status" xml:space="preserve">
     <value>Zobrazí, které možnosti jsou zapnuté</value>
+  </data>
+  <data name="MenuSubCategory_CI_Component" xml:space="preserve">
+    <value>Komponenty</value>
+  </data>
+  <data name="MenuSubCategoryHeader_CI_Component" xml:space="preserve">
+    <value>Nahradit ikony komponent</value>
+  </data>
+  <data name="MenuSubCategory_CI_Tools" xml:space="preserve">
+    <value>Nástroje</value>
+  </data>
+  <data name="MenuSubCategoryHeader_CI_Tools" xml:space="preserve">
+    <value>Nahradit ikony nástrojů</value>
   </data>
 </root>
