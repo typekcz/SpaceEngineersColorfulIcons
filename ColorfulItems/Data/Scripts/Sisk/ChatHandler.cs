@@ -23,6 +23,7 @@ namespace Sisk.ColorfulIcons {
 
         public ChatHandler() {
             _commandHandler = new CommandHandler(Mod.NAME) { Prefix = $"/{Mod.Acronym}" };
+            _commandHandler.Register(new Command { Name = "", Description = ModText.Description_CI_Base.GetString(), Execute = OnBaseCommand });
             _commandHandler.Register(new Command { Name = "Enable", Description = ModText.Description_CI_Enable.GetString(), Execute = OnEnableOptionCommand });
             _commandHandler.Register(new Command { Name = "Disable", Description = ModText.Description_CI_Disable.GetString(), Execute = OnDisableOptionCommand });
             _commandHandler.Register(new Command { Name = "Help", Description = ModText.Description_CI_Help.GetString(), Execute = _commandHandler.ShowHelp });
@@ -36,6 +37,24 @@ namespace Sisk.ColorfulIcons {
         /// </summary>
         public void Close() {
             MyAPIGateway.Utilities.MessageEntered -= OnMessageEntered;
+        }
+
+        /// <summary>
+        ///     Called on Base command.
+        /// </summary>
+        /// <param name="arguments">Arguments are ignored in this handler.</param>
+        private void OnBaseCommand(string arguments) {
+            var sb = new StringBuilder().AppendLine();
+            foreach (var pair in _options) {
+                Option option = pair.Key;
+                sb.Append(option).Append(" = ");
+                if(Mod.Static.IsOptionEnabled(option))
+                    sb.Append("On").AppendLine();
+                else
+                    sb.Append("Off").AppendLine();
+            }
+
+            MyAPIGateway.Utilities.ShowMessage(Mod.NAME, sb.ToString());
         }
 
         /// <summary>

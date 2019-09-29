@@ -153,43 +153,6 @@ namespace Sisk.ColorfulIcons {
             SaveSettings();
             RevertDefinitions();
             ModifyDefinitions();
-
-            /*MyAPIGateway.Utilities.InvokeOnGameThread(() => {
-                RevertDefinitions();
-                ModifyDefinitions();
-            });*/
-        }
-
-        /// <summary>
-        ///     Change icon for specified definition.
-        /// </summary>
-        /// <param name="definition">The definition where the icon should be changed.</param>
-        /// <param name="iconPath">The path to the icon relative to mod path.</param>
-        private void ChangeIcon(MyDefinitionBase definition, string iconPath) {
-            if (definition?.Icons != null && definition.Icons.Any()) {
-                if (!definition.Icons[0].StartsWith(ModContext.ModPath)) {
-                    if (!_replacedIcons.ContainsKey(definition)) {
-                        _replacedIcons.Add(definition, definition.Icons[0]);
-                    }
-
-                    definition.Icons[0] = $"{ModContext.ModPath}\\{iconPath}";
-                }
-            }
-        }
-
-        /// <summary>
-        ///     Change model for specified definition.
-        /// </summary>
-        /// <param name="definition">The definition where the model should be changed.</param>
-        /// <param name="iconPath">The path to the model relative to game path.</param>
-        private void ChangeModel(MyPhysicalItemDefinition definition, string modelPath){
-            if (definition?.Model != null) {
-                if (!_replacedModels.ContainsKey(definition)) {
-                    _replacedModels.Add(definition, definition.Model);
-                }
-
-                definition.Model = modelPath;
-            }
         }
 
         /// <summary>
@@ -197,7 +160,7 @@ namespace Sisk.ColorfulIcons {
         /// </summary>
         /// <param name="option">The option which will be used to check.</param>
         /// <returns>Returns true when given option is enabled.</returns>
-        private bool IsOptionEnabled(Option option) {
+        public bool IsOptionEnabled(Option option) {
             switch (option) {
                 case Option.Blocks:
                     return Settings.Blocks;
@@ -215,6 +178,37 @@ namespace Sisk.ColorfulIcons {
                     return Settings.FixToolColors;
                 default:
                     return false;
+            }
+        }
+
+        /// <summary>
+        ///     Change icon for specified definition.
+        /// </summary>
+        /// <param name="definition">The definition where the icon should be changed.</param>
+        /// <param name="iconPath">The path to the icon relative to mod path.</param>
+        private void ChangeIcon(MyDefinitionBase definition, string iconPath) {
+            if (definition?.Icons != null && definition.Icons.Any()) {
+                if (!definition.Icons[0].StartsWith(ModContext.ModPath) && !_replacedIcons.ContainsKey(definition)) {
+                    _replacedIcons.Add(definition, definition.Icons[0]);
+                }
+
+                definition.Icons[0] = $"{ModContext.ModPath}\\{iconPath}";
+                MyLog.Default.WriteLineAndConsole($"{ModContext.ModPath}\\{iconPath}");
+            }
+        }
+
+        /// <summary>
+        ///     Change model for specified definition.
+        /// </summary>
+        /// <param name="definition">The definition where the model should be changed.</param>
+        /// <param name="iconPath">The path to the model relative to game path.</param>
+        private void ChangeModel(MyPhysicalItemDefinition definition, string modelPath){
+            if (definition?.Model != null) {
+                if (!_replacedModels.ContainsKey(definition)) {
+                    _replacedModels.Add(definition, definition.Model);
+                }
+
+                definition.Model = modelPath;
             }
         }
 
@@ -313,7 +307,7 @@ namespace Sisk.ColorfulIcons {
                         MyBlueprintDefinitionBase blueprint;
                         blueprintDefinitions.TryGetValue(MyDefinitionId.Parse(toolBp.Key), out blueprint);
                         if(blueprint != null){
-                            ChangeIcon(blueprint, toolBp.Key);
+                            ChangeIcon(blueprint, toolBp.Value);
                         }
                     }
                 }

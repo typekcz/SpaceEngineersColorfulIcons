@@ -4,6 +4,7 @@
 
 namespace Sisk.ColorfulIcons.Localization {
     public static class ModText {
+        public static readonly MyStringId Description_CI_Base = MyStringId.GetOrCompute(nameof(Description_CI_Base));
         public static readonly MyStringId Description_CI_Disable = MyStringId.GetOrCompute(nameof(Description_CI_Disable));
         public static readonly MyStringId Description_CI_Enable = MyStringId.GetOrCompute(nameof(Description_CI_Enable));
         public static readonly MyStringId Description_CI_Help = MyStringId.GetOrCompute(nameof(Description_CI_Help));

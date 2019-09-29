@@ -97,6 +97,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Description_CI_Base" xml:space="preserve">
+    <value>Shows which options are enabled</value>
+  </data>
   <data name="Description_CI_Disable" xml:space="preserve">
     <value>[option] Disables an option</value>
   </data>
@@ -128,7 +131,7 @@
     <value>Replace Component Icons with old icons: {0}</value>
   </data>
   <data name="MenuItemText_CI_ReplaceIngots" xml:space="preserve">
-    <value>Replace Ingot Icons {0}</value>
+    <value>Replace Ingot Icons: {0}</value>
   </data>
   <data name="MenuItemText_CI_ReplaceOres" xml:space="preserve">
     <value>Replace Ore Icons: {0}</value>
@@ -137,7 +140,7 @@
     <value>Replace Tool Icons: {0}</value>
   </data>
   <data name="MenuItemText_CI_FixToolColors" xml:space="preserve">
-    <value>Fix tool colors: {0}</value>
+    <value>Fix Tool Colors: {0}</value>
   </data>
   <data name="MenuRootCategoryHeader_CI" xml:space="preserve">
     <value>Colorful Icons Settings</value>
