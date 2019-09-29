@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using Sandbox.ModAPI;
 using Sisk.ColorfulIcons.Data;
@@ -37,24 +38,6 @@ namespace Sisk.ColorfulIcons {
         /// </summary>
         public void Close() {
             MyAPIGateway.Utilities.MessageEntered -= OnMessageEntered;
-        }
-
-        /// <summary>
-        ///     Called on Base command.
-        /// </summary>
-        /// <param name="arguments">Arguments are ignored in this handler.</param>
-        private void OnStatusCommand(string arguments) {
-            var sb = new StringBuilder().AppendLine();
-            foreach (var pair in _options) {
-                Option option = pair.Key;
-                sb.Append(option).Append(" = ");
-                if(Mod.Static.IsOptionEnabled(option))
-                    sb.Append("On").AppendLine();
-                else
-                    sb.Append("Off").AppendLine();
-            }
-
-            MyAPIGateway.Utilities.ShowMessage(Mod.NAME, sb.ToString());
         }
 
         /// <summary>
@@ -117,10 +100,29 @@ namespace Sisk.ColorfulIcons {
                 sendToOthers = false;
                 return;
             }
-            if (messageText.Trim().ToLower() == $"/{Mod.Acronym}".ToLower()){
+
+            if (messageText.Trim().ToLower() == $"/{Mod.Acronym}".ToLower()) {
                 OnStatusCommand("");
                 sendToOthers = false;
             }
+        }
+
+        /// <summary>
+        ///     Called on Status command.
+        /// </summary>
+        /// <param name="arguments">Arguments are ignored in this handler.</param>
+        private void OnStatusCommand(string arguments) {
+            var sb = new StringBuilder().AppendLine();
+            foreach (var option in _options.Select(pair => pair.Key)) {
+                sb.Append(option).Append(" = ");
+                if (Mod.Static.IsOptionEnabled(option)) {
+                    sb.Append("On").AppendLine();
+                } else {
+                    sb.Append("Off").AppendLine();
+                }
+            }
+
+            MyAPIGateway.Utilities.ShowMessage(Mod.NAME, sb.ToString());
         }
 
         /// <summary>

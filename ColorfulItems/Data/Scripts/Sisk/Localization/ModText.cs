@@ -25,5 +25,11 @@ namespace Sisk.ColorfulIcons.Localization {
         public static readonly MyStringId MenuItemText_CI_FixToolColors = MyStringId.GetOrCompute(nameof(MenuItemText_CI_FixToolColors));
 
         public static readonly MyStringId MenuRootCategoryHeader_CI = MyStringId.GetOrCompute(nameof(MenuRootCategoryHeader_CI));
+
+        public static readonly MyStringId MenuSubCategory_CI_Component = MyStringId.GetOrCompute(nameof(MenuSubCategory_CI_Component));
+        public static readonly MyStringId MenuSubCategoryHeader_CI_Component = MyStringId.GetOrCompute(nameof(MenuSubCategoryHeader_CI_Component));
+
+        public static readonly MyStringId MenuSubCategory_CI_Tools = MyStringId.GetOrCompute(nameof(MenuSubCategory_CI_Tools));
+        public static readonly MyStringId MenuSubCategoryHeader_CI_Tools = MyStringId.GetOrCompute(nameof(MenuSubCategoryHeader_CI_Tools));
     }
 }

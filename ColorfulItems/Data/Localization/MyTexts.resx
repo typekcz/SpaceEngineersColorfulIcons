@@ -97,9 +97,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Description_CI_Status" xml:space="preserve">
-    <value>Shows which options are enabled</value>
-  </data>
   <data name="Description_CI_Disable" xml:space="preserve">
     <value>[option] Disables an option</value>
   </data>
@@ -122,30 +119,45 @@
     <value>{0} successfully set to {1}.</value>
   </data>
   <data name="MenuItemText_CI_ReplaceBlocks" xml:space="preserve">
-    <value>Replace Block Icons: {0}</value>
+    <value>Blocks: {0}</value>
   </data>
   <data name="MenuItemText_CI_ReplaceComponents" xml:space="preserve">
-    <value>Replace Component Icons: {0}</value>
+    <value>Components: {0}</value>
   </data>
   <data name="MenuItemText_CI_ReplaceComponentsOld" xml:space="preserve">
-    <value>Replace Component Icons with old icons: {0}</value>
+    <value>Use Old Icons: {0}</value>
   </data>
   <data name="MenuItemText_CI_ReplaceIngots" xml:space="preserve">
-    <value>Replace Ingot Icons: {0}</value>
+    <value>Ingots: {0}</value>
   </data>
   <data name="MenuItemText_CI_ReplaceOres" xml:space="preserve">
-    <value>Replace Ore Icons: {0}</value>
+    <value>Ores: {0}</value>
   </data>
   <data name="MenuItemText_CI_ReplaceTools" xml:space="preserve">
-    <value>Replace Tool Icons: {0}</value>
+    <value>Tools: {0}</value>
   </data>
   <data name="MenuItemText_CI_FixToolColors" xml:space="preserve">
     <value>Fix Tool Colors: {0}</value>
   </data>
   <data name="MenuRootCategoryHeader_CI" xml:space="preserve">
-    <value>Colorful Icons Settings</value>
+    <value>Replace Icons</value>
   </data>
   <data name="Description_CI_List" xml:space="preserve">
     <value>Lists all options</value>
+  </data>
+  <data name="Description_CI_Status" xml:space="preserve">
+    <value>Shows which options are enabled</value>
+  </data>
+  <data name="MenuSubCategory_CI_Component" xml:space="preserve">
+    <value>Components</value>
+  </data>
+  <data name="MenuSubCategoryHeader_CI_Component" xml:space="preserve">
+    <value>Replace Component Icons</value>
+  </data>
+  <data name="MenuSubCategory_CI_Tools" xml:space="preserve">
+    <value>Tools</value>
+  </data>
+  <data name="MenuSubCategoryHeader_CI_Tools" xml:space="preserve">
+    <value>Replace Tool Icons</value>
   </data>
 </root>

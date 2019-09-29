@@ -139,24 +139,45 @@
     <value>{0} erfolgreich auf {1} festgelegt.</value>
   </data>
   <data name="MenuItemText_CI_ReplaceBlocks" xml:space="preserve">
-    <value>Ersetze Block Icons: {0}</value>
+    <value>Blöcke: {0}</value>
   </data>
   <data name="MenuItemText_CI_ReplaceIngots" xml:space="preserve">
-    <value>Ersetze Barren Icons: {0}</value>
+    <value>Barren: {0}</value>
   </data>
   <data name="MenuItemText_CI_ReplaceComponents" xml:space="preserve">
-    <value>Ersetze Komponenten Icons: {0}</value>
+    <value>Komponenten: {0}</value>
   </data>
   <data name="MenuItemText_CI_ReplaceOres" xml:space="preserve">
-    <value>Ersetze Erz Icons: {0}</value>
+    <value>Erze: {0}</value>
   </data>
   <data name="MenuItemText_CI_ReplaceTools" xml:space="preserve">
-    <value>Ersetze Werkzeug Icons: {0}</value>
+    <value>Werkzeuge: {0}</value>
   </data>
   <data name="MenuRootCategoryHeader_CI" xml:space="preserve">
-    <value>Colorful Icons Einstellungen</value>
+    <value>Ersetze Icons</value>
   </data>
   <data name="Description_CI_List" xml:space="preserve">
     <value>Listet alle Optionen auf</value>
+  </data>
+  <data name="Description_CI_Status" xml:space="preserve">
+    <value>Zeigt an, welche Optionen aktiviert sind</value>
+  </data>
+  <data name="MenuItemText_CI_FixToolColors" xml:space="preserve">
+    <value>Werkzeugfarben korrigieren: {0}</value>
+  </data>
+  <data name="MenuItemText_CI_ReplaceComponentsOld" xml:space="preserve">
+    <value>Benutze alte Icons: {0}</value>
+  </data>
+  <data name="MenuSubCategoryHeader_CI_Tools" xml:space="preserve">
+    <value>Ersetze Werkzeug Icons</value>
+  </data>
+  <data name="MenuSubCategory_CI_Tools" xml:space="preserve">
+    <value>Werkzeuge</value>
+  </data>
+  <data name="MenuSubCategoryHeader_CI_Component" xml:space="preserve">
+    <value>Ersetze Komponent Icons</value>
+  </data>
+  <data name="MenuSubCategory_CI_Component" xml:space="preserve">
+    <value>Komponenten</value>
   </data>
 </root>

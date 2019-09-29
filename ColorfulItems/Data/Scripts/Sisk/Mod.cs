@@ -9,6 +9,7 @@ using Sisk.ColorfulIcons.Extensions;
 using Sisk.ColorfulIcons.Localization;
 using Sisk.ColorfulIcons.Settings;
 using VRage;
+using VRage.Collections;
 using VRage.Game;
 using VRage.Game.Components;
 using VRage.Utils;
@@ -21,7 +22,10 @@ namespace Sisk.ColorfulIcons {
 
         private readonly Dictionary<MyDefinitionBase, string> _replacedIcons = new Dictionary<MyDefinitionBase, string>();
         private readonly Dictionary<MyPhysicalItemDefinition, string> _replacedModels = new Dictionary<MyPhysicalItemDefinition, string>();
+        private DictionaryValuesReader<MyDefinitionId, MyBlueprintDefinitionBase>? _blueprintDefinitions;
         private ChatHandler _chatHandler;
+
+        private DictionaryValuesReader<MyDefinitionId, MyDefinitionBase>? _definitions;
         private GuiHandler _guiHandler;
 
         /// <summary>
@@ -35,6 +39,9 @@ namespace Sisk.ColorfulIcons {
         ///     Mod name to acronym.
         /// </summary>
         public static string Acronym => string.Concat(NAME.Where(char.IsUpper));
+
+        private DictionaryValuesReader<MyDefinitionId, MyBlueprintDefinitionBase> BlueprintDefinitions => _blueprintDefinitions ?? (_blueprintDefinitions = MyDefinitionManager.Static.GetBlueprintDefinitions()).Value;
+        private DictionaryValuesReader<MyDefinitionId, MyDefinitionBase> Definitions => _definitions ?? (_definitions = MyDefinitionManager.Static.GetAllDefinitions()).Value;
 
         /// <summary>
         ///     Language used to localize this mod.
@@ -102,10 +109,35 @@ namespace Sisk.ColorfulIcons {
                 }
 
                 RevertDefinitions();
-                _replacedIcons.Clear();
             }
 
             Static = null;
+        }
+
+        /// <summary>
+        ///     Will check if given option is enabled in settings.
+        /// </summary>
+        /// <param name="option">The option which will be used to check.</param>
+        /// <returns>Returns true when given option is enabled.</returns>
+        public bool IsOptionEnabled(Option option) {
+            switch (option) {
+                case Option.Blocks:
+                    return Settings.Blocks;
+                case Option.Components:
+                    return Settings.Components;
+                case Option.OldComponents:
+                    return Settings.OldComponents;
+                case Option.Ingots:
+                    return Settings.Ingots;
+                case Option.Ores:
+                    return Settings.Ores;
+                case Option.Tools:
+                    return Settings.Tools;
+                case Option.FixToolColors:
+                    return Settings.FixToolColors;
+                default:
+                    return false;
+            }
         }
 
         /// <summary>
@@ -147,38 +179,14 @@ namespace Sisk.ColorfulIcons {
             if (showResultInChat) {
                 ShowResultMessage(option, value, Result.Success);
             }
-            
-            _guiHandler.UpdateMenuItemText(option, (bool) (object) value);
+
+            if (_guiHandler != null && _guiHandler.IsRegistered) {
+                _guiHandler.UpdateMenuItemText(option, (bool) (object) value);
+            }
 
             SaveSettings();
             RevertDefinitions();
             ModifyDefinitions();
-        }
-
-        /// <summary>
-        ///     Will check if given option is enabled in settings.
-        /// </summary>
-        /// <param name="option">The option which will be used to check.</param>
-        /// <returns>Returns true when given option is enabled.</returns>
-        public bool IsOptionEnabled(Option option) {
-            switch (option) {
-                case Option.Blocks:
-                    return Settings.Blocks;
-                case Option.Components:
-                    return Settings.Components;
-                case Option.OldComponents:
-                    return Settings.OldComponents;
-                case Option.Ingots:
-                    return Settings.Ingots;
-                case Option.Ores:
-                    return Settings.Ores;
-                case Option.Tools:
-                    return Settings.Tools;
-                case Option.FixToolColors:
-                    return Settings.FixToolColors;
-                default:
-                    return false;
-            }
         }
 
         /// <summary>
@@ -193,7 +201,7 @@ namespace Sisk.ColorfulIcons {
                 }
 
                 definition.Icons[0] = $"{ModContext.ModPath}\\{iconPath}";
-                MyLog.Default.WriteLineAndConsole($"{ModContext.ModPath}\\{iconPath}");
+                MyLog.Default.WriteLineAndConsole($"{definition.Id} -> {ModContext.ModPath}\\{iconPath}");
             }
         }
 
@@ -201,14 +209,15 @@ namespace Sisk.ColorfulIcons {
         ///     Change model for specified definition.
         /// </summary>
         /// <param name="definition">The definition where the model should be changed.</param>
-        /// <param name="iconPath">The path to the model relative to game path.</param>
-        private void ChangeModel(MyPhysicalItemDefinition definition, string modelPath){
+        /// <param name="modelPath">The path to the model relative to game path.</param>
+        private void ChangeModel(MyPhysicalItemDefinition definition, string modelPath) {
             if (definition?.Model != null) {
                 if (!_replacedModels.ContainsKey(definition)) {
                     _replacedModels.Add(definition, definition.Model);
                 }
 
                 definition.Model = modelPath;
+                MyLog.Default.WriteLineAndConsole($"{definition.Id} -> {modelPath}");
             }
         }
 
@@ -261,54 +270,64 @@ namespace Sisk.ColorfulIcons {
         ///     Change block, blueprint and item icons.
         /// </summary>
         private void ModifyDefinitions() {
-            var definitions = MyDefinitionManager.Static.GetAllDefinitions();
-            var blueprintDefinitions = MyDefinitionManager.Static.GetBlueprintDefinitions();
+            MyLog.Default.WriteLine("ColorfulIcons.ModifyDefinitions - START");
+            var definitions = Definitions;
+            var blueprintDefinitions = BlueprintDefinitions;
 
-            foreach (var blueprint in blueprintDefinitions) {
-                if (blueprint?.Id == null) {
-                    continue;
-                }
+            foreach (var pair in Config.Icons.Where(x => IsOptionEnabled(x.Key))) {
+                var option = pair.Key;
+                var dictionary = pair.Value;
 
-                foreach (var dictionary in Config.Icons.Where(x => IsOptionEnabled(x.Key)).Select(x => x.Value)) {
-                    string iconPath;
-                    if (dictionary.TryGetValue(blueprint.Id.ToString(), out iconPath)) {
-                        ChangeIcon(blueprint, iconPath);
-                    }
-                }
-            }
+                ModifyDefinitions(dictionary, ref definitions, ref blueprintDefinitions);
 
-            foreach (var definition in definitions) {
-                if (definition?.Id == null) {
-                    continue;
-                }
+                if (option == Option.Tools && IsOptionEnabled(Option.FixToolColors)) {
+                    foreach (var definitionPair in Config.FixTools) {
+                        var definitionId = MyDefinitionId.Parse(definitionPair.Key);
+                        var blueprintId = MyDefinitionId.Parse(definitionPair.Value.BlueprintId);
+                        var modelPath = definitionPair.Value.Model;
+                        var iconPath = definitionPair.Value.Icon;
 
-                foreach (var dictionary in Config.Icons.Where(x => IsOptionEnabled(x.Key)).Select(x => x.Value)) {
-                    string iconPath;
-                    if (dictionary.TryGetValue(definition.Id.ToString(), out iconPath)) {
-                        if (definition is MyCubeBlockDefinition || definition is MyPhysicalItemDefinition) {
+                        MyBlueprintDefinitionBase blueprint;
+                        if (blueprintDefinitions.TryGetValue(blueprintId, out blueprint)) {
+                            ChangeIcon(blueprint, iconPath);
+                        }
+
+                        MyDefinitionBase definition;
+                        if (definitions.TryGetValue(definitionId, out definition)) {
+                            ChangeModel(definition as MyPhysicalItemDefinition, modelPath);
                             ChangeIcon(definition, iconPath);
                         }
                     }
                 }
+
+                if (option == Option.Components && IsOptionEnabled(Option.OldComponents)) {
+                    ModifyDefinitions(Config.OldComponents, ref definitions, ref blueprintDefinitions);
+                }
             }
 
-            if(IsOptionEnabled(Option.FixToolColors)) {
-                foreach (var tool in Config.FixTools) {
-                    MyDefinitionBase definition;
-                    definitions.TryGetValue(MyDefinitionId.Parse(tool.Key), out definition);
-                    if(definition is MyPhysicalItemDefinition) {
-                        ChangeModel(definition as MyPhysicalItemDefinition, tool.Value.Model);
-                        if(IsOptionEnabled(Option.Tools))
-                            ChangeIcon(definition, tool.Value.Icon);
+            MyLog.Default.WriteLine("ColorfulIcons.ModifyDefinitions - END");
+        }
+
+        /// <summary>
+        ///     Modifies all matching definitions.
+        /// </summary>
+        /// <param name="dictionary">A dictionary with definition ids and icon paths.</param>
+        /// <param name="definitions">All block, component and tool definitions.</param>
+        /// <param name="blueprintDefinitions">All blueprint definitions.</param>
+        private void ModifyDefinitions(Dictionary<string, string> dictionary, ref DictionaryValuesReader<MyDefinitionId, MyDefinitionBase> definitions, ref DictionaryValuesReader<MyDefinitionId, MyBlueprintDefinitionBase> blueprintDefinitions) {
+            foreach (var definitionPair in dictionary) {
+                var definitionId = MyDefinitionId.Parse(definitionPair.Key);
+                var iconPath = definitionPair.Value;
+
+                if (definitionPair.Key.StartsWith("MyObjectBuilder_BlueprintDefinition/")) {
+                    MyBlueprintDefinitionBase blueprint;
+                    if (blueprintDefinitions.TryGetValue(definitionId, out blueprint)) {
+                        ChangeIcon(blueprint, iconPath);
                     }
-                }
-                if(IsOptionEnabled(Option.Tools)){
-                    foreach (var toolBp in Config.FixToolsBlueprints) {
-                        MyBlueprintDefinitionBase blueprint;
-                        blueprintDefinitions.TryGetValue(MyDefinitionId.Parse(toolBp.Key), out blueprint);
-                        if(blueprint != null){
-                            ChangeIcon(blueprint, toolBp.Value);
-                        }
+                } else {
+                    MyDefinitionBase definition;
+                    if (definitions.TryGetValue(definitionId, out definition)) {
+                        ChangeIcon(definition, iconPath);
                     }
                 }
             }
@@ -326,18 +345,27 @@ namespace Sisk.ColorfulIcons {
         }
 
         /// <summary>
-        ///     Revert icons and models to default.
+        ///     Revert definitions to default.
         /// </summary>
         private void RevertDefinitions() {
-            foreach (var definition in _replacedIcons.Keys) {
-                definition.Icons[0] = _replacedIcons[definition];
-            }
-            _replacedIcons.Clear();
+            MyLog.Default.WriteLine("ColorfulIcons.RevertDefinitions - START");
+            foreach (var pair in _replacedIcons) {
+                var definition = pair.Key;
+                var iconPath = pair.Value;
 
-            foreach (var definition in _replacedModels.Keys) {
-                definition.Model = _replacedModels[definition];
+                definition.Icons[0] = iconPath;
+                MyLog.Default.WriteLineAndConsole($"{definition.Id} -> {iconPath}");
             }
-            _replacedModels.Clear();
+
+            foreach (var pair in _replacedModels) {
+                var definition = pair.Key;
+                var modelPath = pair.Value;
+
+                definition.Model = modelPath;
+                MyLog.Default.WriteLineAndConsole($"{definition.Id} -> {modelPath}");
+            }
+
+            MyLog.Default.WriteLine("ColorfulIcons.RevertDefinitions - END");
         }
 
         /// <summary>

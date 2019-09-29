@@ -8,20 +8,26 @@ namespace Sisk.ColorfulIcons {
     public class GuiHandler {
         private static readonly MyStringId Off = MyStringId.GetOrCompute("HudInfoOff");
         private static readonly MyStringId On = MyStringId.GetOrCompute("HudInfoOn");
-        private bool _hudApiRegistered = false;
         private HudAPIv2.MenuItem _blocks;
         private HudAPIv2.MenuItem _components;
-        private HudAPIv2.MenuItem _oldComponents;
+        private HudAPIv2.MenuSubCategory _componentsCategory;
+        private HudAPIv2.MenuItem _fixToolColors;
         private HudAPIv2 _hudApi;
         private HudAPIv2.MenuItem _ingots;
         private HudAPIv2.MenuRootCategory _menu;
+        private HudAPIv2.MenuItem _oldComponents;
         private HudAPIv2.MenuItem _ores;
         private HudAPIv2.MenuItem _tools;
-        private HudAPIv2.MenuItem _fixToolColors;
+        private HudAPIv2.MenuSubCategory _toolsCategory;
 
         public GuiHandler() {
             _hudApi = new HudAPIv2(OnHudApiRegistered);
         }
+
+        /// <summary>
+        ///     Indicated if hud api is registered.
+        /// </summary>
+        public bool IsRegistered { get; private set; }
 
         /// <summary>
         ///     Translate boolean to on or off localized.
@@ -37,9 +43,9 @@ namespace Sisk.ColorfulIcons {
         /// </summary>
         public void Close() {
             if (_hudApi != null) {
+                IsRegistered = false;
                 _hudApi.Close();
                 _hudApi = null;
-                _hudApiRegistered = false;
             }
         }
 
@@ -49,8 +55,6 @@ namespace Sisk.ColorfulIcons {
         /// <param name="option">Which option should be set.</param>
         /// <param name="value">The value for given option.</param>
         public void UpdateMenuItemText(Option option, bool value) {
-            if(!_hudApiRegistered)
-                return;
             HudAPIv2.MenuItem menuItem;
             MyStringId text;
             switch (option) {
@@ -61,6 +65,7 @@ namespace Sisk.ColorfulIcons {
                 case Option.Components:
                     menuItem = _components;
                     text = ModText.MenuItemText_CI_ReplaceComponents;
+                    _oldComponents.Interactable = value;
                     break;
                 case Option.OldComponents:
                     menuItem = _oldComponents;
@@ -77,6 +82,7 @@ namespace Sisk.ColorfulIcons {
                 case Option.Tools:
                     menuItem = _tools;
                     text = ModText.MenuItemText_CI_ReplaceTools;
+                    _fixToolColors.Interactable = value;
                     break;
                 case Option.FixToolColors:
                     menuItem = _fixToolColors;
@@ -97,13 +103,22 @@ namespace Sisk.ColorfulIcons {
         private void OnHudApiRegistered() {
             _menu = new HudAPIv2.MenuRootCategory(Mod.NAME, HudAPIv2.MenuRootCategory.MenuFlag.PlayerMenu, ModText.MenuRootCategoryHeader_CI.GetString());
             _blocks = new HudAPIv2.MenuItem(ModText.MenuItemText_CI_ReplaceBlocks.GetString(ToEnabledDisabledString(Mod.Static.Settings.Blocks)), _menu, OnReplaceBlocksChanged);
-            _components = new HudAPIv2.MenuItem(ModText.MenuItemText_CI_ReplaceComponents.GetString(ToEnabledDisabledString(Mod.Static.Settings.Components)), _menu, OnReplaceComponentsChanged);
-            _oldComponents = new HudAPIv2.MenuItem(ModText.MenuItemText_CI_ReplaceComponentsOld.GetString(ToEnabledDisabledString(Mod.Static.Settings.OldComponents)), _menu, OnReplaceOldComponentsChanged);
+
+            _componentsCategory = new HudAPIv2.MenuSubCategory(ModText.MenuSubCategory_CI_Component.GetString(), _menu, ModText.MenuSubCategoryHeader_CI_Component.GetString());
+            _components = new HudAPIv2.MenuItem(ModText.MenuItemText_CI_ReplaceComponents.GetString(ToEnabledDisabledString(Mod.Static.Settings.Components)), _componentsCategory, OnReplaceComponentsChanged);
+            _oldComponents = new HudAPIv2.MenuItem(ModText.MenuItemText_CI_ReplaceComponentsOld.GetString(ToEnabledDisabledString(Mod.Static.Settings.OldComponents)), _componentsCategory, OnReplaceOldComponentsChanged) {
+                Interactable = Mod.Static.Settings.Components
+            };
+
             _ingots = new HudAPIv2.MenuItem(ModText.MenuItemText_CI_ReplaceIngots.GetString(ToEnabledDisabledString(Mod.Static.Settings.Ingots)), _menu, OnReplaceIngotsChanged);
             _ores = new HudAPIv2.MenuItem(ModText.MenuItemText_CI_ReplaceOres.GetString(ToEnabledDisabledString(Mod.Static.Settings.Ores)), _menu, OnReplaceOresChanged);
-            _tools = new HudAPIv2.MenuItem(ModText.MenuItemText_CI_ReplaceTools.GetString(ToEnabledDisabledString(Mod.Static.Settings.Tools)), _menu, OnReplaceToolsChanged);
-            _fixToolColors = new HudAPIv2.MenuItem(ModText.MenuItemText_CI_FixToolColors.GetString(ToEnabledDisabledString(Mod.Static.Settings.FixToolColors)), _menu, OnReplaceFixToolColorsChanged);
-            _hudApiRegistered = true;
+
+            _toolsCategory = new HudAPIv2.MenuSubCategory(ModText.MenuSubCategory_CI_Tools.GetString(), _menu, ModText.MenuSubCategoryHeader_CI_Tools.GetString());
+            _tools = new HudAPIv2.MenuItem(ModText.MenuItemText_CI_ReplaceTools.GetString(ToEnabledDisabledString(Mod.Static.Settings.Tools)), _toolsCategory, OnReplaceToolsChanged);
+            _fixToolColors = new HudAPIv2.MenuItem(ModText.MenuItemText_CI_FixToolColors.GetString(ToEnabledDisabledString(Mod.Static.Settings.FixToolColors)), _toolsCategory, OnReplaceFixToolColorsChanged) {
+                Interactable = Mod.Static.Settings.Tools
+            };
+            IsRegistered = true;
         }
 
         /// <summary>
@@ -121,10 +136,10 @@ namespace Sisk.ColorfulIcons {
         }
 
         /// <summary>
-        ///     Invert old components option.
+        ///     Invert fix tools color option.
         /// </summary>
-        private void OnReplaceOldComponentsChanged() {
-            Mod.Static.SetOption(Option.OldComponents, !Mod.Static.Settings.OldComponents, false);
+        private void OnReplaceFixToolColorsChanged() {
+            Mod.Static.SetOption(Option.FixToolColors, !Mod.Static.Settings.FixToolColors, false);
         }
 
         /// <summary>
@@ -132,6 +147,13 @@ namespace Sisk.ColorfulIcons {
         /// </summary>
         private void OnReplaceIngotsChanged() {
             Mod.Static.SetOption(Option.Ingots, !Mod.Static.Settings.Ingots, false);
+        }
+
+        /// <summary>
+        ///     Invert old components option.
+        /// </summary>
+        private void OnReplaceOldComponentsChanged() {
+            Mod.Static.SetOption(Option.OldComponents, !Mod.Static.Settings.OldComponents, false);
         }
 
         /// <summary>
@@ -146,13 +168,6 @@ namespace Sisk.ColorfulIcons {
         /// </summary>
         private void OnReplaceToolsChanged() {
             Mod.Static.SetOption(Option.Tools, !Mod.Static.Settings.Tools, false);
-        }
-
-        /// <summary>
-        ///     Invert fix tools color option.
-        /// </summary>
-        private void OnReplaceFixToolColorsChanged() {
-            Mod.Static.SetOption(Option.FixToolColors, !Mod.Static.Settings.FixToolColors, false);
         }
     }
 }
