@@ -139,6 +139,9 @@
   <data name="MenuItemText_CI_FixToolColors" xml:space="preserve">
     <value>Fix Tool Colors: {0}</value>
   </data>
+  <data name="MenuItemText_CI_ForceOverride" xml:space="preserve">
+    <value>Override changes by other mods: {0}</value>
+  </data>
   <data name="MenuRootCategoryHeader_CI" xml:space="preserve">
     <value>Replace Icons</value>
   </data>

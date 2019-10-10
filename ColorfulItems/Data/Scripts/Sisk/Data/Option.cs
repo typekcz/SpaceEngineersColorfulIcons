@@ -6,6 +6,7 @@
         Ingots,
         Ores,
         Tools,
-        FixToolColors
+        FixToolColors,
+        ForceOverride
     }
 }

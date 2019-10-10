@@ -135,6 +135,8 @@ namespace Sisk.ColorfulIcons {
                     return Settings.Tools;
                 case Option.FixToolColors:
                     return Settings.FixToolColors;
+                case Option.ForceOverride:
+                    return Settings.ForceOverride;
                 default:
                     return false;
             }
@@ -170,6 +172,9 @@ namespace Sisk.ColorfulIcons {
                 case Option.FixToolColors:
                     Settings.FixToolColors = (bool) (object) value;
                     break;
+                case Option.ForceOverride:
+                    Settings.ForceOverride = (bool) (object) value;
+                    break;
                 default:
                     MyLog.Default.WriteLine($"Unknown option '{nameof(option)}'");
 
@@ -196,6 +201,8 @@ namespace Sisk.ColorfulIcons {
         /// <param name="iconPath">The path to the icon relative to mod path.</param>
         private void ChangeIcon(MyDefinitionBase definition, string iconPath) {
             if (definition?.Icons != null && definition.Icons.Any()) {
+                if(!IsOptionEnabled(Option.ForceOverride) && Path.IsPathRooted(definition.Icons[0]))
+                    return;
                 if (!definition.Icons[0].StartsWith(ModContext.ModPath) && !_replacedIcons.ContainsKey(definition)) {
                     _replacedIcons.Add(definition, definition.Icons[0]);
                 }

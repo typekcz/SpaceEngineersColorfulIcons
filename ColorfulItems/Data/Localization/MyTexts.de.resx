@@ -165,6 +165,9 @@
   <data name="MenuItemText_CI_FixToolColors" xml:space="preserve">
     <value>Werkzeugfarben korrigieren: {0}</value>
   </data>
+  <data name="MenuItemText_CI_ForceOverride" xml:space="preserve">
+    <value>Änderungen durch andere Mods überschreiben: {0}</value>
+  </data>
   <data name="MenuItemText_CI_ReplaceComponentsOld" xml:space="preserve">
     <value>Benutze alte Icons: {0}</value>
   </data>

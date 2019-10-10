@@ -19,7 +19,8 @@ namespace Sisk.ColorfulIcons {
             { Option.Ingots, typeof(bool) },
             { Option.Ores, typeof(bool) },
             { Option.Tools, typeof(bool) },
-            { Option.FixToolColors, typeof(bool) }
+            { Option.FixToolColors, typeof(bool) },
+            { Option.ForceOverride, typeof(bool) }
         };
 
         public ChatHandler() {

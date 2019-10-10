@@ -23,6 +23,7 @@ namespace Sisk.ColorfulIcons.Localization {
         public static readonly MyStringId MenuItemText_CI_ReplaceOres = MyStringId.GetOrCompute(nameof(MenuItemText_CI_ReplaceOres));
         public static readonly MyStringId MenuItemText_CI_ReplaceTools = MyStringId.GetOrCompute(nameof(MenuItemText_CI_ReplaceTools));
         public static readonly MyStringId MenuItemText_CI_FixToolColors = MyStringId.GetOrCompute(nameof(MenuItemText_CI_FixToolColors));
+        public static readonly MyStringId MenuItemText_CI_ForceOverride = MyStringId.GetOrCompute(nameof(MenuItemText_CI_ForceOverride));
 
         public static readonly MyStringId MenuRootCategoryHeader_CI = MyStringId.GetOrCompute(nameof(MenuRootCategoryHeader_CI));
 

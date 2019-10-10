@@ -100,6 +100,9 @@
   <data name="MenuItemText_CI_FixToolColors" xml:space="preserve">
     <value>Opravit barvy nástrojů: {0}</value>
   </data>
+  <data name="MenuItemText_CI_ForceOverride" xml:space="preserve">
+    <value>Přepsat změny provedené jinými módy: {0}</value>
+  </data>
   <data name="MenuRootCategoryHeader_CI" xml:space="preserve">
     <value>Nahradit ikony</value>
   </data>

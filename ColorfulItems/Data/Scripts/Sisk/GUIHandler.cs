@@ -19,6 +19,7 @@ namespace Sisk.ColorfulIcons {
         private HudAPIv2.MenuItem _ores;
         private HudAPIv2.MenuItem _tools;
         private HudAPIv2.MenuSubCategory _toolsCategory;
+        private HudAPIv2.MenuItem _forceOverride;
 
         public GuiHandler() {
             _hudApi = new HudAPIv2(OnHudApiRegistered);
@@ -88,6 +89,10 @@ namespace Sisk.ColorfulIcons {
                     menuItem = _fixToolColors;
                     text = ModText.MenuItemText_CI_FixToolColors;
                     break;
+                case Option.ForceOverride:
+                    menuItem = _forceOverride;
+                    text = ModText.MenuItemText_CI_ForceOverride;
+                    break;
                 default:
                     MyLog.Default.WriteLine($"Unknown option '{nameof(option)}'");
 
@@ -118,6 +123,7 @@ namespace Sisk.ColorfulIcons {
             _fixToolColors = new HudAPIv2.MenuItem(ModText.MenuItemText_CI_FixToolColors.GetString(ToEnabledDisabledString(Mod.Static.Settings.FixToolColors)), _toolsCategory, OnReplaceFixToolColorsChanged) {
                 Interactable = Mod.Static.Settings.Tools
             };
+            _forceOverride = new HudAPIv2.MenuItem(ModText.MenuItemText_CI_ForceOverride.GetString(ToEnabledDisabledString(Mod.Static.Settings.ForceOverride)), _menu, OnReplaceForceOverrideChanged);
             IsRegistered = true;
         }
 
@@ -168,6 +174,13 @@ namespace Sisk.ColorfulIcons {
         /// </summary>
         private void OnReplaceToolsChanged() {
             Mod.Static.SetOption(Option.Tools, !Mod.Static.Settings.Tools, false);
+        }
+
+        /// <summary>
+        ///     Force override option.
+        /// </summary>
+        private void OnReplaceForceOverrideChanged() {
+            Mod.Static.SetOption(Option.ForceOverride, !Mod.Static.Settings.ForceOverride, false);
         }
     }
 }

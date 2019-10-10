@@ -12,6 +12,7 @@ namespace Sisk.ColorfulIcons.Settings {
         private const bool ORES = true;
         private const bool TOOLS = true;
         private const bool FIX_TOOL_COLORS = false;
+        private const bool FORCE_OVERRIDE = false;
 
         [ProtoMember(1)]
         [XmlElement(Order = 1)]
@@ -47,5 +48,9 @@ namespace Sisk.ColorfulIcons.Settings {
         [XmlElement(Order = 7)]
         [DefaultValue(FIX_TOOL_COLORS)]
         public bool FixToolColors { get; set; } = FIX_TOOL_COLORS;
+        [ProtoMember(8)]
+        [XmlElement(Order = 8)]
+        [DefaultValue(FORCE_OVERRIDE)]
+        public bool ForceOverride { get; set; } = FORCE_OVERRIDE;
     }
 }
