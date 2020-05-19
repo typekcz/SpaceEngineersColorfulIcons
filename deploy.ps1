@@ -1,7 +1,7 @@
 $mods_dir = "$env:APPDATA\SpaceEngineers\Mods";
 $mod_name = "ColorfulItems";
 $mod_dir = "$mods_dir\$mod_name";
-$exclude = @(".git", ".gitignore", ".sln", ".csproj", "\bin\", "\obj\", "\Properties\");
+$exclude = @(".git", ".gitignore", ".sln", ".csproj", "\bin\", "\obj\", "\Properties\", ".md", "LICENSE", "\Utils\Logging\", "\Utils\Net\", "\Utils\Profiler\", "\Utils\TerminalControls\");
 
 if(Test-Path -Path "$mod_dir"){
 	Remove-Item -Recurse "$mod_dir";
