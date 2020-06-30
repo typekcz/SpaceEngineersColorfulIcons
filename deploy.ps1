@@ -6,10 +6,7 @@ $exclude = @(".git", ".gitignore", ".sln", ".csproj", "\bin\", "\obj\", "\Proper
 if(Test-Path -Path "$mod_dir"){
 	Remove-Item -Recurse "$mod_dir";
 }
-
-if(!(Test-Path -Path "$mod_dir")){
-	New-Item -ItemType "directory" "$mod_dir" | Out-Null;
-}
+New-Item -ItemType "directory" "$mod_dir" | Out-Null;
 
 #Copy-Item -Recurse -Exclude $copy_exclude ".\$mod_name\*" "$mod_dir";
 #Get-ChildItem -Path ".\$mod_name\*" -Exclude $copy_exclude -File -Recurse | Copy-Item -Destination {Join-Path $mod_dir $_.FullName.Substring((Resolve-Path ".\$mod_name").Path.length)} -Recurse
@@ -28,6 +25,6 @@ Get-ChildItem -Path ".\$mod_name\*" -File -Recurse | ForEach-Object {
 		if($dir -ne "" -and !(Test-Path -Path "$mod_dir$dir")){
 			New-Item -ItemType "directory" "$mod_dir$dir" | Out-Null;
 		}
-		Copy-Item -Path ".\$mod_name\$file" -Destination "$mod_dir$file" -Force;
+		Copy-Item -Path ".\$mod_name$file" -Destination "$mod_dir$dir\";
 	}
 };

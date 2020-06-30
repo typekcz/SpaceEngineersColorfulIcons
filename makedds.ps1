@@ -24,7 +24,7 @@ foreach($f in $files) {
 		$file = $newfile;
 	}
 	# PNG to DDS
-	$out = & texconv -o "$target_dir\$dir" -ft dds -f BC7_UNORM -pmalpha -m 8 -y "$source_dir\$file" 2>&1
+	$out = & texconv -o "$target_dir\$dir" -ft dds -f BC3_UNORM -pmalpha -m 8 -y "$source_dir\$file" 2>&1
 	if(-Not $?){
 		Write-Output $out;
 		break;
