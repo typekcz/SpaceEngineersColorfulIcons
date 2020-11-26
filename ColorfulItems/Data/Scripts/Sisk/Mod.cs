@@ -200,7 +200,7 @@ namespace Sisk.ColorfulIcons {
         /// <param name="definition">The definition where the icon should be changed.</param>
         /// <param name="iconPath">The path to the icon relative to mod path.</param>
         private void ChangeIcon(MyDefinitionBase definition, string iconPath) {
-            if (definition?.Icons != null && definition.Icons.Any()) {
+            if (definition?.Icons != null && definition.Icons.Any() && definition.Icons[0] != null && definition.Id != null) {
                 if(!IsOptionEnabled(Option.ForceOverride) && Path.IsPathRooted(definition.Icons[0]))
                     return;
                 if (!definition.Icons[0].StartsWith(ModContext.ModPath) && !_replacedIcons.ContainsKey(definition)) {
@@ -323,19 +323,23 @@ namespace Sisk.ColorfulIcons {
         /// <param name="blueprintDefinitions">All blueprint definitions.</param>
         private void ModifyDefinitions(Dictionary<string, string> dictionary, ref DictionaryValuesReader<MyDefinitionId, MyDefinitionBase> definitions, ref DictionaryValuesReader<MyDefinitionId, MyBlueprintDefinitionBase> blueprintDefinitions) {
             foreach (var definitionPair in dictionary) {
-                var definitionId = MyDefinitionId.Parse(definitionPair.Key);
-                var iconPath = definitionPair.Value;
+                try {
+                    var definitionId = MyDefinitionId.Parse(definitionPair.Key);
+                    var iconPath = definitionPair.Value;
 
-                if (definitionPair.Key.StartsWith("MyObjectBuilder_BlueprintDefinition/")) {
-                    MyBlueprintDefinitionBase blueprint;
-                    if (blueprintDefinitions.TryGetValue(definitionId, out blueprint)) {
-                        ChangeIcon(blueprint, iconPath);
+                    if (definitionPair.Key.StartsWith("MyObjectBuilder_BlueprintDefinition/")) {
+                        MyBlueprintDefinitionBase blueprint;
+                        if (blueprintDefinitions.TryGetValue(definitionId, out blueprint)) {
+                            ChangeIcon(blueprint, iconPath);
+                        }
+                    } else {
+                        MyDefinitionBase definition;
+                        if (definitions.TryGetValue(definitionId, out definition)) {
+                            ChangeIcon(definition, iconPath);
+                        }
                     }
-                } else {
-                    MyDefinitionBase definition;
-                    if (definitions.TryGetValue(definitionId, out definition)) {
-                        ChangeIcon(definition, iconPath);
-                    }
+                } catch(ArgumentException e){
+                    MyLog.Default.WriteLineAndConsole($"Failed to parse definition ID: {definitionPair.Key}, Message{e.Message}");
                 }
             }
         }
