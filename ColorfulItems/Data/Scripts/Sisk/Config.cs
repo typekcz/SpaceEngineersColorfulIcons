@@ -633,6 +633,7 @@ namespace Sisk.ColorfulIcons {
             { "MyObjectBuilder_CubeBlock/StorageShelf1", "Textures/GUI/Icons/Cubes/Shelf_1.dds"},
             { "MyObjectBuilder_CubeBlock/StorageShelf2", "Textures/GUI/Icons/Cubes/Shelf_2.dds"},
             { "MyObjectBuilder_CubeBlock/StorageShelf3", "Textures/GUI/Icons/Cubes/Shelf_3.dds"},
+            { "MyObjectBuilder_Cockpit/RoverCockpit", "Textures/GUI/Icons/Cubes/RoverCockpit.dds"},
             // Blueprint
             { "MyObjectBuilder_BlueprintDefinition/BatteryBlock/LargeBlockBatteryBlock", "Textures/GUI/Icons/Cubes/Battery.dds" },
             { "MyObjectBuilder_BlueprintDefinition/CubeBlock/LargeBlockArmorBlock", "Textures/GUI/Icons/Cubes/light_armor_cube.dds" },
@@ -1192,6 +1193,7 @@ namespace Sisk.ColorfulIcons {
             { "MyObjectBuilder_BlueprintDefinition/CubeBlock/StorageShelf1", "Textures/GUI/Icons/Cubes/Shelf_1.dds"},
             { "MyObjectBuilder_BlueprintDefinition/CubeBlock/StorageShelf2", "Textures/GUI/Icons/Cubes/Shelf_2.dds"},
             { "MyObjectBuilder_BlueprintDefinition/CubeBlock/StorageShelf3", "Textures/GUI/Icons/Cubes/Shelf_3.dds"},
+            { "MyObjectBuilder_BlueprintDefinition/Cockpit/RoverCockpit", "Textures/GUI/Icons/Cubes/RoverCockpit.dds"},
         };
 
         private static readonly Dictionary<string, string> Components = new Dictionary<string, string> {
