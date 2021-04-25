@@ -634,6 +634,23 @@ namespace Sisk.ColorfulIcons {
             { "MyObjectBuilder_CubeBlock/StorageShelf2", "Textures/GUI/Icons/Cubes/Shelf_2.dds"},
             { "MyObjectBuilder_CubeBlock/StorageShelf3", "Textures/GUI/Icons/Cubes/Shelf_3.dds"},
             { "MyObjectBuilder_Cockpit/RoverCockpit", "Textures/GUI/Icons/Cubes/RoverCockpit.dds"},
+            { "MyObjectBuilder_CargoContainer/LargeBlockWeaponRack", "Textures/GUI/Icons/Cubes/WeaponRack.dds" },
+            { "MyObjectBuilder_CargoContainer/SmallBlockWeaponRack", "Textures/GUI/Icons/Cubes/WeaponRack_small.dds" },
+            { "MyObjectBuilder_CubeBlock/FireCover", "Textures/GUI/Icons/Cubes/FireCover.dds" },
+            { "MyObjectBuilder_CubeBlock/FireCoverCorner", "Textures/GUI/Icons/Cubes/FireCoverCorner.dds" },
+            { "MyObjectBuilder_CubeBlock/HalfWindow", "Textures/GUI/Icons/Cubes/HalfWindow.dds" },
+            { "MyObjectBuilder_CubeBlock/HalfWindowInv", "Textures/GUI/Icons/Cubes/HalfWindowInv.dds" },
+            { "MyObjectBuilder_CubeBlock/HalfWindowCorner", "Textures/GUI/Icons/Cubes/HalfWindowCorner.dds" },
+            { "MyObjectBuilder_CubeBlock/HalfWindowCornerInv", "Textures/GUI/Icons/Cubes/HalfWindowCornerInv.dds" },
+            { "MyObjectBuilder_CubeBlock/Embrasure", "Textures/GUI/Icons/Cubes/Embrasure.dds" },
+            { "MyObjectBuilder_CubeBlock/PassageSciFi", "Textures/GUI/Icons/Cubes/PassageSciFi.dds" },
+            { "MyObjectBuilder_CubeBlock/PassageSciFiWall", "Textures/GUI/Icons/Cubes/PassageSciFiWall.dds" },
+            { "MyObjectBuilder_CubeBlock/PassageSciFiIntersection", "Textures/GUI/Icons/Cubes/PassageSciFiIntersection.dds" },
+            { "MyObjectBuilder_CubeBlock/PassageSciFiGate", "Textures/GUI/Icons/Cubes/PassageSciFiGate.dds" },
+            { "MyObjectBuilder_InteriorLight/PassageSciFiLight", "Textures/GUI/Icons/Cubes/PassageSciFiLight.dds" },
+            { "MyObjectBuilder_CubeBlock/Passage2", "Textures/GUI/Icons/Cubes/PassageStraight.dds" },
+            { "MyObjectBuilder_CubeBlock/Passage2Wall", "Textures/GUI/Icons/Cubes/PassageWall.dds" },
+            { "MyObjectBuilder_TargetDummyBlock/TargetDummy", "Textures/GUI/Icons/Cubes/TargetDummy.dds" },
             // Blueprint
             { "MyObjectBuilder_BlueprintDefinition/BatteryBlock/LargeBlockBatteryBlock", "Textures/GUI/Icons/Cubes/Battery.dds" },
             { "MyObjectBuilder_BlueprintDefinition/CubeBlock/LargeBlockArmorBlock", "Textures/GUI/Icons/Cubes/light_armor_cube.dds" },
@@ -1194,6 +1211,23 @@ namespace Sisk.ColorfulIcons {
             { "MyObjectBuilder_BlueprintDefinition/CubeBlock/StorageShelf2", "Textures/GUI/Icons/Cubes/Shelf_2.dds"},
             { "MyObjectBuilder_BlueprintDefinition/CubeBlock/StorageShelf3", "Textures/GUI/Icons/Cubes/Shelf_3.dds"},
             { "MyObjectBuilder_BlueprintDefinition/Cockpit/RoverCockpit", "Textures/GUI/Icons/Cubes/RoverCockpit.dds"},
+            { "MyObjectBuilder_BlueprintDefinition/CargoContainer/LargeBlockWeaponRack", "Textures/GUI/Icons/Cubes/WeaponRack.dds" },
+            { "MyObjectBuilder_BlueprintDefinition/CargoContainer/SmallBlockWeaponRack", "Textures/GUI/Icons/Cubes/WeaponRack_small.dds" },
+            { "MyObjectBuilder_BlueprintDefinition/CubeBlock/FireCover", "Textures/GUI/Icons/Cubes/FireCover.dds" },
+            { "MyObjectBuilder_BlueprintDefinition/CubeBlock/FireCoverCorner", "Textures/GUI/Icons/Cubes/FireCoverCorner.dds" },
+            { "MyObjectBuilder_BlueprintDefinition/CubeBlock/HalfWindow", "Textures/GUI/Icons/Cubes/HalfWindow.dds" },
+            { "MyObjectBuilder_BlueprintDefinition/CubeBlock/HalfWindowInv", "Textures/GUI/Icons/Cubes/HalfWindowInv.dds" },
+            { "MyObjectBuilder_BlueprintDefinition/CubeBlock/HalfWindowCorner", "Textures/GUI/Icons/Cubes/HalfWindowCorner.dds" },
+            { "MyObjectBuilder_BlueprintDefinition/CubeBlock/HalfWindowCornerInv", "Textures/GUI/Icons/Cubes/HalfWindowCornerInv.dds" },
+            { "MyObjectBuilder_BlueprintDefinition/CubeBlock/Embrasure", "Textures/GUI/Icons/Cubes/Embrasure.dds" },
+            { "MyObjectBuilder_BlueprintDefinition/CubeBlock/PassageSciFi", "Textures/GUI/Icons/Cubes/PassageSciFi.dds" },
+            { "MyObjectBuilder_BlueprintDefinition/CubeBlock/PassageSciFiWall", "Textures/GUI/Icons/Cubes/PassageSciFiWall.dds" },
+            { "MyObjectBuilder_BlueprintDefinition/CubeBlock/PassageSciFiIntersection", "Textures/GUI/Icons/Cubes/PassageSciFiIntersection.dds" },
+            { "MyObjectBuilder_BlueprintDefinition/CubeBlock/PassageSciFiGate", "Textures/GUI/Icons/Cubes/PassageSciFiGate.dds" },
+            { "MyObjectBuilder_BlueprintDefinition/InteriorLight/PassageSciFiLight", "Textures/GUI/Icons/Cubes/PassageSciFiLight.dds" },
+            { "MyObjectBuilder_BlueprintDefinition/CubeBlock/Passage2", "Textures/GUI/Icons/Cubes/PassageStraight.dds" },
+            { "MyObjectBuilder_BlueprintDefinition/CubeBlock/Passage2Wall", "Textures/GUI/Icons/Cubes/PassageWall.dds" },
+            { "MyObjectBuilder_BlueprintDefinition/TargetDummyBlock/TargetDummy", "Textures/GUI/Icons/Cubes/TargetDummy.dds" },
         };
 
         private static readonly Dictionary<string, string> Components = new Dictionary<string, string> {
@@ -1235,6 +1269,13 @@ namespace Sisk.ColorfulIcons {
             { "MyObjectBuilder_PhysicalObject/SpaceCredit", "Textures/GUI/Icons/Items/SpaceCredit.dds" },
             { "MyObjectBuilder_ConsumableItem/ClangCola", "Textures/GUI/Icons/Items/ClangCola.dds" },
             { "MyObjectBuilder_ConsumableItem/CosmicCoffee", "Textures/GUI/Icons/Items/CosmicCoffee.dds" },
+            { "MyObjectBuilder_AmmoMagazine/SemiAutoPistolMagazine", "Textures/GUI/Icons/ammo/Pistol_Warfare_Ammo.dds" },
+            { "MyObjectBuilder_AmmoMagazine/FullAutoPistolMagazine", "Textures/GUI/Icons/ammo/Pistol_FullAuto_Warfare_Ammo.dds" },
+            { "MyObjectBuilder_AmmoMagazine/ElitePistolMagazine", "Textures/GUI/Icons/ammo/Pistol_Elite_Warfare_Ammo.dds" },
+            { "MyObjectBuilder_AmmoMagazine/AutomaticRifleGun_Mag_20rd", "Textures/GUI/Icons/ammo/Rifle_Ammo_SemiAuto.dds" },
+            { "MyObjectBuilder_AmmoMagazine/RapidFireAutomaticRifleGun_Mag_50rd", "Textures/GUI/Icons/ammo/Rifle_Ammo_RapidFire.dds" },
+            { "MyObjectBuilder_AmmoMagazine/PreciseAutomaticRifleGun_Mag_5rd", "Textures/GUI/Icons/ammo/Rifle_Ammo_Precise.dds" },
+            { "MyObjectBuilder_AmmoMagazine/UltimateAutomaticRifleGun_Mag_30rd", "Textures/GUI/Icons/ammo/Rifle_Ammo_Elite.dds" },
             // Blueprint
             { "MyObjectBuilder_BlueprintDefinition/ScrapIngotToIronIngot", "Textures/GUI/Icons/component/ScrapMetalComponent.dds" },
             { "MyObjectBuilder_BlueprintDefinition/ScrapToIronIngot", "Textures/GUI/Icons/component/ScrapMetalComponent.dds" },
@@ -1266,7 +1307,14 @@ namespace Sisk.ColorfulIcons {
             { "MyObjectBuilder_BlueprintDefinition/Missile200mm", "Textures/GUI/Icons/ammo/Small_Rocket.dds" },
             { "MyObjectBuilder_BlueprintDefinition/Superconductor", "Textures/GUI/Icons/component/superconductor_conducts_component.dds" },
             { "MyObjectBuilder_BlueprintDefinition/ZoneChip", "Textures/GUI/Icons/Items/ZoneChip_Item.dds" },
-            { "MyObjectBuilder_BlueprintDefinition/Datapad", "Textures/GUI/Icons/Items/Datapad_Item.dds" }
+            { "MyObjectBuilder_BlueprintDefinition/Datapad", "Textures/GUI/Icons/Items/Datapad_Item.dds" },
+            { "MyObjectBuilder_BlueprintDefinition/SemiAutoPistolMagazine", "Textures/GUI/Icons/ammo/Pistol_Warfare_Ammo.dds" },
+            { "MyObjectBuilder_BlueprintDefinition/FullAutoPistolMagazine", "Textures/GUI/Icons/ammo/Pistol_FullAuto_Warfare_Ammo.dds" },
+            { "MyObjectBuilder_BlueprintDefinition/ElitePistolMagazine", "Textures/GUI/Icons/ammo/Pistol_Elite_Warfare_Ammo.dds" },
+            { "MyObjectBuilder_BlueprintDefinition/AutomaticRifleGun_Mag_20rd", "Textures/GUI/Icons/ammo/Rifle_Ammo_SemiAuto.dds" },
+            { "MyObjectBuilder_BlueprintDefinition/RapidFireAutomaticRifleGun_Mag_50rd", "Textures/GUI/Icons/ammo/Rifle_Ammo_RapidFire.dds" },
+            { "MyObjectBuilder_BlueprintDefinition/PreciseAutomaticRifleGun_Mag_5rd", "Textures/GUI/Icons/ammo/Rifle_Ammo_Precise.dds" },
+            { "MyObjectBuilder_BlueprintDefinition/UltimateAutomaticRifleGun_Mag_30rd", "Textures/GUI/Icons/ammo/Rifle_Ammo_Elite.dds" },
         };
 
         private static readonly Dictionary<string, string> Ingots = new Dictionary<string, string> {
@@ -1332,6 +1380,11 @@ namespace Sisk.ColorfulIcons {
             { "MyObjectBuilder_PhysicalGunObject/HandDrill2Item", "Textures/GUI/Icons/WeaponDrill_1.dds" },
             { "MyObjectBuilder_PhysicalGunObject/HandDrill3Item", "Textures/GUI/Icons/WeaponDrill_2.dds" },
             { "MyObjectBuilder_PhysicalGunObject/HandDrill4Item", "Textures/GUI/Icons/WeaponDrill_3.dds" },
+            { "MyObjectBuilder_PhysicalGunObject/SemiAutoPistolItem", "Textures/GUI/Icons/WeaponPistol_Warfare.dds" },
+            { "MyObjectBuilder_PhysicalGunObject/FullAutoPistolItem", "Textures/GUI/Icons/WeaponPistol_FullAuto_Warfare.dds" },
+            { "MyObjectBuilder_PhysicalGunObject/ElitePistolItem", "Textures/GUI/Icons/WeaponPistol_Elite_Warfare.dds" },
+            { "MyObjectBuilder_PhysicalGunObject/BasicHandHeldLauncherItem", "Textures/GUI/Icons/WeaponRocketLauncher_Regular.dds" },
+            { "MyObjectBuilder_PhysicalGunObject/AdvancedHandHeldLauncherItem", "Textures/GUI/Icons/WeaponRocketLauncher_Precise.dds" },
             // Blueprint
             { "MyObjectBuilder_BlueprintDefinition/AutomaticRifle", "Textures/GUI/Icons/WeaponAutomaticRifle.dds" },
             { "MyObjectBuilder_BlueprintDefinition/RapidFireAutomaticRifle", "Textures/GUI/Icons/WeaponAutomaticRifle_RapidFire.dds" },
@@ -1348,7 +1401,12 @@ namespace Sisk.ColorfulIcons {
             { "MyObjectBuilder_BlueprintDefinition/HandDrill", "Textures/GUI/Icons/WeaponDrill.dds" },
             { "MyObjectBuilder_BlueprintDefinition/HandDrill2", "Textures/GUI/Icons/WeaponDrill_1.dds" },
             { "MyObjectBuilder_BlueprintDefinition/HandDrill3", "Textures/GUI/Icons/WeaponDrill_2.dds" },
-            { "MyObjectBuilder_BlueprintDefinition/HandDrill4", "Textures/GUI/Icons/WeaponDrill_3.dds" }
+            { "MyObjectBuilder_BlueprintDefinition/HandDrill4", "Textures/GUI/Icons/WeaponDrill_3.dds" },
+            { "MyObjectBuilder_BlueprintDefinition/SemiAutoPistol", "Textures/GUI/Icons/WeaponPistol_Warfare.dds" },
+            { "MyObjectBuilder_BlueprintDefinition/FullAutoPistol", "Textures/GUI/Icons/WeaponPistol_FullAuto_Warfare.dds" },
+            { "MyObjectBuilder_BlueprintDefinition/EliteAutoPistol", "Textures/GUI/Icons/WeaponPistol_Elite_Warfare.dds" },
+            { "MyObjectBuilder_BlueprintDefinition/BasicHandHeldLauncher", "Textures/GUI/Icons/WeaponRocketLauncher_Regular.dds" },
+            { "MyObjectBuilder_BlueprintDefinition/AdvancedHandHeldLauncher", "Textures/GUI/Icons/WeaponRocketLauncher_Precise.dds" }
         };
 
         public static readonly Dictionary<Option, Dictionary<string, string>> Icons = new Dictionary<Option, Dictionary<string, string>> {
