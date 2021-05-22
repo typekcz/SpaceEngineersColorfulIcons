@@ -28,3 +28,25 @@ Get-ChildItem -Path ".\$mod_name\*" -File -Recurse | ForEach-Object {
 		Copy-Item -Path ".\$mod_name$file" -Destination "$mod_dir$dir\";
 	}
 };
+
+# No scripts version
+$game_dir = "D:\Hry\steamapps\common\SpaceEngineers";
+$mod_dir_no_scripts = "$mods_dir\$($mod_name)NoScripts";
+if(Test-Path -Path "$mod_dir_no_scripts"){
+	Remove-Item -Recurse "$mod_dir_no_scripts";
+}
+New-Item -ItemType "directory" "$mod_dir_no_scripts" | Out-Null;
+Copy-Item "$mod_dir\thumb.png" "$mod_dir_no_scripts\";
+Copy-Item "$mod_dir\metadata.mod" "$mod_dir_no_scripts\";
+Copy-Item "$mod_dir\modinfo.sbmi" "$mod_dir_no_scripts\";
+Copy-Item -Recurse "$mod_dir\Textures" "$mod_dir_no_scripts\Textures";
+
+New-Item -ItemType "directory" "$mod_dir_no_scripts\Data";
+
+Copy-Item "$game_dir\Content\Data\AmmoMagazines.sbc" "$mod_dir_no_scripts\Data\";
+Copy-Item "$game_dir\Content\Data\Ammos.sbc" "$mod_dir_no_scripts\Data\";
+Copy-Item "$game_dir\Content\Data\Components.sbc" "$mod_dir_no_scripts\Data\";
+Copy-Item "$game_dir\Content\Data\PhysicalItems.sbc" "$mod_dir_no_scripts\Data\";
+Copy-Item "$game_dir\Content\Data\PhysicalItems_Economy.sbc" "$mod_dir_no_scripts\Data\";
+Copy-Item "$game_dir\Content\Data\Weapons.sbc" "$mod_dir_no_scripts\Data\";
+Copy-Item -Recurse "$game_dir\Content\Data\CubeBlocks" "$mod_dir_no_scripts\Data\";

@@ -28,6 +28,14 @@ namespace Sisk.ColorfulIcons {
         private DictionaryValuesReader<MyDefinitionId, MyDefinitionBase>? _definitions;
         private GuiHandler _guiHandler;
 
+        public static readonly Dictionary<Option, Dictionary<string, string>> Icons = new Dictionary<Option, Dictionary<string, string>> {
+            { Option.Blocks, Config.Blocks },
+            { Option.Components, Config.Components },
+            { Option.Ingots, Config.Ingots },
+            { Option.Ores, Config.Ores },
+            { Option.Tools, Config.Tools }
+        };
+
         /// <summary>
         ///     Initializes a new instance of the <see cref="Mod" /> session component.
         /// </summary>
@@ -281,7 +289,7 @@ namespace Sisk.ColorfulIcons {
             var definitions = Definitions;
             var blueprintDefinitions = BlueprintDefinitions;
 
-            foreach (var pair in Config.Icons.Where(x => IsOptionEnabled(x.Key))) {
+            foreach (var pair in Icons.Where(x => IsOptionEnabled(x.Key))) {
                 var option = pair.Key;
                 var dictionary = pair.Value;
 
