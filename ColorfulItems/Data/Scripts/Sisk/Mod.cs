@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text;
 using Sandbox.Definitions;
 using Sandbox.ModAPI;
 using Sisk.ColorfulIcons.Data;
@@ -23,6 +24,7 @@ namespace Sisk.ColorfulIcons {
         private readonly Dictionary<MyDefinitionBase, string> _replacedIcons = new Dictionary<MyDefinitionBase, string>();
         private readonly Dictionary<MyPhysicalItemDefinition, string> _replacedModels = new Dictionary<MyPhysicalItemDefinition, string>();
         private DictionaryValuesReader<MyDefinitionId, MyBlueprintDefinitionBase>? _blueprintDefinitions;
+        private DictionaryReader<string, MyBlockVariantGroup>? _blockVariantGroupDefinitions;
         private ChatHandler _chatHandler;
 
         private DictionaryValuesReader<MyDefinitionId, MyDefinitionBase>? _definitions;
@@ -50,6 +52,7 @@ namespace Sisk.ColorfulIcons {
 
         private DictionaryValuesReader<MyDefinitionId, MyBlueprintDefinitionBase> BlueprintDefinitions => _blueprintDefinitions ?? (_blueprintDefinitions = MyDefinitionManager.Static.GetBlueprintDefinitions()).Value;
         private DictionaryValuesReader<MyDefinitionId, MyDefinitionBase> Definitions => _definitions ?? (_definitions = MyDefinitionManager.Static.GetAllDefinitions()).Value;
+        private DictionaryReader<string, MyBlockVariantGroup> BlockVariantGroupDefinitions => _blockVariantGroupDefinitions ?? (_blockVariantGroupDefinitions = MyDefinitionManager.Static.GetBlockVariantGroupDefinitions()).Value;
 
         /// <summary>
         ///     Language used to localize this mod.
@@ -288,12 +291,13 @@ namespace Sisk.ColorfulIcons {
             MyLog.Default.WriteLine("ColorfulIcons.ModifyDefinitions - START");
             var definitions = Definitions;
             var blueprintDefinitions = BlueprintDefinitions;
+            var groupsDefinitions = BlockVariantGroupDefinitions;
 
             foreach (var pair in Icons.Where(x => IsOptionEnabled(x.Key))) {
                 var option = pair.Key;
                 var dictionary = pair.Value;
 
-                ModifyDefinitions(dictionary, ref definitions, ref blueprintDefinitions);
+                ModifyDefinitions(dictionary, ref definitions, ref blueprintDefinitions, ref groupsDefinitions);
 
                 if (option == Option.Tools && IsOptionEnabled(Option.FixToolColors)) {
                     foreach (var definitionPair in Config.FixTools) {
@@ -316,7 +320,7 @@ namespace Sisk.ColorfulIcons {
                 }
 
                 if (option == Option.Components && IsOptionEnabled(Option.OldComponents)) {
-                    ModifyDefinitions(Config.OldComponents, ref definitions, ref blueprintDefinitions);
+                    ModifyDefinitions(Config.OldComponents, ref definitions, ref blueprintDefinitions, ref groupsDefinitions);
                 }
             }
 
@@ -329,7 +333,8 @@ namespace Sisk.ColorfulIcons {
         /// <param name="dictionary">A dictionary with definition ids and icon paths.</param>
         /// <param name="definitions">All block, component and tool definitions.</param>
         /// <param name="blueprintDefinitions">All blueprint definitions.</param>
-        private void ModifyDefinitions(Dictionary<string, string> dictionary, ref DictionaryValuesReader<MyDefinitionId, MyDefinitionBase> definitions, ref DictionaryValuesReader<MyDefinitionId, MyBlueprintDefinitionBase> blueprintDefinitions) {
+        /// <param name="groupDefinitions">All block groups definitions.</param>
+        private void ModifyDefinitions(Dictionary<string, string> dictionary, ref DictionaryValuesReader<MyDefinitionId, MyDefinitionBase> definitions, ref DictionaryValuesReader<MyDefinitionId, MyBlueprintDefinitionBase> blueprintDefinitions, ref DictionaryReader<string, MyBlockVariantGroup> groupDefinitions) {
             foreach (var definitionPair in dictionary) {
                 try {
                     var definitionId = MyDefinitionId.Parse(definitionPair.Key);
@@ -340,6 +345,11 @@ namespace Sisk.ColorfulIcons {
                         if (blueprintDefinitions.TryGetValue(definitionId, out blueprint)) {
                             ChangeIcon(blueprint, iconPath);
                         }
+                    } else if (definitionPair.Key.StartsWith("MyObjectBuilder_BlockVariantGroup/")) {
+                        MyBlockVariantGroup group;
+                        if(groupDefinitions.TryGetValue(definitionId.SubtypeName, out group)) {
+                            ChangeIcon(group, iconPath);
+						}
                     } else {
                         MyDefinitionBase definition;
                         if (definitions.TryGetValue(definitionId, out definition)) {
