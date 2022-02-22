@@ -910,6 +910,8 @@ namespace Sisk.ColorfulIcons {
             { "MyObjectBuilder_BlueprintDefinition/Reactor/LargeBlockLargeGenerator", "Textures/GUI/Icons/Cubes/nuclear_reactor_large.dds" },
             { "MyObjectBuilder_BlueprintDefinition/HydrogenEngine/LargeHydrogenEngine", "Textures/GUI/Icons/Cubes/HydrogenEngineLarge.dds" },
             { "MyObjectBuilder_BlueprintDefinition/ExtendedPistonBase/LargePistonBase", "Textures/GUI/Icons/Cubes/Piston.dds" },
+            { "MyObjectBuilder_BlueprintDefinition/PistonTop/LargePistonTop", "Textures/GUI/Icons/Cubes/PistonTop.dds" },
+            { "MyObjectBuilder_BlueprintDefinition/PistonTop/SmallPistonTop", "Textures/GUI/Icons/Cubes/PistonTop.dds" },
             { "MyObjectBuilder_BlueprintDefinition/MotorStator/LargeStator", "Textures/GUI/Icons/Cubes/motor.dds" },
             { "MyObjectBuilder_BlueprintDefinition/MotorSuspension/Suspension3x3", "Textures/GUI/Icons/Cubes/WheelSuspension3x3Right.dds" },
             { "MyObjectBuilder_BlueprintDefinition/MotorSuspension/Suspension5x5", "Textures/GUI/Icons/Cubes/WheelSuspension5x5Right.dds" },
