@@ -806,7 +806,7 @@ namespace Sisk.ColorfulIcons {
             { "MyObjectBuilder_CubeBlock/Railing2x1Right", "Textures/GUI/Icons/Cubes/2x1RailingRight.dds" },
             { "MyObjectBuilder_CubeBlock/BridgeWindow1x1FaceInverted", "Textures/GUI/Icons/Cubes/BridgeWindow1x1FaceInverted.dds" },
             { "MyObjectBuilder_Conveyor/SmallBlockConveyorConverter", "Textures/GUI/Icons/Cubes/ConveyorConverter.dds" },
-            { "MyObjectBuilder_ConveyorConnector/ConveyorTubeDuct", "Textures/GUI/Icons/Cubes/ConveyorTubeDuct.dds" },
+            { "MyObjectBuilder_ConveyorConnector/ConveyorTubeDuct", "Textures/GUI/Icons/Cubes/ConveyorDuct.dds" },
             { "MyObjectBuilder_ConveyorConnector/ConveyorTubeDuctCurved", "Textures/GUI/Icons/Cubes/ConveyorDuctCurved.dds" },
             { "MyObjectBuilder_ConveyorConnector/ConveyorTubeDuctSmallCurved", "Textures/GUI/Icons/Cubes/ConveyorDuctCurvedSmall.dds" },
             { "MyObjectBuilder_ConveyorConnector/ConveyorTubeDuctSmall", "Textures/GUI/Icons/Cubes/ConveyorDuctSmall.dds" },
@@ -1618,7 +1618,7 @@ namespace Sisk.ColorfulIcons {
             { "MyObjectBuilder_BlueprintDefinition/CubeBlock/Railing2x1Right", "Textures/GUI/Icons/Cubes/2x1RailingRight.dds" },
             { "MyObjectBuilder_BlueprintDefinition/CubeBlock/BridgeWindow1x1FaceInverted", "Textures/GUI/Icons/Cubes/BridgeWindow1x1FaceInverted.dds" },
             { "MyObjectBuilder_BlueprintDefinition/Conveyor/SmallBlockConveyorConverter", "Textures/GUI/Icons/Cubes/ConveyorConverter.dds" },
-            { "MyObjectBuilder_BlueprintDefinition/ConveyorConnector/ConveyorTubeDuct", "Textures/GUI/Icons/Cubes/ConveyorTubeDuct.dds" },
+            { "MyObjectBuilder_BlueprintDefinition/ConveyorConnector/ConveyorTubeDuct", "Textures/GUI/Icons/Cubes/ConveyorDuct.dds" },
             { "MyObjectBuilder_BlueprintDefinition/ConveyorConnector/ConveyorTubeDuctCurved", "Textures/GUI/Icons/Cubes/ConveyorDuctCurved.dds" },
             { "MyObjectBuilder_BlueprintDefinition/ConveyorConnector/ConveyorTubeDuctSmallCurved", "Textures/GUI/Icons/Cubes/ConveyorDuctCurvedSmall.dds" },
             { "MyObjectBuilder_BlueprintDefinition/ConveyorConnector/ConveyorTubeDuctSmall", "Textures/GUI/Icons/Cubes/ConveyorDuctSmall.dds" },
@@ -1855,7 +1855,7 @@ namespace Sisk.ColorfulIcons {
             { "MyObjectBuilder_AmmoMagazine/MediumCalibreAmmo", "Textures/GUI/Icons/ammo/MediumCalibreShell.dds" },
             { "MyObjectBuilder_AmmoMagazine/LargeRailgunAmmo", "Textures/GUI/Icons/ammo/RailgunAmmoLarge.dds" },
             { "MyObjectBuilder_AmmoMagazine/SmallRailgunAmmo", "Textures/GUI/Icons/ammo/RailgunAmmo.dds" },
-            { "MyObjectBuilder_Component/EngineerPlushie", "Textures/GUI/Icons/ammo/Plushie.dds" },
+            { "MyObjectBuilder_Component/EngineerPlushie", "Textures/GUI/Icons/Cubes/Plushie.dds" },
             // Blueprint
             { "MyObjectBuilder_BlueprintDefinition/ScrapIngotToIronIngot", "Textures/GUI/Icons/component/ScrapMetalComponent.dds" },
             { "MyObjectBuilder_BlueprintDefinition/ScrapToIronIngot", "Textures/GUI/Icons/component/ScrapMetalComponent.dds" },
@@ -1900,7 +1900,7 @@ namespace Sisk.ColorfulIcons {
             { "MyObjectBuilder_BlueprintDefinition/MediumCalibreAmmo", "Textures/GUI/Icons/ammo/MediumCalibreShell.dds" },
             { "MyObjectBuilder_BlueprintDefinition/LargeRailgunAmmo", "Textures/GUI/Icons/ammo/RailgunAmmoLarge.dds" },
             { "MyObjectBuilder_BlueprintDefinition/SmallRailgunAmmo", "Textures/GUI/Icons/ammo/RailgunAmmo.dds" },
-            { "MyObjectBuilder_BlueprintDefinition/EngineerPlushie", "Textures/GUI/Icons/ammo/Plushie.dds" },
+            { "MyObjectBuilder_BlueprintDefinition/EngineerPlushie", "Textures/GUI/Icons/Cubes/Plushie.dds" },
         };
 
         public static readonly Dictionary<string, string> Ingots = new Dictionary<string, string> {
