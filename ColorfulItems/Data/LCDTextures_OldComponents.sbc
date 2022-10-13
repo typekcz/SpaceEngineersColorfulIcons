@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <LCDTextures>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Component/Construction" />
+            <SpritePath>Textures/GUI/Icons/old/component/construction_components_component.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/old/component/construction_components_component.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Component/MetalGrid" />
+            <SpritePath>Textures/GUI/Icons/old/component/metal_grid_component.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/old/component/metal_grid_component.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Component/InteriorPlate" />
+            <SpritePath>Textures/GUI/Icons/old/component/interior_plate_component.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/old/component/interior_plate_component.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Component/SteelPlate" />
+            <SpritePath>Textures/GUI/Icons/old/component/steel_plate_component.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/old/component/steel_plate_component.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Component/Girder" />
+            <SpritePath>Textures/GUI/Icons/old/component/girder_component.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/old/component/girder_component.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Component/SmallTube" />
+            <SpritePath>Textures/GUI/Icons/old/component/small_tube_component.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/old/component/small_tube_component.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Component/LargeTube" />
+            <SpritePath>Textures/GUI/Icons/old/component/large_tube_component.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/old/component/large_tube_component.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Component/Motor" />
+            <SpritePath>Textures/GUI/Icons/old/component/motor_component.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/old/component/motor_component.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Component/Display" />
+            <SpritePath>Textures/GUI/Icons/old/component/display_component.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/old/component/display_component.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Component/BulletproofGlass" />
+            <SpritePath>Textures/GUI/Icons/old/component/bulletproof_glass_component.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/old/component/bulletproof_glass_component.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Component/Superconductor" />
+            <SpritePath>Textures/GUI/Icons/old/component/superconductor_conducts_component.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/old/component/superconductor_conducts_component.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Component/Computer" />
+            <SpritePath>Textures/GUI/Icons/old/component/computer_component.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/old/component/computer_component.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Component/Reactor" />
+            <SpritePath>Textures/GUI/Icons/old/component/reactor_components_component.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/old/component/reactor_components_component.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Component/Thrust" />
+            <SpritePath>Textures/GUI/Icons/old/component/thrust_components_component.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/old/component/thrust_components_component.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Component/GravityGenerator" />
+            <SpritePath>Textures/GUI/Icons/old/component/gravity_generator_components_component.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/old/component/gravity_generator_components_component.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Component/Medical" />
+            <SpritePath>Textures/GUI/Icons/old/component/medical_components_component.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/old/component/medical_components_component.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Component/RadioCommunication" />
+            <SpritePath>Textures/GUI/Icons/old/component/radio_communication_components_component.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/old/component/radio_communication_components_component.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Component/Detector" />
+            <SpritePath>Textures/GUI/Icons/old/component/detector_components_component.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/old/component/detector_components_component.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Component/Explosives" />
+            <SpritePath>Textures/GUI/Icons/old/component/ExplosivesComponent.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/old/component/ExplosivesComponent.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Component/SolarCell" />
+            <SpritePath>Textures/GUI/Icons/old/component/SolarCellComponent.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/old/component/SolarCellComponent.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Component/PowerCell" />
+            <SpritePath>Textures/GUI/Icons/old/component/BatteryComponent.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/old/component/BatteryComponent.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_OxygenContainerObject/OxygenBottle" />
+            <SpritePath>Textures/GUI/Icons/old/component/OxygenBottleComponent.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/old/component/OxygenBottleComponent.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_GasContainerObject/HydrogenBottle" />
+            <SpritePath>Textures/GUI/Icons/old/component/HydrogenBottle_Component.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/old/component/HydrogenBottle_Component.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Ore/Scrap" />
+            <SpritePath>Textures/GUI/Icons/old/component/ScrapMetalComponent.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/old/component/ScrapMetalComponent.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Ingot/Scrap" />
+            <SpritePath>Textures/GUI/Icons/old/component/ScrapMetalComponent.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/old/component/ScrapMetalComponent.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+    </LCDTextures>
+</Definitions>

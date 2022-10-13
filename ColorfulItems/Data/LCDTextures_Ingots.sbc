@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <LCDTextures>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Ingot/Stone" />
+            <SpritePath>Textures/GUI/Icons/ingot/gravel_ingot.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/ingot/gravel_ingot.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Ingot/Iron" />
+            <SpritePath>Textures/GUI/Icons/ingot/iron_ingot.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/ingot/iron_ingot.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Ingot/Nickel" />
+            <SpritePath>Textures/GUI/Icons/ingot/nickel_ingot.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/ingot/nickel_ingot.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Ingot/Cobalt" />
+            <SpritePath>Textures/GUI/Icons/ingot/cobalt_ingot.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/ingot/cobalt_ingot.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Ingot/Magnesium" />
+            <SpritePath>Textures/GUI/Icons/ingot/magnesium_ingot.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/ingot/magnesium_ingot.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Ingot/Silicon" />
+            <SpritePath>Textures/GUI/Icons/ingot/silicon_ingot.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/ingot/silicon_ingot.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Ingot/Silver" />
+            <SpritePath>Textures/GUI/Icons/ingot/silver_ingot.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/ingot/silver_ingot.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Ingot/Gold" />
+            <SpritePath>Textures/GUI/Icons/ingot/gold_ingot.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/ingot/gold_ingot.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Ingot/Platinum" />
+            <SpritePath>Textures/GUI/Icons/ingot/platinum_ingot.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/ingot/platinum_ingot.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Ingot/Uranium" />
+            <SpritePath>Textures/GUI/Icons/ingot/uranium_ingot.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/ingot/uranium_ingot.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+    </LCDTextures>
+</Definitions>

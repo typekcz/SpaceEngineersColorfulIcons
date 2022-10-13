@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <LCDTextures>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_PhysicalGunObject/AutomaticRifleItem" />
+            <SpritePath>Textures/GUI/Icons/WeaponAutomaticRifle.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/WeaponAutomaticRifle.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_PhysicalGunObject/PreciseAutomaticRifleItem" />
+            <SpritePath>Textures/GUI/Icons/WeaponAutomaticRifle_Precise.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/WeaponAutomaticRifle_Precise.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_PhysicalGunObject/RapidFireAutomaticRifleItem" />
+            <SpritePath>Textures/GUI/Icons/WeaponAutomaticRifle_RapidFire.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/WeaponAutomaticRifle_RapidFire.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_PhysicalGunObject/UltimateAutomaticRifleItem" />
+            <SpritePath>Textures/GUI/Icons/WeaponAutomaticRifle_Elite.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/WeaponAutomaticRifle_Elite.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_PhysicalGunObject/WelderItem" />
+            <SpritePath>Textures/GUI/Icons/WeaponWelder.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/WeaponWelder.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_PhysicalGunObject/Welder2Item" />
+            <SpritePath>Textures/GUI/Icons/WeaponWelder_1.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/WeaponWelder_1.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_PhysicalGunObject/Welder3Item" />
+            <SpritePath>Textures/GUI/Icons/WeaponWelder_2.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/WeaponWelder_2.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_PhysicalGunObject/Welder4Item" />
+            <SpritePath>Textures/GUI/Icons/WeaponWelder_3.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/WeaponWelder_3.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_PhysicalGunObject/AngleGrinderItem" />
+            <SpritePath>Textures/GUI/Icons/WeaponGrinder.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/WeaponGrinder.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_PhysicalGunObject/AngleGrinder2Item" />
+            <SpritePath>Textures/GUI/Icons/WeaponGrinder_1.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/WeaponGrinder_1.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_PhysicalGunObject/AngleGrinder3Item" />
+            <SpritePath>Textures/GUI/Icons/WeaponGrinder_2.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/WeaponGrinder_2.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_PhysicalGunObject/AngleGrinder4Item" />
+            <SpritePath>Textures/GUI/Icons/WeaponGrinder_3.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/WeaponGrinder_3.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_PhysicalGunObject/HandDrillItem" />
+            <SpritePath>Textures/GUI/Icons/WeaponDrill.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/WeaponDrill.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_PhysicalGunObject/HandDrill2Item" />
+            <SpritePath>Textures/GUI/Icons/WeaponDrill_1.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/WeaponDrill_1.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_PhysicalGunObject/HandDrill3Item" />
+            <SpritePath>Textures/GUI/Icons/WeaponDrill_2.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/WeaponDrill_2.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_PhysicalGunObject/HandDrill4Item" />
+            <SpritePath>Textures/GUI/Icons/WeaponDrill_3.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/WeaponDrill_3.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_PhysicalGunObject/SemiAutoPistolItem" />
+            <SpritePath>Textures/GUI/Icons/WeaponPistol_Warfare.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/WeaponPistol_Warfare.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_PhysicalGunObject/FullAutoPistolItem" />
+            <SpritePath>Textures/GUI/Icons/WeaponPistol_FullAuto_Warfare.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/WeaponPistol_FullAuto_Warfare.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_PhysicalGunObject/ElitePistolItem" />
+            <SpritePath>Textures/GUI/Icons/WeaponPistol_Elite_Warfare.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/WeaponPistol_Elite_Warfare.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_PhysicalGunObject/BasicHandHeldLauncherItem" />
+            <SpritePath>Textures/GUI/Icons/WeaponRocketLauncher_Regular.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/WeaponRocketLauncher_Regular.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_PhysicalGunObject/AdvancedHandHeldLauncherItem" />
+            <SpritePath>Textures/GUI/Icons/WeaponRocketLauncher_Precise.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/WeaponRocketLauncher_Precise.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+    </LCDTextures>
+</Definitions>

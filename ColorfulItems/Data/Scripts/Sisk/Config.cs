@@ -1832,7 +1832,7 @@ namespace Sisk.ColorfulIcons {
             { "MyObjectBuilder_Component/Explosives", "Textures/GUI/Icons/component/ExplosivesComponent.dds" },
             { "MyObjectBuilder_Component/SolarCell", "Textures/GUI/Icons/component/SolarCellComponent.dds" },
             { "MyObjectBuilder_Component/PowerCell", "Textures/GUI/Icons/component/BatteryComponent.dds" },
-            { "MyObjectBuilder_Component/Canvas", "/Textures/GUI/Icons/component/Cartridge_Icon.dds" },
+            { "MyObjectBuilder_Component/Canvas", "Textures/GUI/Icons/component/Cartridge_Icon.dds" },
             { "MyObjectBuilder_OxygenContainerObject/OxygenBottle", "Textures/GUI/Icons/component/OxygenBottleComponent.dds" },
             { "MyObjectBuilder_GasContainerObject/HydrogenBottle", "Textures/GUI/Icons/component/HydrogenBottle_Component.dds" },
             { "MyObjectBuilder_AmmoMagazine/NATO_5p56x45mm", "Textures/GUI/Icons/ammo/Rifle_Ammo.dds" },

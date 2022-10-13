@@ -19,6 +19,12 @@ texconv.exe -ft png -o . "path\to\texture.dds"
 ```
 This takes all PNG and XCF from `.\textures\modded` and saves them as DDS to `.\ColorfulItems\Textures\GUI\Icons`.
 
+### Generate LCDTextureDefinitions
+```
+.\gen_lcdtexturedef.ps1
+```
+This generates sbc files with LCDTextureDefinitions for icons to be used in user scripts.
+
 ### Install mod
 ```
 .\install.ps1

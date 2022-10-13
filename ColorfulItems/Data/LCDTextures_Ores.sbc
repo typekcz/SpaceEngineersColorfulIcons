@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <LCDTextures>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Ore/Stone" />
+            <SpritePath>Textures/GUI/Icons/ore_rock.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/ore_rock.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Ore/Iron" />
+            <SpritePath>Textures/GUI/Icons/ore_Fe_iron.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/ore_Fe_iron.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Ore/Nickel" />
+            <SpritePath>Textures/GUI/Icons/ore_Ni_nickel.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/ore_Ni_nickel.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Ore/Cobalt" />
+            <SpritePath>Textures/GUI/Icons/ore_Co_cobalt.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/ore_Co_cobalt.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Ore/Magnesium" />
+            <SpritePath>Textures/GUI/Icons/ore_Mg_magnesium.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/ore_Mg_magnesium.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Ore/Silicon" />
+            <SpritePath>Textures/GUI/Icons/ore_Si_silicon.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/ore_Si_silicon.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Ore/Silver" />
+            <SpritePath>Textures/GUI/Icons/ore_Ag_silver.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/ore_Ag_silver.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Ore/Gold" />
+            <SpritePath>Textures/GUI/Icons/ore_Au_gold.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/ore_Au_gold.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Ore/Platinum" />
+            <SpritePath>Textures/GUI/Icons/ore_Pt_platinum.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/ore_Pt_platinum.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Ore/Uranium" />
+            <SpritePath>Textures/GUI/Icons/ore_UO2_uranite.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/ore_UO2_uranite.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Ore/Ice" />
+            <SpritePath>Textures/GUI/Icons/ore_H2O_ice.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/ore_H2O_ice.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+    </LCDTextures>
+</Definitions>
