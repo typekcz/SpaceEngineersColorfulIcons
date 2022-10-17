@@ -6,7 +6,9 @@ Add-Type -TypeDefinition $config -Language CSharp
 function Write-LCDTextureDefinitions {
 	param (
 		$definitions,
-		$name
+		$name,
+		[parameter(Mandatory=$false)]
+		$overrideSubtypePrefix
 	)
 
 	$xmlObjectsettings = New-Object System.Xml.XmlWriterSettings
@@ -24,7 +26,11 @@ function Write-LCDTextureDefinitions {
 		if($def.Key.StartsWith("MyObjectBuilder_BlueprintDefinition")){
 			continue
 		}
-		$subtype = $def.Key -replace "^[^_]+", "ColorfulIcons"
+		if($overrideSubtypePrefix){
+			$subtype = $def.Key -replace "^[^/]+", "ColorfulIcons_$overrideSubtypePrefix"
+		} else {
+			$subtype = $def.Key -replace "^[^_]+", "ColorfulIcons"
+		}
 
 		$xmlWriter.WriteStartElement("LCDTextureDefinition")
 
@@ -52,4 +58,4 @@ Write-LCDTextureDefinitions $([Sisk.ColorfulIcons.Config]::Components) "Componen
 Write-LCDTextureDefinitions $([Sisk.ColorfulIcons.Config]::Ingots) "Ingots"
 Write-LCDTextureDefinitions $([Sisk.ColorfulIcons.Config]::Ores) "Ores"
 Write-LCDTextureDefinitions $([Sisk.ColorfulIcons.Config]::Tools) "Tools"
-Write-LCDTextureDefinitions $([Sisk.ColorfulIcons.Config]::OldComponents) "OldComponents"
+Write-LCDTextureDefinitions $([Sisk.ColorfulIcons.Config]::OldComponents) "OldComponents" "OldComponent"
