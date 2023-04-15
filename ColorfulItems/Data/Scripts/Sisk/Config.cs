@@ -2030,6 +2030,7 @@ namespace Sisk.ColorfulIcons {
             { "MyObjectBuilder_BlockVariantGroup/AccesPanelGroup", "Textures/GUI/Icons/Cubes/MaintenancePanel_Large.dds" },
             { "MyObjectBuilder_BlockVariantGroup/SabiroidPlushieGroup", "Textures/GUI/Icons/Cubes/SabiroidPlushie.dds" },
             { "MyObjectBuilder_BlockVariantGroup/WarningSignGroup", "Textures/GUI/Icons/Cubes/WarningSign_Large.dds" },
+            { "MyObjectBuilder_BlockVariantGroup/AirDuctGroup", "Textures/GUI/Icons/Cubes/AirDuctStraight01.dds" },
         };
 
         public static readonly Dictionary<string, string> Components = new Dictionary<string, string> {
