@@ -301,5 +301,11 @@
             <TexturePath>Textures/GUI/Icons/Cubes/Plushie.dds</TexturePath>
             <Selectable>false</Selectable>
         </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Component/SabiroidPlushie" />
+            <SpritePath>Textures/GUI/Icons/Cubes/SabiroidPlushie.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/SabiroidPlushie.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
     </LCDTextures>
 </Definitions>
