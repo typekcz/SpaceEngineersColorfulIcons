@@ -58,6 +58,9 @@ $sbcFiles = @(
 	"AmmoMagazines.sbc",
 	"Ammos.sbc",
 	"BlockVariantGroups.sbc",
+	"Blueprints.sbc",
+	"BlueprintClasses.sbc",
+	"Blueprints_Economy.sbc",
 	"Components.sbc",
 	"PhysicalItems.sbc",
 	"PhysicalItems_Economy.sbc",
@@ -72,6 +75,7 @@ $sbcFiles = @(
 	"CubeBlocks/CubeBlocks_Control.sbc",
 	"CubeBlocks/CubeBlocks_DecorativePack.sbc",
 	"CubeBlocks/CubeBlocks_DecorativePack2.sbc",
+	"CubeBlocks/CubeBlocks_DecorativePack3.sbc",
 	"CubeBlocks/CubeBlocks_Doors.sbc",
 	"CubeBlocks/CubeBlocks_Economy.sbc",
 	"CubeBlocks/CubeBlocks_Energy.sbc",
@@ -109,7 +113,8 @@ Start-Job -ScriptBlock {
 		)
 		foreach ($value in $paths){
 			$icon_path = $value -replace "/", "\";
-			$icon_path_mod = $icon_path -replace "Textures\\", "Textures\$textures_sub_dir\";
+			$icon_path_mod = $icon_path -replace "Textures\\", "Textures\$using:textures_sub_dir\";
+			$icon_path_mod = $icon_path_mod -replace "Textures/", "Textures/$using:textures_sub_dir/";
 			$content = ($content -replace [Regex]::Escape($icon_path), $icon_path_mod);
 		}
 		return $content;
