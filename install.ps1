@@ -54,8 +54,6 @@ Copy-Item -Recurse "$game_dir\Content\Data\CubeBlocks" "$mod_dir_no_scripts\Data
 
 $config = Get-Content -Path .\ColorfulItems\Data\Scripts\Sisk\Config.cs -Raw
 
-Add-Type -TypeDefinition $config -Language CSharp
-
 $sbcFiles = @(
 	"AmmoMagazines.sbc",
 	"Ammos.sbc",
@@ -102,25 +100,30 @@ $sbcFiles = @(
 	"CubeBlocks/CubeBlocks_Windows.sbc"
 );
 
-function replace_icons_paths {
-	param (
-		$content,
-		$paths
-	)
-	foreach ($value in $paths){
-		$icon_path = $value -replace "/", "\";
-		$icon_path_mod = $icon_path -replace "Textures\\", "Textures\$textures_sub_dir\";
-		$content = ($content -replace [Regex]::Escape($icon_path), $icon_path_mod);
+# Wrapped in job, so that we can run it again without starting new PowerShell, otherwise Add-Type fails.
+Start-Job -ScriptBlock {
+	function replace_icons_paths {
+		param (
+			$content,
+			$paths
+		)
+		foreach ($value in $paths){
+			$icon_path = $value -replace "/", "\";
+			$icon_path_mod = $icon_path -replace "Textures\\", "Textures\$textures_sub_dir\";
+			$content = ($content -replace [Regex]::Escape($icon_path), $icon_path_mod);
+		}
+		return $content;
 	}
-	return $content;
-}
 
-foreach ($sbc in $sbcFiles){
-	$sbcContent = Get-Content -Path "$game_dir\Content\Data\$sbc";
-	$sbcContent = replace_icons_paths $sbcContent $([Sisk.ColorfulIcons.Config]::Components.Values);
-	$sbcContent = replace_icons_paths $sbcContent $([Sisk.ColorfulIcons.Config]::Blocks.Values);
-	$sbcContent = replace_icons_paths $sbcContent $([Sisk.ColorfulIcons.Config]::Ingots.Values);
-	$sbcContent = replace_icons_paths $sbcContent $([Sisk.ColorfulIcons.Config]::Ores.Values);
-	$sbcContent = replace_icons_paths $sbcContent $([Sisk.ColorfulIcons.Config]::Tools.Values);
-	Set-Content -Path "$mod_dir_no_scripts\Data\$sbc" -Value $sbcContent -Encoding UTF8
-}
+	Add-Type -TypeDefinition $using:config -Language CSharp
+
+	foreach ($sbc in $using:sbcFiles){
+		$sbcContent = Get-Content -Path "$using:game_dir\Content\Data\$sbc";
+		$sbcContent = replace_icons_paths $sbcContent $([Sisk.ColorfulIcons.Config]::Components.Values);
+		$sbcContent = replace_icons_paths $sbcContent $([Sisk.ColorfulIcons.Config]::Blocks.Values);
+		$sbcContent = replace_icons_paths $sbcContent $([Sisk.ColorfulIcons.Config]::Ingots.Values);
+		$sbcContent = replace_icons_paths $sbcContent $([Sisk.ColorfulIcons.Config]::Ores.Values);
+		$sbcContent = replace_icons_paths $sbcContent $([Sisk.ColorfulIcons.Config]::Tools.Values);
+		Set-Content -Path "$using:mod_dir_no_scripts\Data\$sbc" -Value $sbcContent -Encoding UTF8
+	}
+} | Receive-Job -Wait -AutoRemoveJob
