@@ -2365,7 +2365,7 @@ namespace Sisk.ColorfulIcons {
             { "MyObjectBuilder_BlueprintDefinition/SmallRailgunAmmo", "Textures/GUI/Icons/ammo/RailgunAmmo.dds" },
             { "MyObjectBuilder_BlueprintDefinition/EngineerPlushie", "Textures/GUI/Icons/Cubes/Plushie.dds" },
             // New assembler entries
-            { "MyObjectBuilder_BlueprintDefinition/Position0010_StoneOreToIngotBasic", "Textures/GUI/Icons/ingot/ingot_class.dds" },
+            { "MyObjectBuilder_BlueprintDefinition/Position0010_StoneOreToIngotBasic", "Textures/GUI/Icons/ingot/gravel_ingot.dds" },
             { "MyObjectBuilder_BlueprintDefinition/Position0010_OxygenBottle", "Textures/GUI/Icons/component/OxygenBottleComponent.dds" },
             { "MyObjectBuilder_BlueprintDefinition/Position0020_HydrogenBottle", "Textures/GUI/Icons/component/HydrogenBottle_Component.dds" },
             { "MyObjectBuilder_BlueprintDefinition/Position0030_Canvas", "Textures/GUI/Icons/component/Cartridge_Icon.dds" },
