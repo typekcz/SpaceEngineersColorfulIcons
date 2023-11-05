@@ -307,5 +307,47 @@
             <TexturePath>Textures/GUI/Icons/Cubes/SabiroidPlushie.dds</TexturePath>
             <Selectable>false</Selectable>
         </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_AmmoMagazine/FlareClip" />
+            <SpritePath>Textures/GUI/Icons/ammo/FlareGun_Ammo.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/ammo/FlareGun_Ammo.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_AmmoMagazine/FireworksBoxBlue" />
+            <SpritePath>Textures/GUI/Icons/ammo/FireworksBoxBlue.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/ammo/FireworksBoxBlue.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_AmmoMagazine/FireworksBoxGreen" />
+            <SpritePath>Textures/GUI/Icons/ammo/FireworksBoxGreen.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/ammo/FireworksBoxGreen.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_AmmoMagazine/FireworksBoxRed" />
+            <SpritePath>Textures/GUI/Icons/ammo/FireworksBoxRed.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/ammo/FireworksBoxRed.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_AmmoMagazine/FireworksBoxPink" />
+            <SpritePath>Textures/GUI/Icons/ammo/FireworksBoxPink.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/ammo/FireworksBoxPink.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_AmmoMagazine/FireworksBoxYellow" />
+            <SpritePath>Textures/GUI/Icons/ammo/FireworksBoxYellow.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/ammo/FireworksBoxYellow.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_AmmoMagazine/FireworksBoxRainbow" />
+            <SpritePath>Textures/GUI/Icons/ammo/FireworksBoxRainbow.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/ammo/FireworksBoxRainbow.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
     </LCDTextures>
 </Definitions>

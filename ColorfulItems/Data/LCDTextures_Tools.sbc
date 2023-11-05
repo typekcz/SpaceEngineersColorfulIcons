@@ -127,5 +127,11 @@
             <TexturePath>Textures/GUI/Icons/WeaponRocketLauncher_Precise.dds</TexturePath>
             <Selectable>false</Selectable>
         </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_PhysicalGunObject/FlareGunItem" />
+            <SpritePath>Textures/GUI/Icons/FlareGun.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/FlareGun.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
     </LCDTextures>
 </Definitions>
