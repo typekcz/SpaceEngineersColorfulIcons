@@ -33,7 +33,7 @@ foreach ($xcfFile in $xcfFiles) {
     & magick convert -layers merge -background none -alpha background $xcfFile.FullName $outputPath
 
     # Update progress information
-    Write-Progress -Activity "Converting XCF to PNG" -Status "$(($xcfFiles.IndexOf($xcfFile) + 1) / $xcfFiles.Count * 100)% Complete:" -CurrentOperation $xcfFile.FullName -PercentComplete (($xcfFiles.IndexOf($xcfFile) + 1) / $xcfFiles.Count * 100)
+    Write-Progress -Activity "Converting XCF to PNG" -Status "$([Math]::Round(($xcfFiles.IndexOf($xcfFile) + 1) / $xcfFiles.Count * 100))% Complete:" -CurrentOperation $xcfFile.FullName -PercentComplete ([Math]::Round(($xcfFiles.IndexOf($xcfFile) + 1) / $xcfFiles.Count * 100))
 }
 
 # Get existing PNG files in the source directory and its subdirectories
@@ -58,8 +58,5 @@ foreach ($pngFile in $pngFiles) {
     Copy-Item -Path $pngFile.FullName -Destination $outputPath -Force
 
     # Update progress information
-    Write-Progress -Activity "Moving existing PNG files" -Status "$(($pngFiles.IndexOf($pngFile) + 1) / $pngFiles.Count * 100)% Complete:" -CurrentOperation $pngFile.FullName -PercentComplete (($pngFiles.IndexOf($pngFile) + 1) / $pngFiles.Count * 100)
+    Write-Progress -Activity "Moving existing PNG files" -Status "$([Math]::Round(($pngFiles.IndexOf($pngFile) + 1) / $pngFiles.Count * 100))% Complete:" -CurrentOperation $pngFile.FullName -PercentComplete ([Math]::Round(($pngFiles.IndexOf($pngFile) + 1) / $pngFiles.Count * 100))
 }
-
-# Display completion message
-Write-Host "Conversion and move completed."
