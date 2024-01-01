@@ -15,7 +15,7 @@ $count = $files.Length
 $done = 0
 
 # Display progress information for the DDS conversion
-Write-Progress -Activity "Converting to DDS" -Status "0% Complete:" -PercentComplete 0
+Write-Progress -Activity "Converting XCF to DDS" -Status "0% Complete:" -PercentComplete 0
 
 # Loop through each file in the source directory
 foreach ($f in $files) {
