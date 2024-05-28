@@ -1176,6 +1176,7 @@ namespace Sisk.ColorfulIcons {
             { "MyObjectBuilder_BroadcastController/SmallBlockBroadcastController", "Textures/GUI/Icons/Cubes/BroadcastSsmall.dds" },
             { "MyObjectBuilder_TransponderBlock/LargeBlockTransponder", "Textures/GUI/Icons/Cubes/Transponder.dds" },
             { "MyObjectBuilder_TransponderBlock/SmallBlockTransponder", "Textures/GUI/Icons/Cubes/Transponder_small.dds" },
+            { "MyObjectBuilder_RadioAntenna/LargeBlockCompactRadioAntenna", "Textures/GUI/Icons/Cubes/CompactAntenna.dds" },
             // Blueprint
             { "MyObjectBuilder_BlueprintDefinition/BatteryBlock/LargeBlockBatteryBlock", "Textures/GUI/Icons/Cubes/Battery.dds" },
             { "MyObjectBuilder_BlueprintDefinition/CubeBlock/LargeBlockArmorBlock", "Textures/GUI/Icons/Cubes/light_armor_cube.dds" },
@@ -2285,6 +2286,7 @@ namespace Sisk.ColorfulIcons {
             { "MyObjectBuilder_BlueprintDefinition/BroadcastController/SmallBlockBroadcastController", "Textures/GUI/Icons/Cubes/BroadcastSsmall.dds" },
             { "MyObjectBuilder_BlueprintDefinition/TransponderBlock/LargeBlockTransponder", "Textures/GUI/Icons/Cubes/Transponder.dds" },
             { "MyObjectBuilder_BlueprintDefinition/TransponderBlock/SmallBlockTransponder", "Textures/GUI/Icons/Cubes/Transponder_small.dds" },
+            { "MyObjectBuilder_BlueprintDefinition/RadioAntenna/LargeBlockCompactRadioAntenna", "Textures/GUI/Icons/Cubes/CompactAntenna.dds" },
             // Groups
             { "MyObjectBuilder_BlockVariantGroup/ArmorLightCubeGroup", "Textures/GUI/Icons/Cubes/light_armor_cube.dds" },
             { "MyObjectBuilder_BlockVariantGroup/ArmorLightRampGroup", "Textures/GUI/Icons/Cubes/Slope2x1x1Base.dds" },
