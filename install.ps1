@@ -52,6 +52,8 @@ Copy-Item "$game_dir\Content\Data\PhysicalItems_Economy.sbc" "$mod_dir_no_script
 Copy-Item "$game_dir\Content\Data\Weapons.sbc" "$mod_dir_no_scripts\Data\";
 Copy-Item -Recurse "$game_dir\Content\Data\CubeBlocks" "$mod_dir_no_scripts\Data\";
 
+Copy-Item ".\ColorfulItemsNoScripts\modinfo.sbmi" "$mod_dir_no_scripts\"
+
 $config = Get-Content -Path .\ColorfulItems\Data\Scripts\Sisk\Config.cs -Raw
 
 $sbcFiles = @(
@@ -70,6 +72,7 @@ $sbcFiles = @(
 	"CubeBlocks/CubeBlocks_ArmorPanels.sbc",
 	"CubeBlocks/CubeBlocks_Armor_2.sbc",
 	"CubeBlocks/CubeBlocks_Armor_3.sbc",
+	"CubeBlocks/CubeBlocks_ArmorPanels.sbc",
 	"CubeBlocks/CubeBlocks_Automation.sbc",
 	"CubeBlocks/CubeBlocks_Communications.sbc",
 	"CubeBlocks/CubeBlocks_Control.sbc",
@@ -92,6 +95,7 @@ $sbcFiles = @(
 	"CubeBlocks/CubeBlocks_Medical.sbc",
 	"CubeBlocks/CubeBlocks_Production.sbc",
 	"CubeBlocks/CubeBlocks_ScrapRacePack.sbc",
+	"CubeBlocks/CubeBlocks_SignalsPack.sbc",
 	"CubeBlocks/CubeBlocks_SparksOfTheFuturePack.sbc",
 	"CubeBlocks/CubeBlocks_Symbols.sbc",
 	"CubeBlocks/CubeBlocks_Thrusters.sbc",
