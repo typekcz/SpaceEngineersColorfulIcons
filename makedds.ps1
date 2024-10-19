@@ -2,7 +2,7 @@
 
 $source_dir = ".\textures\modded"
 $target_dir = ".\ColorfulItems\Textures\GUI\Icons"
-$texconvPath = ".\texconv"
+$texconvPath = "texconv"
 
 # Create the target directory if it doesn't exist
 if (!(Test-Path -Path $target_dir)) {
