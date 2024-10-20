@@ -59,6 +59,7 @@ let groupDefs = SaxonJs.XPath.evaluate("/Definitions/BlockVariantGroups/BlockVar
  */
 function iconFilter(item) {
 	return item.id && item.icon
+		&& !item.id.endsWith("/undefined")
 		&& !item.icon.endsWith("/Fake.dds")
 		&& !item.icon.includes("/NeonTubes")
 		&& !configStr.includes(`"MyObjectBuilder_${item.id}"`);
