@@ -219,7 +219,6 @@ namespace Sisk.ColorfulIcons {
                 }
 
                 definition.Icons[0] = $"{ModContext.ModPath}\\{iconPath}";
-                MyLog.Default.WriteLineAndConsole($"{definition.Id} -> {ModContext.ModPath}\\{iconPath}");
             }
         }
 
