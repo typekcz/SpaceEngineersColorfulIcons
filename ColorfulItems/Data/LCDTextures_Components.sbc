@@ -349,5 +349,53 @@
             <TexturePath>Textures/GUI/Icons/ammo/FireworksBoxRainbow.dds</TexturePath>
             <Selectable>false</Selectable>
         </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Component/PrototechFrame" />
+            <SpritePath>Textures/GUI/Icons/component/PrototechFrame.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/component/PrototechFrame.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Component/PrototechPanel" />
+            <SpritePath>Textures/GUI/Icons/component/PrototechPanel_Component.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/component/PrototechPanel_Component.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Component/PrototechCapacitor" />
+            <SpritePath>Textures/GUI/Icons/component/PrototechCapacitor_Component.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/component/PrototechCapacitor_Component.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Component/PrototechPropulsionUnit" />
+            <SpritePath>Textures/GUI/Icons/component/PrototechThrusterComponent.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/component/PrototechThrusterComponent.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Component/PrototechMachinery" />
+            <SpritePath>Textures/GUI/Icons/component/PrototechMachinery_Icon.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/component/PrototechMachinery_Icon.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Component/PrototechCircuitry" />
+            <SpritePath>Textures/GUI/Icons/component/prototech_circuitry_component.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/component/prototech_circuitry_component.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Component/PrototechCoolingUnit" />
+            <SpritePath>Textures/GUI/Icons/component/PrototechCoolingUnit.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/component/PrototechCoolingUnit.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Ingot/PrototechScrap" />
+            <SpritePath>Textures/GUI/Icons/component/ScrapPrototechComponent.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/component/ScrapPrototechComponent.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
     </LCDTextures>
 </Definitions>
