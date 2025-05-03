@@ -82,6 +82,7 @@ $sbcFiles = @(
 	"CubeBlocks/CubeBlocks_Economy.sbc",
 	"CubeBlocks/CubeBlocks_Energy.sbc",
 	"CubeBlocks/CubeBlocks_Extras.sbc",
+	"CubeBlocks/CubeBlocks_Fieldwork.sbc",
 	"CubeBlocks/CubeBlocks_Frostbite.sbc",
 	"CubeBlocks/CubeBlocks_Gravity.sbc",
 	"CubeBlocks/CubeBlocks_GridAIPack.sbc",
