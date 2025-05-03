@@ -7808,12 +7808,6 @@
             <Selectable>false</Selectable>
         </LCDTextureDefinition>
         <LCDTextureDefinition>
-            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_BlockVariantGroup/NeonTubes" />
-            <SpritePath>Textures/GUI/Icons/Cubes/NeonTubesStraight1.dds</SpritePath>
-            <TexturePath>Textures/GUI/Icons/Cubes/NeonTubesStraight1.dds</TexturePath>
-            <Selectable>false</Selectable>
-        </LCDTextureDefinition>
-        <LCDTextureDefinition>
             <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_BlockVariantGroup/StatueGroup" />
             <SpritePath>Textures/GUI/Icons/Cubes/10YearStatue.dds</SpritePath>
             <TexturePath>Textures/GUI/Icons/Cubes/10YearStatue.dds</TexturePath>

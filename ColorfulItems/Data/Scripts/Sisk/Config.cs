@@ -2563,7 +2563,6 @@ namespace Sisk.ColorfulIcons {
             { "MyObjectBuilder_BlockVariantGroup/AccesPanelGroup", "Textures/GUI/Icons/Cubes/MaintenancePanel_Large.dds" },
             { "MyObjectBuilder_BlockVariantGroup/StorageShelves", "Textures/GUI/Icons/Cubes/Shelf_1.dds" },
             { "MyObjectBuilder_BlockVariantGroup/LockersGroup", "Textures/GUI/Icons/Cubes/WeaponRack.dds" },
-            { "MyObjectBuilder_BlockVariantGroup/NeonTubes", "Textures/GUI/Icons/Cubes/NeonTubesStraight1.dds" },
             { "MyObjectBuilder_BlockVariantGroup/StatueGroup", "Textures/GUI/Icons/Cubes/10YearStatue.dds" },
             { "MyObjectBuilder_BlockVariantGroup/EngineerPlushieGroup", "Textures/GUI/Icons/Cubes/Plushie.dds" },
             { "MyObjectBuilder_BlockVariantGroup/SabiroidPlushieGroup", "Textures/GUI/Icons/Cubes/SabiroidPlushie.dds" },
