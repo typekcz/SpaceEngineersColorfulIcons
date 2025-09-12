@@ -46,9 +46,13 @@ New-Item -ItemType "directory" "$mod_dir_no_scripts\Data";
 
 Copy-Item "$game_dir\Content\Data\AmmoMagazines.sbc" "$mod_dir_no_scripts\Data\";
 Copy-Item "$game_dir\Content\Data\Ammos.sbc" "$mod_dir_no_scripts\Data\";
+Copy-Item "$game_dir\Content\Data\BlockVariantGroups.sbc" "$mod_dir_no_scripts\Data\";
+Copy-Item "$game_dir\Content\Data\Blueprints.sbc" "$mod_dir_no_scripts\Data\";
+Copy-Item "$game_dir\Content\Data\BlueprintClasses.sbc" "$mod_dir_no_scripts\Data\";
+Copy-Item "$game_dir\Content\Data\Blueprints_Food.sbc" "$mod_dir_no_scripts\Data\";
 Copy-Item "$game_dir\Content\Data\Components.sbc" "$mod_dir_no_scripts\Data\";
 Copy-Item "$game_dir\Content\Data\PhysicalItems.sbc" "$mod_dir_no_scripts\Data\";
-Copy-Item "$game_dir\Content\Data\PhysicalItems_Economy.sbc" "$mod_dir_no_scripts\Data\";
+Copy-Item "$game_dir\Content\Data\PhysicalItems_Food.sbc" "$mod_dir_no_scripts\Data\";
 Copy-Item "$game_dir\Content\Data\Weapons.sbc" "$mod_dir_no_scripts\Data\";
 Copy-Item -Recurse "$game_dir\Content\Data\CubeBlocks" "$mod_dir_no_scripts\Data\";
 
@@ -56,58 +60,7 @@ Copy-Item ".\ColorfulItemsNoScripts\modinfo.sbmi" "$mod_dir_no_scripts\"
 
 $config = Get-Content -Path .\ColorfulItems\Data\Scripts\Sisk\Config.cs -Raw
 
-$sbcFiles = @(
-	"AmmoMagazines.sbc",
-	"Ammos.sbc",
-	"BlockVariantGroups.sbc",
-	"Blueprints.sbc",
-	"BlueprintClasses.sbc",
-	"Blueprints_Economy.sbc",
-	"Components.sbc",
-	"PhysicalItems.sbc",
-	"PhysicalItems_Economy.sbc",
-	"Weapons.sbc",
-	"CubeBlocks/CubeBlocks_Armor.sbc"
-	"CubeBlocks/CubeBlocks_ArmorPanels.sbc",
-	"CubeBlocks/CubeBlocks_Armor_2.sbc",
-	"CubeBlocks/CubeBlocks_Armor_3.sbc",
-	"CubeBlocks/CubeBlocks_Automation.sbc",
-	"CubeBlocks/CubeBlocks_Communications.sbc",
-	"CubeBlocks/CubeBlocks_ContactPack.sbc",
-	"CubeBlocks/CubeBlocks_Control.sbc",
-	"CubeBlocks/CubeBlocks_DecorativePack.sbc",
-	"CubeBlocks/CubeBlocks_DecorativePack2.sbc",
-	"CubeBlocks/CubeBlocks_DecorativePack3.sbc",
-	"CubeBlocks/CubeBlocks_Doors.sbc",
-	"CubeBlocks/CubeBlocks_Economy.sbc",
-	"CubeBlocks/CubeBlocks_Energy.sbc",
-	"CubeBlocks/CubeBlocks_Extras.sbc",
-	"CubeBlocks/CubeBlocks_Fieldwork.sbc",
-	"CubeBlocks/CubeBlocks_Frostbite.sbc",
-	"CubeBlocks/CubeBlocks_Gravity.sbc",
-	"CubeBlocks/CubeBlocks_GridAIPack.sbc",
-	"CubeBlocks/CubeBlocks_IndustrialPack.sbc",
-	"CubeBlocks/CubeBlocks_Interiors.sbc",
-	"CubeBlocks/CubeBlocks_LCDPanels.sbc",
-	"CubeBlocks/CubeBlocks_Lights.sbc",
-	"CubeBlocks/CubeBlocks_Logistics.sbc",
-	"CubeBlocks/CubeBlocks_Mechanical.sbc",
-	"CubeBlocks/CubeBlocks_Medical.sbc",
-	"CubeBlocks/CubeBlocks_Production.sbc",
-	"CubeBlocks/CubeBlocks_Prototech.sbc",
-	"CubeBlocks/CubeBlocks_ScrapRacePack.sbc",
-	"CubeBlocks/CubeBlocks_SignalsPack.sbc",
-	"CubeBlocks/CubeBlocks_SparksOfTheFuturePack.sbc",
-	"CubeBlocks/CubeBlocks_Symbols.sbc",
-	"CubeBlocks/CubeBlocks_Thrusters.sbc",
-	"CubeBlocks/CubeBlocks_Tools.sbc",
-	"CubeBlocks/CubeBlocks_Utility.sbc",
-	"CubeBlocks/CubeBlocks_Warfare1.sbc",
-	"CubeBlocks/CubeBlocks_Warfare2.sbc",
-	"CubeBlocks/CubeBlocks_Weapons.sbc",
-	"CubeBlocks/CubeBlocks_Wheels.sbc",
-	"CubeBlocks/CubeBlocks_Windows.sbc"
-);
+$sbcFiles = Get-ChildItem -Path "$mod_dir_no_scripts\Data" -Filter *.sbc -Recurse | Select-Object -ExpandProperty FullName
 
 # Wrapped in job, so that we can run it again without starting new PowerShell, otherwise Add-Type fails.
 Start-Job -ScriptBlock {
@@ -128,12 +81,12 @@ Start-Job -ScriptBlock {
 	Add-Type -TypeDefinition $using:config -Language CSharp
 
 	foreach ($sbc in $using:sbcFiles){
-		$sbcContent = Get-Content -Path "$using:game_dir\Content\Data\$sbc";
+		$sbcContent = Get-Content -Path $sbc;
 		$sbcContent = replace_icons_paths $sbcContent $([Sisk.ColorfulIcons.Config]::Components.Values);
 		$sbcContent = replace_icons_paths $sbcContent $([Sisk.ColorfulIcons.Config]::Blocks.Values);
 		$sbcContent = replace_icons_paths $sbcContent $([Sisk.ColorfulIcons.Config]::Ingots.Values);
 		$sbcContent = replace_icons_paths $sbcContent $([Sisk.ColorfulIcons.Config]::Ores.Values);
 		$sbcContent = replace_icons_paths $sbcContent $([Sisk.ColorfulIcons.Config]::Tools.Values);
-		Set-Content -Path "$using:mod_dir_no_scripts\Data\$sbc" -Value $sbcContent -Encoding UTF8
+		Set-Content -Path $sbc -Value $sbcContent -Encoding UTF8
 	}
 } | Receive-Job -Wait -AutoRemoveJob
