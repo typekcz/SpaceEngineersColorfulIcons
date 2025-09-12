@@ -39,7 +39,7 @@ foreach ($f in $files) {
         $newfile = [System.IO.Path]::ChangeExtension($relativePath, "png")
 
         # XCF to PNG (MAGICK)
-        magick convert -layers merge -background none -alpha background (Join-Path -Path $source_dir -ChildPath $relativePath) (Join-Path -Path $source_dir -ChildPath $newfile)
+        magick (Join-Path -Path $source_dir -ChildPath $relativePath) -background none -alpha set -layers merge (Join-Path -Path $source_dir -ChildPath $newfile)
         
         # Update current file to the new PNG file
         $relativePath = $newfile
