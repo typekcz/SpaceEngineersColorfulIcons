@@ -177,50 +177,50 @@
         </LCDTextureDefinition>
         <LCDTextureDefinition>
             <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Component/ZoneChip" />
-            <SpritePath>Textures/GUI/Icons/Items/ZoneChip_Item.dds</SpritePath>
-            <TexturePath>Textures/GUI/Icons/Items/ZoneChip_Item.dds</TexturePath>
+            <SpritePath>Textures/GUI/Icons/items/ZoneChip_Item.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/items/ZoneChip_Item.dds</TexturePath>
             <Selectable>false</Selectable>
         </LCDTextureDefinition>
         <LCDTextureDefinition>
             <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Datapad/Datapad" />
-            <SpritePath>Textures/GUI/Icons/Items/Datapad_Item.dds</SpritePath>
-            <TexturePath>Textures/GUI/Icons/Items/Datapad_Item.dds</TexturePath>
+            <SpritePath>Textures/GUI/Icons/items/Datapad_Item.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/items/Datapad_Item.dds</TexturePath>
             <Selectable>false</Selectable>
         </LCDTextureDefinition>
         <LCDTextureDefinition>
             <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Package/Package" />
-            <SpritePath>Textures/GUI/Icons/Items/ContractPackage.dds</SpritePath>
-            <TexturePath>Textures/GUI/Icons/Items/ContractPackage.dds</TexturePath>
+            <SpritePath>Textures/GUI/Icons/items/ContractPackage.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/items/ContractPackage.dds</TexturePath>
             <Selectable>false</Selectable>
         </LCDTextureDefinition>
         <LCDTextureDefinition>
             <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_ConsumableItem/Medkit" />
-            <SpritePath>Textures/GUI/Icons/Items/MedKit.dds</SpritePath>
-            <TexturePath>Textures/GUI/Icons/Items/MedKit.dds</TexturePath>
+            <SpritePath>Textures/GUI/Icons/items/MedKit.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/items/MedKit.dds</TexturePath>
             <Selectable>false</Selectable>
         </LCDTextureDefinition>
         <LCDTextureDefinition>
             <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_ConsumableItem/Powerkit" />
-            <SpritePath>Textures/GUI/Icons/Items/PowerKit.dds</SpritePath>
-            <TexturePath>Textures/GUI/Icons/Items/PowerKit.dds</TexturePath>
+            <SpritePath>Textures/GUI/Icons/items/PowerKit.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/items/PowerKit.dds</TexturePath>
             <Selectable>false</Selectable>
         </LCDTextureDefinition>
         <LCDTextureDefinition>
             <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_PhysicalObject/SpaceCredit" />
-            <SpritePath>Textures/GUI/Icons/Items/SpaceCredit.dds</SpritePath>
-            <TexturePath>Textures/GUI/Icons/Items/SpaceCredit.dds</TexturePath>
+            <SpritePath>Textures/GUI/Icons/items/SpaceCredit.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/items/SpaceCredit.dds</TexturePath>
             <Selectable>false</Selectable>
         </LCDTextureDefinition>
         <LCDTextureDefinition>
             <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_ConsumableItem/ClangCola" />
-            <SpritePath>Textures/GUI/Icons/Items/ClangCola.dds</SpritePath>
-            <TexturePath>Textures/GUI/Icons/Items/ClangCola.dds</TexturePath>
+            <SpritePath>Textures/GUI/Icons/items/ClangCola.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/items/ClangCola.dds</TexturePath>
             <Selectable>false</Selectable>
         </LCDTextureDefinition>
         <LCDTextureDefinition>
             <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_ConsumableItem/CosmicCoffee" />
-            <SpritePath>Textures/GUI/Icons/Items/CosmicCoffee.dds</SpritePath>
-            <TexturePath>Textures/GUI/Icons/Items/CosmicCoffee.dds</TexturePath>
+            <SpritePath>Textures/GUI/Icons/items/CosmicCoffee.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/items/CosmicCoffee.dds</TexturePath>
             <Selectable>false</Selectable>
         </LCDTextureDefinition>
         <LCDTextureDefinition>
@@ -297,14 +297,14 @@
         </LCDTextureDefinition>
         <LCDTextureDefinition>
             <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Component/EngineerPlushie" />
-            <SpritePath>Textures/GUI/Icons/Cubes/Plushie.dds</SpritePath>
-            <TexturePath>Textures/GUI/Icons/Cubes/Plushie.dds</TexturePath>
+            <SpritePath>Textures/GUI/Icons/cubes/Plushie.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/cubes/Plushie.dds</TexturePath>
             <Selectable>false</Selectable>
         </LCDTextureDefinition>
         <LCDTextureDefinition>
             <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Component/SabiroidPlushie" />
-            <SpritePath>Textures/GUI/Icons/Cubes/SabiroidPlushie.dds</SpritePath>
-            <TexturePath>Textures/GUI/Icons/Cubes/SabiroidPlushie.dds</TexturePath>
+            <SpritePath>Textures/GUI/Icons/cubes/SabiroidPlushie.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/cubes/SabiroidPlushie.dds</TexturePath>
             <Selectable>false</Selectable>
         </LCDTextureDefinition>
         <LCDTextureDefinition>
@@ -395,6 +395,240 @@
             <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Ingot/PrototechScrap" />
             <SpritePath>Textures/GUI/Icons/component/ScrapPrototechComponent.dds</SpritePath>
             <TexturePath>Textures/GUI/Icons/component/ScrapPrototechComponent.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_ConsumableItem/MealPack_KelpCrisp" />
+            <SpritePath>Textures/GUI/Icons/items/MealPack_Algae.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/items/MealPack_Algae.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_ConsumableItem/MealPack_FruitBar" />
+            <SpritePath>Textures/GUI/Icons/items/MealPack_Fruit.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/items/MealPack_Fruit.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_ConsumableItem/MealPack_GardenSlaw" />
+            <SpritePath>Textures/GUI/Icons/items/MealPack_Vegetable.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/items/MealPack_Vegetable.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_ConsumableItem/MealPack_RedPellets" />
+            <SpritePath>Textures/GUI/Icons/items/MealPack_Fruit.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/items/MealPack_Fruit.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_ConsumableItem/MealPack_Chili" />
+            <SpritePath>Textures/GUI/Icons/items/MealPack_Vegetable.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/items/MealPack_Vegetable.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_ConsumableItem/MealPack_Ramen" />
+            <SpritePath>Textures/GUI/Icons/items/MealPack_Algae.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/items/MealPack_Algae.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_ConsumableItem/MealPack_Flatbread" />
+            <SpritePath>Textures/GUI/Icons/items/MealPack_Grain.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/items/MealPack_Grain.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_ConsumableItem/MealPack_FruitPastry" />
+            <SpritePath>Textures/GUI/Icons/items/MealPack_Grain.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/items/MealPack_Grain.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_ConsumableItem/MealPack_VeggieBurger" />
+            <SpritePath>Textures/GUI/Icons/items/MealPack_Mushroom.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/items/MealPack_Mushroom.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_ConsumableItem/MealPack_GreenPellets" />
+            <SpritePath>Textures/GUI/Icons/items/MealPack_Spider.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/items/MealPack_Spider.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_ConsumableItem/MealPack_Curry" />
+            <SpritePath>Textures/GUI/Icons/items/MealPack_Grain.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/items/MealPack_Grain.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_ConsumableItem/MealPack_Dumplings" />
+            <SpritePath>Textures/GUI/Icons/items/MealPack_Grain.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/items/MealPack_Grain.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_ConsumableItem/MealPack_Spaghetti" />
+            <SpritePath>Textures/GUI/Icons/items/MealPack_Mushroom.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/items/MealPack_Mushroom.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_ConsumableItem/MealPack_Lasagna" />
+            <SpritePath>Textures/GUI/Icons/items/MealPack_Meat.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/items/MealPack_Meat.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_ConsumableItem/MealPack_Burrito" />
+            <SpritePath>Textures/GUI/Icons/items/MealPack_Meat.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/items/MealPack_Meat.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_ConsumableItem/MealPack_FrontierStew" />
+            <SpritePath>Textures/GUI/Icons/items/MealPack_Mushroom.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/items/MealPack_Mushroom.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_ConsumableItem/MealPack_SearedSabiroid" />
+            <SpritePath>Textures/GUI/Icons/items/MealPack_Spider.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/items/MealPack_Spider.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_ConsumableItem/MealPack_SteakDinner" />
+            <SpritePath>Textures/GUI/Icons/items/MealPack_Meat.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/items/MealPack_Meat.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_PhysicalObject/Algae" />
+            <SpritePath>Textures/GUI/Icons/items/Algae_item.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/items/Algae_item.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_ConsumableItem/Fruit" />
+            <SpritePath>Textures/GUI/Icons/items/FoodContainer_Fruit.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/items/FoodContainer_Fruit.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_PhysicalObject/Grain" />
+            <SpritePath>Textures/GUI/Icons/items/FoodContainer_Grain.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/items/FoodContainer_Grain.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_ConsumableItem/Mushrooms" />
+            <SpritePath>Textures/GUI/Icons/items/FoodContainer_Mushroom.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/items/FoodContainer_Mushroom.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_ConsumableItem/Vegetables" />
+            <SpritePath>Textures/GUI/Icons/items/FoodContainer_Vegetable.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/items/FoodContainer_Vegetable.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_ConsumableItem/MammalMeatRaw" />
+            <SpritePath>Textures/GUI/Icons/items/Meat_mammal_raw.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/items/Meat_mammal_raw.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_ConsumableItem/MammalMeatCooked" />
+            <SpritePath>Textures/GUI/Icons/items/Meat_mammal_cooked.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/items/Meat_mammal_cooked.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_ConsumableItem/InsectMeatRaw" />
+            <SpritePath>Textures/GUI/Icons/items/Meat_spider_raw.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/items/Meat_spider_raw.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_ConsumableItem/InsectMeatCooked" />
+            <SpritePath>Textures/GUI/Icons/items/Meat_spider_cooked.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/items/Meat_spider_cooked.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_ConsumableItem/MealPack_Unknown" />
+            <SpritePath>Textures/GUI/Icons/items/MealPack_Algae.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/items/MealPack_Algae.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_ConsumableItem/MealPack_FoodPaste" />
+            <SpritePath>Textures/GUI/Icons/items/MealPack_Mushroom.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/items/MealPack_Mushroom.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_ConsumableItem/MealPack_SynthLoaf" />
+            <SpritePath>Textures/GUI/Icons/items/MealPack_Algae.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/items/MealPack_Algae.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_ConsumableItem/MealPack_ClangCrunchies" />
+            <SpritePath>Textures/GUI/Icons/items/MealPack_Grain.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/items/MealPack_Grain.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_ConsumableItem/MealPack_BananaBeef" />
+            <SpritePath>Textures/GUI/Icons/items/MealPack_Meat.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/items/MealPack_Meat.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_ConsumableItem/MealPack_Hardtack" />
+            <SpritePath>Textures/GUI/Icons/items/MealPack_Grain.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/items/MealPack_Grain.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_ConsumableItem/MealPack_ExpiredSlop" />
+            <SpritePath>Textures/GUI/Icons/items/MealPack_Expired.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/items/MealPack_Expired.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_SeedItem/Fruit" />
+            <SpritePath>Textures/GUI/Icons/items/SeedPack_Fruit.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/items/SeedPack_Fruit.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_SeedItem/Grain" />
+            <SpritePath>Textures/GUI/Icons/items/SeedPack_Grain.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/items/SeedPack_Grain.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_SeedItem/Mushrooms" />
+            <SpritePath>Textures/GUI/Icons/items/SeedPack_Mushroom.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/items/SeedPack_Mushroom.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_SeedItem/Vegetables" />
+            <SpritePath>Textures/GUI/Icons/items/SeedPack_Vegetable.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/items/SeedPack_Vegetable.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_ConsumableItem/RadiationKit" />
+            <SpritePath>Textures/GUI/Icons/items/AntiRadiationMedkit.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/items/AntiRadiationMedkit.dds</TexturePath>
             <Selectable>false</Selectable>
         </LCDTextureDefinition>
     </LCDTextures>
