@@ -73,7 +73,8 @@ Start-Job -ScriptBlock {
 			$icon_path = $value -replace "/", "\";
 			$icon_path_mod = $icon_path -replace "Textures\\", "Textures\$using:textures_sub_dir\";
 			$icon_path_mod = $icon_path_mod -replace "Textures/", "Textures/$using:textures_sub_dir/";
-			$content = ($content -replace [Regex]::Escape($icon_path), $icon_path_mod);
+			$icon_path = $icon_path -replace "\\", "[\\/]";
+			$content = ($content -replace $icon_path, $icon_path_mod);
 		}
 		return $content;
 	}
