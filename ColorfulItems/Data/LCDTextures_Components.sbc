@@ -631,5 +631,41 @@
             <TexturePath>Textures/GUI/Icons/items/AntiRadiationMedkit.dds</TexturePath>
             <Selectable>false</Selectable>
         </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Package/EncryptedDataStorage" />
+            <SpritePath>Textures/GUI/Icons/items/EncryptedDataStorage.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/items/EncryptedDataStorage.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Package/InterceptedTransmissions" />
+            <SpritePath>Textures/GUI/Icons/items/InterceptedTransmissions.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/items/InterceptedTransmissions.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Package/ResearchMaterials" />
+            <SpritePath>Textures/GUI/Icons/items/ResearchMaterials.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/items/ResearchMaterials.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Package/SmuggledGoods" />
+            <SpritePath>Textures/GUI/Icons/items/SmuggledGoods.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/items/SmuggledGoods.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Package/TechnicalBlueprints" />
+            <SpritePath>Textures/GUI/Icons/items/TechnicalBlueprints.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/items/TechnicalBlueprints.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Component/EngineerPlushieSE2" />
+            <SpritePath>Textures/GUI/Icons/Cubes/PlushieSE2.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/PlushieSE2.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
     </LCDTextures>
 </Definitions>
