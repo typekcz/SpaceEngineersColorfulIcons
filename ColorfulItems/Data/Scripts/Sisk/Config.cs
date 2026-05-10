@@ -996,7 +996,7 @@ namespace Sisk.ColorfulIcons {
             // Warfare Evolution
             { "MyObjectBuilder_MotorSuspension/ShortSuspension3x3", "Textures/GUI/Icons/cubes/WheelSuspension3x3Right.dds" },
             { "MyObjectBuilder_MotorSuspension/ShortSuspension5x5", "Textures/GUI/Icons/cubes/WheelSuspension5x5Right.dds" },
-            { "MyObjectBuilder_MotorSuspension/ShortSuspension1x1", "Textures/GUI/Icons/cubes/WheelSuspension1x1Right.dds" },
+            { "MyObjectBuilder_MotorSuspension/ShortSuspension1x1", "Textures/GUI/Icons/cubes/ShortWheelSuspension1x1Right.dds" },
             { "MyObjectBuilder_MotorSuspension/ShortSuspension2x2", "Textures/GUI/Icons/cubes/WheelSuspension2x2Right.dds" },
             { "MyObjectBuilder_MotorSuspension/SmallShortSuspension3x3", "Textures/GUI/Icons/cubes/WheelSuspension3x3Right.dds" },
             { "MyObjectBuilder_MotorSuspension/SmallShortSuspension5x5", "Textures/GUI/Icons/cubes/WheelSuspension5x5Right.dds" },
@@ -1004,7 +1004,7 @@ namespace Sisk.ColorfulIcons {
             { "MyObjectBuilder_MotorSuspension/SmallShortSuspension2x2", "Textures/GUI/Icons/cubes/WheelSuspension2x2Right.dds" },
             { "MyObjectBuilder_MotorSuspension/ShortSuspension3x3mirrored", "Textures/GUI/Icons/cubes/WheelSuspension3x3Left.dds" },
             { "MyObjectBuilder_MotorSuspension/ShortSuspension5x5mirrored", "Textures/GUI/Icons/cubes/WheelSuspension5x5Left.dds" },
-            { "MyObjectBuilder_MotorSuspension/ShortSuspension1x1mirrored", "Textures/GUI/Icons/cubes/WheelSuspension1x1Left.dds" },
+            { "MyObjectBuilder_MotorSuspension/ShortSuspension1x1mirrored", "Textures/GUI/Icons/cubes/ShortWheelSuspension1x1Left.dds" },
             { "MyObjectBuilder_MotorSuspension/ShortSuspension2x2Mirrored", "Textures/GUI/Icons/cubes/WheelSuspension2x2Left.dds" },
             { "MyObjectBuilder_MotorSuspension/SmallShortSuspension3x3mirrored", "Textures/GUI/Icons/cubes/WheelSuspension3x3Left.dds" },
             { "MyObjectBuilder_MotorSuspension/SmallShortSuspension5x5mirrored", "Textures/GUI/Icons/cubes/WheelSuspension5x5Left.dds" },
@@ -2372,7 +2372,7 @@ namespace Sisk.ColorfulIcons {
             // Warfare Evolution
             { "MyObjectBuilder_BlueprintDefinition/MotorSuspension/ShortSuspension3x3", "Textures/GUI/Icons/cubes/WheelSuspension3x3Right.dds" },
             { "MyObjectBuilder_BlueprintDefinition/MotorSuspension/ShortSuspension5x5", "Textures/GUI/Icons/cubes/WheelSuspension5x5Right.dds" },
-            { "MyObjectBuilder_BlueprintDefinition/MotorSuspension/ShortSuspension1x1", "Textures/GUI/Icons/cubes/WheelSuspension1x1Right.dds" },
+            { "MyObjectBuilder_BlueprintDefinition/MotorSuspension/ShortSuspension1x1", "Textures/GUI/Icons/cubes/ShortWheelSuspension1x1Right.dds" },
             { "MyObjectBuilder_BlueprintDefinition/MotorSuspension/ShortSuspension2x2", "Textures/GUI/Icons/cubes/WheelSuspension2x2Right.dds" },
             { "MyObjectBuilder_BlueprintDefinition/MotorSuspension/SmallShortSuspension3x3", "Textures/GUI/Icons/cubes/WheelSuspension3x3Right.dds" },
             { "MyObjectBuilder_BlueprintDefinition/MotorSuspension/SmallShortSuspension5x5", "Textures/GUI/Icons/cubes/WheelSuspension5x5Right.dds" },
@@ -2380,7 +2380,7 @@ namespace Sisk.ColorfulIcons {
             { "MyObjectBuilder_BlueprintDefinition/MotorSuspension/SmallShortSuspension2x2", "Textures/GUI/Icons/cubes/WheelSuspension2x2Right.dds" },
             { "MyObjectBuilder_BlueprintDefinition/MotorSuspension/ShortSuspension3x3mirrored", "Textures/GUI/Icons/cubes/WheelSuspension3x3Left.dds" },
             { "MyObjectBuilder_BlueprintDefinition/MotorSuspension/ShortSuspension5x5mirrored", "Textures/GUI/Icons/cubes/WheelSuspension5x5Left.dds" },
-            { "MyObjectBuilder_BlueprintDefinition/MotorSuspension/ShortSuspension1x1mirrored", "Textures/GUI/Icons/cubes/WheelSuspension1x1Left.dds" },
+            { "MyObjectBuilder_BlueprintDefinition/MotorSuspension/ShortSuspension1x1mirrored", "Textures/GUI/Icons/cubes/ShortWheelSuspension1x1Left.dds" },
             { "MyObjectBuilder_BlueprintDefinition/MotorSuspension/ShortSuspension2x2Mirrored", "Textures/GUI/Icons/cubes/WheelSuspension2x2Left.dds" },
             { "MyObjectBuilder_BlueprintDefinition/MotorSuspension/SmallShortSuspension3x3mirrored", "Textures/GUI/Icons/cubes/WheelSuspension3x3Left.dds" },
             { "MyObjectBuilder_BlueprintDefinition/MotorSuspension/SmallShortSuspension5x5mirrored", "Textures/GUI/Icons/cubes/WheelSuspension5x5Left.dds" },
@@ -2776,7 +2776,7 @@ namespace Sisk.ColorfulIcons {
             { "MyObjectBuilder_BlueprintDefinition/InteriorLight/LargeBlockHalfTrofferLight", "Textures/GUI/Icons/Cubes/HalfTrofferLight.dds" },
             { "MyObjectBuilder_BlueprintDefinition/InteriorLight/LargeBlockHalfTrofferLightInv", "Textures/GUI/Icons/Cubes/HalfTrofferLightInv.dds" },
             { "MyObjectBuilder_BlueprintDefinition/CryoChamber/LargeBlockBedFree", "Textures/GUI/Icons/Cubes/BedFree.dds" },
-// Economy 2
+            // Economy 2
             { "MyObjectBuilder_BlueprintDefinition/CubeBlock/SmallStorageBin1", "Textures/GUI/Icons/Cubes/StorageBins_single.dds" },
             { "MyObjectBuilder_BlueprintDefinition/CubeBlock/Freight1Small", "Textures/GUI/Icons/Cubes/Freight_I.dds" },
             { "MyObjectBuilder_BlueprintDefinition/CubeBlock/Freight2Small", "Textures/GUI/Icons/Cubes/Freight_II.dds" },
@@ -2979,7 +2979,7 @@ namespace Sisk.ColorfulIcons {
             { "MyObjectBuilder_BlockVariantGroup/ConduitsBlockGroup", "Textures/GUI/Icons/cubes/Conduit_Straight.dds" },
             { "MyObjectBuilder_BlockVariantGroup/DecorativeStorageGroup4", "Textures/GUI/Icons/cubes/StorageBins_single.dds" },
             { "MyObjectBuilder_BlockVariantGroup/RoundEdgeGroup", "Textures/GUI/Icons/Cubes/Round_Edge.dds" },
-{ "MyObjectBuilder_BlockVariantGroup/FloorPlanSignGroup", "Textures/GUI/Icons/Cubes/FloorPlanSign.dds" },
+            { "MyObjectBuilder_BlockVariantGroup/FloorPlanSignGroup", "Textures/GUI/Icons/Cubes/FloorPlanSign.dds" },
             { "MyObjectBuilder_BlockVariantGroup/StructualBlocksGroup", "Textures/GUI/Icons/Cubes/Structural_5_platform.dds" },
         };
 
@@ -3090,7 +3090,7 @@ namespace Sisk.ColorfulIcons {
             { "MyObjectBuilder_SeedItem/Mushrooms", "Textures/GUI/Icons/items/SeedPack_Mushroom.dds" },
             { "MyObjectBuilder_SeedItem/Vegetables", "Textures/GUI/Icons/items/SeedPack_Vegetable.dds" },
             { "MyObjectBuilder_ConsumableItem/RadiationKit", "Textures/GUI/Icons/items/AntiRadiationMedkit.dds" },
-{ "MyObjectBuilder_Package/EncryptedDataStorage", "Textures/GUI/Icons/items/EncryptedDataStorage.dds" },
+            { "MyObjectBuilder_Package/EncryptedDataStorage", "Textures/GUI/Icons/items/EncryptedDataStorage.dds" },
             { "MyObjectBuilder_Package/InterceptedTransmissions", "Textures/GUI/Icons/items/InterceptedTransmissions.dds" },
             { "MyObjectBuilder_Package/ResearchMaterials", "Textures/GUI/Icons/items/ResearchMaterials.dds" },
             { "MyObjectBuilder_Package/SmuggledGoods", "Textures/GUI/Icons/items/SmuggledGoods.dds" },
