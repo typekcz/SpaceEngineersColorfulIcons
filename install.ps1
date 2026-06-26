@@ -30,7 +30,7 @@ Get-ChildItem -Path ".\$mod_name\*" -File -Recurse | ForEach-Object {
 };
 
 # No scripts version
-$game_dir = "D:\Hry\steamapps\common\SpaceEngineers";
+$game_dir = $env:SPACEENGINEERS_GAME_DIR;
 $textures_sub_dir = "Colorful Icons";
 $mod_dir_no_scripts = "$mods_dir\$($mod_name)NoScripts";
 if(Test-Path -Path "$mod_dir_no_scripts"){

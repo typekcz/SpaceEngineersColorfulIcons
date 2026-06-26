@@ -1,7 +1,8 @@
 import fs from "fs";
 import SaxonJs from "saxon-js";
 
-const dirGame = "D:/Hry/steamapps/common/SpaceEngineers/Content/";
+const gameRoot = (process.env.SPACEENGINEERS_GAME_DIR || "C:/Program Files (x86)/Steam/steamapps/common/SpaceEngineers").replace(/\\/g, "/");
+const dirGame = `${gameRoot}/Content/`;
 const dirDefs = "Data/CubeBlocks/";
 const fileGroups = "Data/BlockVariantGroups.sbc";
 
