@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using Sandbox.Definitions;
 using Sandbox.ModAPI;
+using Sisk.ColorfulIcons.Api;
 using Sisk.ColorfulIcons.Data;
 using Sisk.ColorfulIcons.Extensions;
 using Sisk.ColorfulIcons.Localization;
@@ -25,6 +26,7 @@ namespace Sisk.ColorfulIcons {
         private readonly Dictionary<MyPhysicalItemDefinition, string> _replacedModels = new Dictionary<MyPhysicalItemDefinition, string>();
         private DictionaryValuesReader<MyDefinitionId, MyBlueprintDefinitionBase>? _blueprintDefinitions;
         private DictionaryReader<string, MyBlockVariantGroup>? _blockVariantGroupDefinitions;
+        private ColorfulIconsApiServer _apiServer;
         private ChatHandler _chatHandler;
 
         private DictionaryValuesReader<MyDefinitionId, MyDefinitionBase>? _definitions;
@@ -65,6 +67,20 @@ namespace Sisk.ColorfulIcons {
         public ModSettings Settings { get; private set; }
 
         /// <summary>
+        ///     Returns the current mod config serialized in the same XML format used on disk.
+        /// </summary>
+        public string GetConfigXml() {
+            return Settings != null ? MyAPIGateway.Utilities.SerializeToXML(Settings) : null;
+        }
+        
+        /// <summary>
+        ///     Returns the current mod config serialized in the same binary format used on network.
+        /// </summary>
+        public byte[] GetConfigBinary() {
+            return Settings != null ? MyAPIGateway.Utilities.SerializeToBinary(Settings) : null;
+        }
+
+        /// <summary>
         ///     The static instance.
         /// </summary>
         public static Mod Static { get; private set; }
@@ -96,6 +112,8 @@ namespace Sisk.ColorfulIcons {
             if (!MyAPIGateway.Multiplayer.MultiplayerActive || !MyAPIGateway.Utilities.IsDedicated) {
                 LoadLocalization();
                 LoadSettings();
+                _apiServer = new ColorfulIconsApiServer(GetConfigXml, GetConfigBinary);
+                _apiServer.Register();
                 ModifyDefinitions();
 
                 MyAPIGateway.Gui.GuiControlRemoved += OnGuiControlRemoved;
@@ -108,6 +126,11 @@ namespace Sisk.ColorfulIcons {
         protected override void UnloadData() {
             if (!MyAPIGateway.Multiplayer.MultiplayerActive || !MyAPIGateway.Utilities.IsDedicated) {
                 MyAPIGateway.Gui.GuiControlRemoved -= OnGuiControlRemoved;
+
+                if (_apiServer != null) {
+                    _apiServer.Close();
+                    _apiServer = null;
+                }
 
                 if (_guiHandler != null) {
                     _guiHandler.Close();
@@ -161,6 +184,8 @@ namespace Sisk.ColorfulIcons {
         /// <param name="value">The value for given option.</param>
         /// <param name="showResultInChat">Show result in chat box when this is true.</param>
         public void SetOption<TValue>(Option option, TValue value, bool showResultInChat = true) {
+            var previousValue = IsOptionEnabled(option);
+
             switch (option) {
                 case Option.Blocks:
                     Settings.Blocks = (bool) (object) value;
@@ -203,6 +228,10 @@ namespace Sisk.ColorfulIcons {
             SaveSettings();
             RevertDefinitions();
             ModifyDefinitions();
+
+            if (previousValue != (bool) (object) value && _apiServer != null) {
+                _apiServer.NotifyConfigChanged();
+            }
         }
 
         /// <summary>
@@ -402,7 +431,7 @@ namespace Sisk.ColorfulIcons {
         private void SaveSettings() {
             try {
                 using (var writer = MyAPIGateway.Utilities.WriteFileInGlobalStorage(SETTINGS_FILE)) {
-                    writer.Write(MyAPIGateway.Utilities.SerializeToXML(Settings));
+                    writer.Write(GetConfigXml());
                 }
             } catch (Exception exception) {
                 MyLog.Default.WriteLine(exception);

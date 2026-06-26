@@ -30,3 +30,20 @@ This generates sbc files with LCDTextureDefinitions for icons to be used in user
 .\install.ps1
 ```
 Run this to copy the mod directory (`.\ColorfulItems`) to the game's directory for local mods.
+## Inter-mod config API
+
+The scripted mod publishes a local inter-mod API on message channel `205103492865`
+(`(801185519 << 8) | 1`, derived from the Colorful Icons workshop id).
+A client sends its own `long` reply channel as the payload. Colorful Icons replies on
+that channel with this dictionary of delegates:
+
+```csharp
+payload["GetConfigVersion"] as Func<Version>,          // Api Version
+payload["GetConfig"] as Func<string>,                  // Get current ModSettings as XML
+payload["GetConfigBinary"] as Func<byte[]>,            // Get current ModSettings as a binary stream byte[]
+payload["SubscribeConfigChanged"] as Action<Action>,   // Subscribe for ConfigChanged events
+payload["UnsubscribeConfigChanged"] as Action<Action>  // Unsubscribe from ConfigChanged events
+```
+
+`ColorfulIconsApiClient.cs` is a copyable client
+wrapper. The consuming mod owns the reply channel (recomended derive it from its ownworkshop id.)
