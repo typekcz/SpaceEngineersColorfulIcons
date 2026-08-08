@@ -5745,8 +5745,8 @@
         </LCDTextureDefinition>
         <LCDTextureDefinition>
             <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_MotorSuspension/ShortSuspension1x1" />
-            <SpritePath>Textures/GUI/Icons/cubes/WheelSuspension1x1Right.dds</SpritePath>
-            <TexturePath>Textures/GUI/Icons/cubes/WheelSuspension1x1Right.dds</TexturePath>
+            <SpritePath>Textures/GUI/Icons/cubes/ShortWheelSuspension1x1Right.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/cubes/ShortWheelSuspension1x1Right.dds</TexturePath>
             <Selectable>false</Selectable>
         </LCDTextureDefinition>
         <LCDTextureDefinition>
@@ -5793,8 +5793,8 @@
         </LCDTextureDefinition>
         <LCDTextureDefinition>
             <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_MotorSuspension/ShortSuspension1x1mirrored" />
-            <SpritePath>Textures/GUI/Icons/cubes/WheelSuspension1x1Left.dds</SpritePath>
-            <TexturePath>Textures/GUI/Icons/cubes/WheelSuspension1x1Left.dds</TexturePath>
+            <SpritePath>Textures/GUI/Icons/cubes/ShortWheelSuspension1x1Left.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/cubes/ShortWheelSuspension1x1Left.dds</TexturePath>
             <Selectable>false</Selectable>
         </LCDTextureDefinition>
         <LCDTextureDefinition>
@@ -8510,6 +8510,348 @@
             <Selectable>false</Selectable>
         </LCDTextureDefinition>
         <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_CubeBlock/CatwalkTriangular" />
+            <SpritePath>Textures/GUI/Icons/Cubes/GratedCatwalkTriangular.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/GratedCatwalkTriangular.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_CubeBlock/CatwalkTriangularRailing" />
+            <SpritePath>Textures/GUI/Icons/Cubes/GratedCatwalkRailingTriangular.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/GratedCatwalkRailingTriangular.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_CubeBlock/Passage2Frame" />
+            <SpritePath>Textures/GUI/Icons/Cubes/Passage2Frame.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/Passage2Frame.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_CubeBlock/LargeStairsShort" />
+            <SpritePath>Textures/GUI/Icons/Cubes/StairsShort.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/StairsShort.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Collector/CollectorFlat" />
+            <SpritePath>Textures/GUI/Icons/Cubes/SmallCollector.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/SmallCollector.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Cockpit/LargeBlockOpenSlopedCockpit" />
+            <SpritePath>Textures/GUI/Icons/Cubes/OpenSlopedCockpit.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/OpenSlopedCockpit.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Cockpit/LargeBlockClosedSlopedCockpit" />
+            <SpritePath>Textures/GUI/Icons/Cubes/SlopedCockpit.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/SlopedCockpit.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Cockpit/SmallBlockOpenSlopedCockpit" />
+            <SpritePath>Textures/GUI/Icons/Cubes/OpenSlopedCockpitSmallGrid.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/OpenSlopedCockpitSmallGrid.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Cockpit/SmallBlockClosedSlopedCockpit" />
+            <SpritePath>Textures/GUI/Icons/Cubes/SlopedCockpitSmallGrid.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/SlopedCockpitSmallGrid.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_CubeBlock/LargeBlockServerRack1" />
+            <SpritePath>Textures/GUI/Icons/Cubes/DecorativeServerRack_01.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/DecorativeServerRack_01.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_TerminalBlock/LargeBlockServerRack2" />
+            <SpritePath>Textures/GUI/Icons/Cubes/DecorativeServerRack_02.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/DecorativeServerRack_02.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_CubeBlock/LargeBlockServerRack3" />
+            <SpritePath>Textures/GUI/Icons/Cubes/DecorativeServerRack_03.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/DecorativeServerRack_03.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_CubeBlock/LargeBlockCableRun" />
+            <SpritePath>Textures/GUI/Icons/Cubes/CableRun.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/CableRun.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_CubeBlock/LargeBlockCableRunStyle2" />
+            <SpritePath>Textures/GUI/Icons/Cubes/CableRunStyle2.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/CableRunStyle2.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_CubeBlock/LargeBlockCableRunLong" />
+            <SpritePath>Textures/GUI/Icons/Cubes/CableRunLong.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/CableRunLong.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_CubeBlock/LargeBlockCableRunOffset" />
+            <SpritePath>Textures/GUI/Icons/Cubes/CableRunOffset.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/CableRunOffset.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_CubeBlock/LargeBlockCableRunStyle2Offset" />
+            <SpritePath>Textures/GUI/Icons/Cubes/CableRunStyle2Offset.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/CableRunStyle2Offset.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_CubeBlock/LargeBlockCableRunLongOffset" />
+            <SpritePath>Textures/GUI/Icons/Cubes/CableRunLongOffset.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/CableRunLongOffset.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_CubeBlock/LargeBlockCableRunCorner" />
+            <SpritePath>Textures/GUI/Icons/Cubes/CableRunCorner.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/CableRunCorner.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_OxygenTank/LargeHydrogenTankBulk" />
+            <SpritePath>Textures/GUI/Icons/Cubes/BulkyHydrogenTank.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/BulkyHydrogenTank.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_OxygenTank/SmallHydrogenTankBulk" />
+            <SpritePath>Textures/GUI/Icons/Cubes/BulkyHydrogenTankSmall.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/BulkyHydrogenTankSmall.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_CubeBlock/LargeStairsSolid" />
+            <SpritePath>Textures/GUI/Icons/Cubes/SolidStairs.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/SolidStairs.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_CubeBlock/LargeStairsSolidSideR" />
+            <SpritePath>Textures/GUI/Icons/Cubes/SolidSideStairsRight.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/SolidSideStairsRight.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_CubeBlock/LargeStairsSolidSideL" />
+            <SpritePath>Textures/GUI/Icons/Cubes/SolidSideStairsLeft.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/SolidSideStairsLeft.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_CubeBlock/LargeStairsSolidHalf" />
+            <SpritePath>Textures/GUI/Icons/Cubes/SolidHalfStairs.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/SolidHalfStairs.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_CubeBlock/LargeStairsSolidRailing" />
+            <SpritePath>Textures/GUI/Icons/Cubes/SolidStairsRailing.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/SolidStairsRailing.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_CubeBlock/LargeStairsSolidSideRailingR" />
+            <SpritePath>Textures/GUI/Icons/Cubes/SolidSideStairsRailingRight.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/SolidSideStairsRailingRight.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_CubeBlock/LargeStairsSolidSideRailingL" />
+            <SpritePath>Textures/GUI/Icons/Cubes/SolidSideStairsRailingLeft.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/SolidSideStairsRailingLeft.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_CubeBlock/LargeStairsSolidHalfRailing" />
+            <SpritePath>Textures/GUI/Icons/Cubes/SolidHalfStairsRailing.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/SolidHalfStairsRailing.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_CubeBlock/LargeSteepStairsRight" />
+            <SpritePath>Textures/GUI/Icons/Cubes/SteepStairsRight.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/SteepStairsRight.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_CubeBlock/LargeSteepStairsLeft" />
+            <SpritePath>Textures/GUI/Icons/Cubes/SteepStairsLeft.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/SteepStairsLeft.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_CubeBlock/LargeSteepStairsCenter" />
+            <SpritePath>Textures/GUI/Icons/Cubes/SteepStairsCenter.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/SteepStairsCenter.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_CubeBlock/LargeSteepStairsRailingRight" />
+            <SpritePath>Textures/GUI/Icons/Cubes/SteepStairsRailingRight.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/SteepStairsRailingRight.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_CubeBlock/LargeSteepStairsRailingLeft" />
+            <SpritePath>Textures/GUI/Icons/Cubes/SteepStairsRailingLeft.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/SteepStairsRailingLeft.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_CubeBlock/LargeSteepStairsRailingCenter" />
+            <SpritePath>Textures/GUI/Icons/Cubes/SteepStairsRailingCenter.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/SteepStairsRailingCenter.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_BatteryBlock/LargeBlockBatteryReskin" />
+            <SpritePath>Textures/GUI/Icons/Cubes/HalfBlockBatteryBank.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/HalfBlockBatteryBank.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_BatteryBlock/LargeBlockBatteryReskinOffset" />
+            <SpritePath>Textures/GUI/Icons/Cubes/HalfBlockBatteryBankOffset.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/HalfBlockBatteryBankOffset.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_BatteryBlock/SmallBlockBatteryReskin" />
+            <SpritePath>Textures/GUI/Icons/Cubes/BatteryBank.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/BatteryBank.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_CubeBlock/ContinuousRailingStraight" />
+            <SpritePath>Textures/GUI/Icons/Cubes/ContinuousRailingStraight.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/ContinuousRailingStraight.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_CubeBlock/ContinuousRailingDouble" />
+            <SpritePath>Textures/GUI/Icons/Cubes/ContinuousRailingDouble.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/ContinuousRailingDouble.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_CubeBlock/ContinuousRailingCorner" />
+            <SpritePath>Textures/GUI/Icons/Cubes/ContinuousRailingCorner.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/ContinuousRailingCorner.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_CubeBlock/ContinuousRailingDiagonal" />
+            <SpritePath>Textures/GUI/Icons/Cubes/ContinuousRailingDiagonal.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/ContinuousRailingDiagonal.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_CubeBlock/ContinuousRailingHalfRight" />
+            <SpritePath>Textures/GUI/Icons/Cubes/ContinuousRailingHalfRight.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/ContinuousRailingHalfRight.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_CubeBlock/ContinuousRailingHalfLeft" />
+            <SpritePath>Textures/GUI/Icons/Cubes/ContinuousRailingHalfLeft.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/ContinuousRailingHalfLeft.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_CubeBlock/ContinuousRailingCenter" />
+            <SpritePath>Textures/GUI/Icons/Cubes/ContinuousRailingCenter.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/ContinuousRailingCenter.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_CubeBlock/ContinuousRailing2x1Right" />
+            <SpritePath>Textures/GUI/Icons/Cubes/2x1ContinuousRailingRight.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/2x1ContinuousRailingRight.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_CubeBlock/ContinuousRailing2x1RightTip" />
+            <SpritePath>Textures/GUI/Icons/Cubes/2x1ContinuousRailingRightTip.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/2x1ContinuousRailingRightTip.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_CubeBlock/ContinuousRailing2x1Left" />
+            <SpritePath>Textures/GUI/Icons/Cubes/2x1ContinuousRailingLeft.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/2x1ContinuousRailingLeft.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_CubeBlock/ContinuousRailing2x1LeftTip" />
+            <SpritePath>Textures/GUI/Icons/Cubes/2x1ContinuousRailingLeftTip.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/2x1ContinuousRailingLeftTip.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_CubeBlock/ContinuousRailingRound" />
+            <SpritePath>Textures/GUI/Icons/Cubes/ContinuousRoundCorner.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/ContinuousRoundCorner.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_CubeBlock/ContinuousRailingGate" />
+            <SpritePath>Textures/GUI/Icons/Cubes/ContinuousRailingGate.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/ContinuousRailingGate.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_InteriorLight/LargeBlockLightRound" />
+            <SpritePath>Textures/GUI/Icons/Cubes/InteriorLightReskinRound.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/InteriorLightReskinRound.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_InteriorLight/SmallBlockLightRound" />
+            <SpritePath>Textures/GUI/Icons/Cubes/InteriorLightReskinRound.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/InteriorLightReskinRound.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_InteriorLight/LargeBlockLightSquare" />
+            <SpritePath>Textures/GUI/Icons/Cubes/InteriorLightReskin.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/InteriorLightReskin.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_InteriorLight/SmallBlockLightSquare" />
+            <SpritePath>Textures/GUI/Icons/Cubes/InteriorLightReskin.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/InteriorLightReskin.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_OxygenGenerator/LargeBlockPrototechOxygenGenerator" />
+            <SpritePath>Textures/GUI/Icons/Cubes/Prototech_Generator.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/Prototech_Generator.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Conveyor/LargeBlockStructural_PlatformConveyor" />
+            <SpritePath>Textures/GUI/Icons/Cubes/Structural_5_platformConveyor.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/Structural_5_platformConveyor.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
             <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_BlockVariantGroup/ArmorLightCubeGroup" />
             <SpritePath>Textures/GUI/Icons/cubes/light_armor_cube.dds</SpritePath>
             <TexturePath>Textures/GUI/Icons/cubes/light_armor_cube.dds</TexturePath>
@@ -9387,6 +9729,24 @@
         </LCDTextureDefinition>
         <LCDTextureDefinition>
             <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_BlockVariantGroup/StructualBlocksGroup" />
+            <SpritePath>Textures/GUI/Icons/Cubes/Structural_5_platform.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/Structural_5_platform.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_BlockVariantGroup/AccessPanelGroup" />
+            <SpritePath>Textures/GUI/Icons/Cubes/MaintenancePanel_Large.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/MaintenancePanel_Large.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_BlockVariantGroup/CableRunGroup" />
+            <SpritePath>Textures/GUI/Icons/Cubes/CableRun.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/Cubes/CableRun.dds</TexturePath>
+            <Selectable>false</Selectable>
+        </LCDTextureDefinition>
+        <LCDTextureDefinition>
+            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_BlockVariantGroup/StructuralBlocksGroup" />
             <SpritePath>Textures/GUI/Icons/Cubes/Structural_5_platform.dds</SpritePath>
             <TexturePath>Textures/GUI/Icons/Cubes/Structural_5_platform.dds</TexturePath>
             <Selectable>false</Selectable>
