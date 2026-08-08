@@ -64,30 +64,89 @@ $sbcFiles = Get-ChildItem -Path "$mod_dir_no_scripts\Data" -Filter *.sbc -Recurs
 
 # Wrapped in job, so that we can run it again without starting new PowerShell, otherwise Add-Type fails.
 Start-Job -ScriptBlock {
-	function replace_icons_paths {
-		param (
-			$content,
-			$paths
-		)
-		foreach ($value in $paths){
-			$icon_path = $value -replace "/", "\";
-			$icon_path_mod = $icon_path -replace "Textures\\", "Textures\$using:textures_sub_dir\";
-			$icon_path_mod = $icon_path_mod -replace "Textures/", "Textures/$using:textures_sub_dir/";
-			$icon_path = $icon_path -replace "\\", "[\\/]";
-			$content = ($content -replace $icon_path, $icon_path_mod);
-		}
-		return $content;
-	}
-
 	Add-Type -TypeDefinition $using:config -Language CSharp
 
-	foreach ($sbc in $using:sbcFiles){
-		$sbcContent = Get-Content -Path $sbc;
-		$sbcContent = replace_icons_paths $sbcContent $([Sisk.ColorfulIcons.Config]::Components.Values);
-		$sbcContent = replace_icons_paths $sbcContent $([Sisk.ColorfulIcons.Config]::Blocks.Values);
-		$sbcContent = replace_icons_paths $sbcContent $([Sisk.ColorfulIcons.Config]::Ingots.Values);
-		$sbcContent = replace_icons_paths $sbcContent $([Sisk.ColorfulIcons.Config]::Ores.Values);
-		$sbcContent = replace_icons_paths $sbcContent $([Sisk.ColorfulIcons.Config]::Tools.Values);
-		Set-Content -Path $sbc -Value $sbcContent -Encoding UTF8
+	$iconMap = @{}
+	$dicts = @(
+		[Sisk.ColorfulIcons.Config]::Components,
+		[Sisk.ColorfulIcons.Config]::Blocks,
+		[Sisk.ColorfulIcons.Config]::Ingots,
+		[Sisk.ColorfulIcons.Config]::Ores,
+		[Sisk.ColorfulIcons.Config]::Tools
+	)
+
+	foreach ($dict in $dicts) {
+		if ($null -eq $dict) { continue }
+		foreach ($entry in $dict.GetEnumerator()) {
+			$rawKey = $entry.Key
+			$rawPath = $entry.Value
+			if ([string]::IsNullOrEmpty($rawKey) -or [string]::IsNullOrEmpty($rawPath)) { continue }
+
+			$iconPath = $rawPath -replace "/", "\"
+			if ($iconPath -match "^Textures\\") {
+				$modIconPath = $iconPath -replace "^Textures\\", "Textures\$using:textures_sub_dir\"
+			} else {
+				$modIconPath = "Textures\$using:textures_sub_dir\$iconPath"
+			}
+
+			$parts = $rawKey.Split('/')
+			$typeIdPart = $parts[0]
+			$subtypeIdPart = if ($parts.Length -gt 1) { $parts[1] } else { "" }
+			if ($subtypeIdPart -eq "(null)") { $subtypeIdPart = "" }
+
+			$shortTypeId = if ($typeIdPart.StartsWith("MyObjectBuilder_")) { $typeIdPart.Substring(16) } else { $typeIdPart }
+
+			$iconMap["$shortTypeId/$subtypeIdPart"] = $modIconPath
+			$iconMap["MyObjectBuilder_$shortTypeId/$subtypeIdPart"] = $modIconPath
+		}
+	}
+
+	foreach ($sbc in $using:sbcFiles) {
+		$xml = New-Object System.Xml.XmlDocument
+		$xml.PreserveWhitespace = $true
+		$xml.Load($sbc)
+
+		$idNodes = $xml.GetElementsByTagName("Id")
+		$modified = $false
+
+		foreach ($idNode in $idNodes) {
+			$typeNode = $idNode.SelectSingleNode("TypeId")
+			$subtypeNode = $idNode.SelectSingleNode("SubtypeId")
+
+			$typeId = if ($typeNode) { $typeNode.InnerText } else { $idNode.GetAttribute("TypeId") }
+			if ([string]::IsNullOrEmpty($typeId)) { $typeId = $idNode.GetAttribute("Type") }
+
+			$subtypeId = if ($subtypeNode) { $subtypeNode.InnerText } else { $idNode.GetAttribute("SubtypeId") }
+			if ([string]::IsNullOrEmpty($subtypeId)) { $subtypeId = $idNode.GetAttribute("Subtype") }
+
+			if ($null -ne $typeId) { $typeId = $typeId.Trim() } else { $typeId = "" }
+			if ($null -ne $subtypeId) { $subtypeId = $subtypeId.Trim() } else { $subtypeId = "" }
+
+			if ([string]::IsNullOrEmpty($typeId)) { continue }
+
+			$lookupKey = "$typeId/$subtypeId"
+
+			if ($iconMap.ContainsKey($lookupKey)) {
+				$newIconPath = $iconMap[$lookupKey]
+				$defNode = $idNode.ParentNode
+
+				if ($null -ne $defNode) {
+					$iconNodes = $defNode.SelectNodes(".//Icon")
+					if ($null -ne $iconNodes -and $iconNodes.Count -gt 0) {
+						$iconNodes[0].InnerText = $newIconPath
+						$modified = $true
+					} else {
+						$newIconNode = $xml.CreateElement("Icon")
+						$newIconNode.InnerText = $newIconPath
+						$defNode.AppendChild($newIconNode)
+						$modified = $true
+					}
+				}
+			}
+		}
+
+		if ($modified) {
+			$xml.Save($sbc)
+		}
 	}
 } | Receive-Job -Wait -AutoRemoveJob
