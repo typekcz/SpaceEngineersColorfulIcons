@@ -711,8 +711,8 @@
         </LCDTextureDefinition>
         <LCDTextureDefinition>
             <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_Cockpit/PassengerSeatSmallOffset" />
-            <SpritePath>Textures/GUI/Icons/cubes/PassengerSeat.dds</SpritePath>
-            <TexturePath>Textures/GUI/Icons/cubes/PassengerSeat.dds</TexturePath>
+            <SpritePath>Textures/GUI/Icons/cubes/OffsetPassengerSeat.dds</SpritePath>
+            <TexturePath>Textures/GUI/Icons/cubes/OffsetPassengerSeat.dds</TexturePath>
             <Selectable>false</Selectable>
         </LCDTextureDefinition>
         <LCDTextureDefinition>
