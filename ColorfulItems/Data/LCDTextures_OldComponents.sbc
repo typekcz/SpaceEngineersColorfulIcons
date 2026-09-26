@@ -145,11 +145,5 @@
             <TexturePath>Textures/GUI/Icons/old/component/ScrapMetalComponent.dds</TexturePath>
             <Selectable>false</Selectable>
         </LCDTextureDefinition>
-        <LCDTextureDefinition>
-            <Id Type="LCDTextureDefinition" Subtype="ColorfulIcons_OldComponent/Scrap" />
-            <SpritePath>Textures/GUI/Icons/old/component/ScrapMetalComponent.dds</SpritePath>
-            <TexturePath>Textures/GUI/Icons/old/component/ScrapMetalComponent.dds</TexturePath>
-            <Selectable>false</Selectable>
-        </LCDTextureDefinition>
     </LCDTextures>
 </Definitions>

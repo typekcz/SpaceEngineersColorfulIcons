@@ -20,6 +20,7 @@ function Write-LCDTextureDefinitions {
 	$xmlWriter.WriteAttributeString("xmlns", "xsi", $null, "http://www.w3.org/2001/XMLSchema-instance")
 	$xmlWriter.WriteAttributeString("xmlns", "xsd", $null, "http://www.w3.org/2001/XMLSchema")
 	$xmlWriter.WriteStartElement("LCDTextures")
+	$writtenIds = [System.Collections.Generic.HashSet[string]]::new([System.StringComparer]::OrdinalIgnoreCase)
 
 	foreach($def in $definitions.GetEnumerator()){
 		# Skip blueprint definitions
@@ -30,6 +31,11 @@ function Write-LCDTextureDefinitions {
 			$subtype = $def.Key -replace "^[^/]+", "ColorfulIcons_$overrideSubtypePrefix"
 		} else {
 			$subtype = $def.Key -replace "^[^_]+", "ColorfulIcons"
+		}
+
+		if(-not $writtenIds.Add($subtype)) {
+			Write-Host "Skipping duplicate: $subtype"
+			continue
 		}
 
 		$xmlWriter.WriteStartElement("LCDTextureDefinition")
